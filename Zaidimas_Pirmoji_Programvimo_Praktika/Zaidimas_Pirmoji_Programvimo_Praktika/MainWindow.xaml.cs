@@ -21,5 +21,14 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
         {
             this.Close();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var page = new FirstLvlWindow();
+
+            page.Show();
+
+            this.Close();
+        }
     }
 }

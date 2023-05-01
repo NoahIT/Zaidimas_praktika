@@ -4,7 +4,7 @@
 
 - Komanda
 - Komandos narių indėlis
-- Kokias technologijas naudojome ?
+- [Kokias technologijas naudojome ?](https://github.com/NoahIT/Zaidimas_praktika#%EF%B8%8F-kokias-technologijas-naudojome)
 - Apie žaidima
 - Funkcijos
 - Atsisiuntimas

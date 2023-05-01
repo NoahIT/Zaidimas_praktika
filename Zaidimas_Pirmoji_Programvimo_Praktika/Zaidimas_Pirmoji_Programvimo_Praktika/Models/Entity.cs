@@ -4,39 +4,46 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Controls;
+using System.Windows.Media.Imaging;
+using Zaidimas_Pirmoji_Programvimo_Praktika.Models.Items;
 
 namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
 {
     public class Entity
     {
-        public int posX { get; }
-        public int posY { get; }
-
-        public int idleFrames { get; }
-        public int runFrames { get; }
-        public int attackFrames { get; }
-        public int deathFrames { get; }
-
-        public int size { get; }
-
-        public Bitmap spriteSheet { get; }
-
-        public Entity(int posX, int posY, int idleFrames, int runFrames, int attackFrames, int deathFrames, Bitmap spriteSheet)
+        public Entity(
+            string name,
+            BitmapImage image,
+            int defaultAttack,
+            int defaultHealth,
+            int defaultMana,
+            List<Item> inventory,
+            int roundLvl,
+            int playerLvl,
+            int experience,
+            decimal money)
         {
-            this.posX = posX;
-            this.posY = posY;
-            this.idleFrames = idleFrames;
-            this.runFrames = runFrames;
-            this.attackFrames = attackFrames;
-            this.deathFrames = deathFrames;
-            this.spriteSheet = spriteSheet;
-            size = 50;
+            Name = name;
+            Image = image;
+            DefaultAttack = defaultAttack;
+            DefaultHealth = defaultHealth;
+            DefaultMana = defaultMana;
+            Inventory = inventory;
+            RoundLvl = roundLvl;
+            PlayerLvl = playerLvl;
+            Experience = experience;
+            Money = money;
         }
 
-        public void Move()
-        {
-
-        }
+        public string Name { get; }
+        public BitmapImage Image { get; }
+        public int DefaultAttack { get; }
+        public int DefaultHealth { get; }
+        public int DefaultMana { get; }
+        public List<Item> Inventory { get; }
+        public int RoundLvl { get; }
+        public int PlayerLvl { get; }
+        public int Experience { get; }
+        public decimal Money { get; }
     }
 }

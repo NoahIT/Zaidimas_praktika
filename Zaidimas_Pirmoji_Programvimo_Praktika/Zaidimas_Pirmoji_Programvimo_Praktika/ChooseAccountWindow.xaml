@@ -40,7 +40,7 @@
 
         <Button x:Name="btnAccountSelect1" 
                 Grid.Column="1" 
-                Content="NEW PLAYER SAVE 1" 
+                Content="Hero 1" 
                 HorizontalAlignment="Center" 
                 Height="50" 
                 Grid.Row="2" 
@@ -49,7 +49,7 @@
                 Background="#FF696786" 
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold">
+                FontWeight="Bold" Click="btnAccountSelect1_Click">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -60,7 +60,7 @@
 
         <Button x:Name="btnAccountSelect2" 
                 Grid.Column="1" 
-                Content="NEW PLAYER SAVE 2" 
+                Content="Hero 2" 
                 HorizontalAlignment="Center" 
                 Height="50" 
                 Grid.Row="3" 
@@ -69,7 +69,7 @@
                 Background="#FF696786" 
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold">
+                FontWeight="Bold" Click="btnAccountSelect2_Click">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -80,7 +80,7 @@
 
         <Button x:Name="btnAccountSelect3" 
                 Grid.Column="1" 
-                Content="NEW PLAYER SAVE 3" 
+                Content="Hero 3" 
                 HorizontalAlignment="Center" 
                 Height="50" 
                 Grid.Row="4" 
@@ -89,7 +89,7 @@
                 Background="#FF696786" 
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold">
+                FontWeight="Bold" Click="btnAccountSelect3_Click">
 
             <Button.Resources>
                 <Style TargetType="Border">

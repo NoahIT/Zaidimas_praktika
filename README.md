@@ -20,9 +20,9 @@
 
 | Studentas | Procentinė dalis | Kontekstas |
 | :- | :- | :- |
-| `Nojus Raščius` | `30%` | `Programavo Front-end dalį šio projekto, maketavo grafines programos dalis` |
-| `Ivan Savochkin` | `40%` | `Programavo Back-end dalį šio projekto, maketavo grafines programos dalis` |
-| `Kristupas Viščiūna` | `30%` | `Programavo Back/Front-end dalis, maketavo grafines programos dalis` |
+| Nojus Raščiu` | `30%` | Programavo Front-end dalį šio projekto, maketavo grafines programos dalis |
+| Ivan Savochkin | `40%` | Programavo Back-end dalį šio projekto, maketavo grafines programos dalis |
+| Kristupas Viščiūna | `30%` | Programavo Back/Front-end dalis, maketavo grafines programos dalis |
 
 ## ⚡️ Kokias technologijas naudojome
 

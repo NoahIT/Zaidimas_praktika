@@ -35,7 +35,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
         private void btnAttack_Click(object sender, RoutedEventArgs e)
         {
             DispatcherTimer timer1 = new DispatcherTimer();
-            timer1.Interval = TimeSpan.FromSeconds(1);
+            timer1.Interval = TimeSpan.FromSeconds(0);
             timer1.Tick +=  (s, a) =>
             {
                 timer1.Stop();
@@ -43,7 +43,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
                 EController.Hurt(enemyHero, "1lvl");
 
                 DispatcherTimer timer2 = new DispatcherTimer();
-                timer2.Interval = TimeSpan.FromSeconds(3);
+                timer2.Interval = TimeSpan.FromSeconds(2);
                 timer2.Tick += (s2, a2) =>
                 {
                     timer2.Stop();

@@ -1,0 +1,116 @@
+﻿<Window x:Class="Zaidimas_Pirmoji_Programvimo_Praktika.ChooseAccountWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Zaidimas_Pirmoji_Programvimo_Praktika"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d"
+        Title="KIN" Height="450" Width="800"
+        ResizeMode="NoResize"
+        Background="Black"
+        Icon="Recourses/Images/Window title bar icon.ico">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="btnInventory" 
+                Grid.Column="0" 
+                Content="INVENTORY" 
+                HorizontalAlignment="Center" 
+                Height="50" 
+                Grid.Row="4" 
+                VerticalAlignment="Center" 
+                Width="80" 
+                Foreground="White"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold" Cursor="Hand">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FEAB17C5" Offset="0.9"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="btnFight" 
+                Grid.Column="6" 
+                Content="FIGHT" 
+                HorizontalAlignment="Center" 
+                Height="50" 
+                Grid.Row="4" 
+                VerticalAlignment="Center" 
+                Width="80" 
+                Foreground="White"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold" Cursor="Hand">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FEAB17C5" Offset="0.9"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="btnStore" 
+                Grid.Column="1" 
+                Content="STORE" 
+                HorizontalAlignment="Center" 
+                Height="50" 
+                Grid.Row="4" 
+                VerticalAlignment="Center" 
+                Width="80" 
+                Foreground="White"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold" Cursor="Hand">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FEAB17C5" Offset="0.9"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Image gif:ImageBehavior.AnimatedSource="Recourses/Images/game_background.gif" 
+               Stretch="Fill" 
+               VerticalAlignment="Center" 
+               HorizontalAlignment="Center"
+               Grid.ColumnSpan="7"
+               Grid.RowSpan="5"
+               Panel.ZIndex="-1"/>
+
+    </Grid>
+</Window>

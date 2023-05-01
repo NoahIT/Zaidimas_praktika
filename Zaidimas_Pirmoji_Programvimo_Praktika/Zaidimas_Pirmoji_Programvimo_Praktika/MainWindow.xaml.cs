@@ -30,5 +30,12 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
 
             this.Close();
         }
+
+        private void toShop_Click(object sender, RoutedEventArgs e)
+        {
+            var page = new ShopWindow();
+
+            page.Show(); this.Close();
+        }
     }
 }

@@ -7,7 +7,7 @@
         xmlns:gif="http://wpfanimatedgif.codeplex.com"
         mc:Ignorable="d"
         Title="KIN" Height="450" Width="800"
-        ResizeMode="CanResize"
+        ResizeMode="NoResize"
         Icon="Recourses/Images/Window title bar icon.ico">
 
     <Grid x:Name="mainContainer">

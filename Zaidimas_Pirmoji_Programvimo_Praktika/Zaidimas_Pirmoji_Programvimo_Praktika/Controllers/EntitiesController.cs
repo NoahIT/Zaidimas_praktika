@@ -21,7 +21,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Controllers
             ImageBehavior.SetAnimatedSource(mainHero, jumpImage);
 
             // Создайте анимацию удара
-            BitmapImage kickImage = new BitmapImage(new Uri($"Recourses\\Images\\{pathname}\\attack1.gif", UriKind.Relative));
+            BitmapImage kickImage = new BitmapImage(new Uri($"Recourses\\Images\\{pathname}\\attack.gif", UriKind.Relative));
 
             var margin = mainHero.Margin;
 
@@ -93,17 +93,17 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Controllers
             timer.Start();
         }
 
-        internal void AttackEnemy(int damage, ProgressBar heroHp, Image enemyHero, string pathname)
+        public void AttackEnemy(int damage, ProgressBar heroHp, Image enemyHero, string pathname)
         {
             BitmapImage jumpImage = new BitmapImage(new Uri($"Recourses\\Images\\{pathname}\\jump.gif", UriKind.Relative));
             ImageBehavior.SetAnimatedSource(enemyHero, jumpImage);
 
-            BitmapImage kickImage = new BitmapImage(new Uri($"Recourses\\Images\\{pathname}\\attack1.gif", UriKind.Relative));
+            BitmapImage kickImage = new BitmapImage(new Uri($"Recourses\\Images\\{pathname}\\attack.gif", UriKind.Relative));
 
             var margin = enemyHero.Margin;
 
             DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Interval = TimeSpan.FromSeconds(2);
             timer.Tick += (s, a) =>
             {
                 timer.Stop();

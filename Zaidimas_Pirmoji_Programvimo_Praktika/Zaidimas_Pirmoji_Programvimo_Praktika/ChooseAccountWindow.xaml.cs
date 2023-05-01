@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfAnimatedGif;
+using Zaidimas_Pirmoji_Programvimo_Praktika.Models;
 
 namespace Zaidimas_Pirmoji_Programvimo_Praktika
 {
@@ -19,6 +21,30 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
         public ChooseAccountWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnAccountSelect1_Click(object sender, RoutedEventArgs e)
+        {
+            // logika del save/load turi but
+            var page = new ChooseHeroWindow();
+            page.Show();
+            this.Close();
+        }
+
+        private void btnAccountSelect2_Click(object sender, RoutedEventArgs e)
+        {
+            // logika del save/load turi but
+            var page = new ChooseHeroWindow();
+            page.Show();
+            this.Close();
+        }
+
+        private void btnAccountSelect3_Click(object sender, RoutedEventArgs e)
+        {
+            // logika del save/load turi but
+            var page = new ChooseHeroWindow();
+            page.Show();
+            this.Close();
         }
     }
 }

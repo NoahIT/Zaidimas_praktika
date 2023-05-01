@@ -35,11 +35,11 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
         private void btnAttack_Click(object sender, RoutedEventArgs e)
         {
             DispatcherTimer timer1 = new DispatcherTimer();
-            timer1.Interval = TimeSpan.FromSeconds(0);
+            timer1.Interval = TimeSpan.FromSeconds(1);
             timer1.Tick +=  (s, a) =>
             {
                 timer1.Stop();
-                EController.AttackHero(100, EnemyHp, mainHero, "Ninja");
+                EController.AttackHero(20, EnemyHp, mainHero, "Ninja");
                 EController.Hurt(enemyHero, "1lvl");
 
                 DispatcherTimer timer2 = new DispatcherTimer();
@@ -47,7 +47,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
                 timer2.Tick += (s2, a2) =>
                 {
                     timer2.Stop();
-                    EController.AttackEnemy(20,HeroHp,enemyHero,"1lvl");
+                    EController.AttackEnemy(20, HeroHp, enemyHero, "1lvl");
                 };
                 timer2.Start();
             };

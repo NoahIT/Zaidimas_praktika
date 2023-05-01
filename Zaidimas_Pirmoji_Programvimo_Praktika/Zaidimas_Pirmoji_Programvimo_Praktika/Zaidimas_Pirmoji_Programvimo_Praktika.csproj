@@ -60,11 +60,39 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ChooseHeroWindow.xaml.cs">
+      <DependentUpon>ChooseHeroWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GameLobbyWindow.xaml.cs">
+      <DependentUpon>GameLobbyWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryWindow.xaml.cs">
+      <DependentUpon>InventoryWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Hero1.cs" />
+    <Compile Include="Models\Hero2.cs" />
+    <Compile Include="Models\Hero3.cs" />
+    <Compile Include="Models\PlayingModel.cs" />
+    <Compile Include="ShopWindow.xaml.cs">
+      <DependentUpon>ShopWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="ChooseAccountWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ChooseHeroWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FirstLvlWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GameLobbyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InventoryWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -88,10 +116,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ShopWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Items\DamageItem.cs" />
     <Compile Include="Models\Entity.cs" />
-    <Compile Include="Models\Hero.cs" />
+    <Compile Include="Models\Items\HealthItem.cs" />
+    <Compile Include="Models\Items\Item.cs" />
+    <Compile Include="Models\Items\ManaItem.cs" />
+    <Compile Include="Products\Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -172,11 +208,6 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Recourses\Images\Ninja\attack1.gif">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="background.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -190,7 +221,7 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Recourses\Images\1lvl\attack1.gif">
+    <Resource Include="Recourses\Images\1lvl\attack.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
@@ -198,6 +229,74 @@
     <Resource Include="Recourses\Images\1lvl\jump.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recourses\Images\Items\damage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\Items\health.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\Items\mana.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recourses\Images\Hero2\attack.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\Hero2\dead.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\Hero2\hurt.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\Hero2\Idle.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\Hero2\jump.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recourses\Images\Hero3\attack.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\Hero3\dead.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\Hero3\hurt.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\Hero3\Idle.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\Hero3\jump.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recourses\Images\Ninja\attack.gif" />
+    <Resource Include="Recourses\Images\Ninja\dead.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recourses\Images\Ninja\hurt.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recourses\Images\backgroundChoose.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="backgroundChoose.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recourses\Images\lobbyBack.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="lobbyBack.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

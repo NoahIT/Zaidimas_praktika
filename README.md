@@ -2,13 +2,13 @@
 
 ### Turinys
 
-- Komanda
-- Komandos narių indėlis
+- [Komanda](https://github.com/NoahIT/Zaidimas_praktika#-komanda)
+- [Komandos narių indėlis](https://github.com/NoahIT/Zaidimas_praktika#komandos-nari%C5%B3-ind%C4%97lis)
 - [Kokias technologijas naudojome ?](https://github.com/NoahIT/Zaidimas_praktika#%EF%B8%8F-kokias-technologijas-naudojome)
-- Apie žaidima
-- Funkcijos
-- Atsisiuntimas
-- Likulios detalės
+- [Apie žaidima](https://github.com/NoahIT/Zaidimas_praktika#-apie-%C5%BEaidima)
+- [Funkcijos](https://github.com/NoahIT/Zaidimas_praktika#-funkcijos)
+- [Atsisiuntimas](https://github.com/NoahIT/Zaidimas_praktika#-atsisiuntimas)
+- [Likulios detalės](https://github.com/NoahIT/Zaidimas_praktika#-likulios-detal%C4%97s)
 
 ## 👩‍💻 Komanda
 

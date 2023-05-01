@@ -11,6 +11,6 @@
 | Technology | Name     |
 | :-------- | :------- |
 | `IDE` | `Visual Studio 2023` |
-| `Programming language` | `C#` |
+| `Programming language` | `C# WPF app` |
 | `Markup language` | `XAML` |
-| `Framework` | `C# WPF app (.NET Framework)` |
+| `Framework` | `.NET Framework` |

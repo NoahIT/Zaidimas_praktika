@@ -11,8 +11,8 @@
         Icon="Recourses/Images/Window title bar icon.ico">
 
     <Grid x:Name="mainContainer">
-        <Image Margin="-165,-122,-54,0" Source="/background.jpg" Stretch="Fill"/>
-        <Image x:Name="mainHero" gif:ImageBehavior.AnimatedSource="Recourses\Images\Ninja\Idle.gif" RenderTransformOrigin="0.5,0.5" Height="337" Width="362" Canvas.Left="-18" Canvas.Top="-2" Margin="0,111,394,0" VerticalAlignment="Top" HorizontalAlignment="Right">
+        <Image Source="\background.jpg" Stretch="Fill" Margin="-267,-296,-139,0"/>
+        <Image x:Name="mainHero" gif:ImageBehavior.AnimatedSource="Recourses\Images\Ninja\Idle.gif" RenderTransformOrigin="0.5,0.5" Height="337" Width="362" Canvas.Left="-18" Canvas.Top="-2" Margin="0,86,381,0" VerticalAlignment="Top" HorizontalAlignment="Right">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -22,10 +22,30 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <ProgressBar x:Name="HeroHp" Minimum="0" Maximum="100" Value="100" Height="20" IsEnabled="False" Canvas.Left="46" Canvas.Top="318" VerticalAlignment="Top" Margin="0,403,476,0" HorizontalAlignment="Right" Width="173" />
 
-        <Button x:Name="btnAttack" Content="Attack" HorizontalAlignment="Left" Height="42" Margin="650,303,0,0" VerticalAlignment="Top" Width="121" Click="btnAttack_Click"/>
-        <ProgressBar x:Name="EnemyHp" Minimum="0" Maximum="100" Value="100" Height="20" Margin="438,0,0,394" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="146" />
+        <Button x:Name="btnAttack" 
+                Content="Attack 1" 
+                HorizontalAlignment="Left" 
+                Height="24" 
+                Margin="611,361,0,0" 
+                VerticalAlignment="Top"
+                Width="62" 
+                Foreground="White"
+                BorderBrush="Red"
+                Click="btnAttack_Click"
+                Panel.ZIndex="3">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFAB0000"/>
+                    <GradientStop Color="#FF480E0E" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
         <Image x:Name="enemyHero" gif:ImageBehavior.AnimatedSource="Recourses\Images\1lvl\Idle.gif" RenderTransformOrigin="0.5,0.5" Height="336" Width="362" Canvas.Left="-18" Canvas.Top="-2" Margin="340,38,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
             <Image.RenderTransform>
@@ -37,6 +57,248 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-    </Grid>
 
+
+        <Image Source="Recourses\Images\HUD\HUD (1).png" Margin="136,398,648,23" Panel.ZIndex="3"/>
+        <Image Source="Recourses\Images\HUD\HUD (2).png" Margin="135,382,647,36" Panel.ZIndex="3"/>
+
+        <ProgressBar x:Name="HeroMana"  Panel.ZIndex="2" Minimum="0" Maximum="100" Value="100" Height="11" IsEnabled="False" VerticalAlignment="Top" Margin="0,399,474,0" HorizontalAlignment="Right" Width="173">
+            <ProgressBar.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF009CFF"/>
+                    <GradientStop Color="#FF084C77" Offset="1"/>
+                </LinearGradientBrush>
+            </ProgressBar.Foreground>
+        </ProgressBar>
+        <ProgressBar x:Name="EnemyMana" Panel.ZIndex="2" Minimum="0" Maximum="100" Value="100" Height="10" IsEnabled="False" VerticalAlignment="Top" Margin="0,288,195,0" HorizontalAlignment="Right" Width="173" >
+            <ProgressBar.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF009CFF"/>
+                    <GradientStop Color="#FF084C77" Offset="1"/>
+                </LinearGradientBrush>
+            </ProgressBar.Foreground>
+        </ProgressBar>
+        <ProgressBar x:Name="EnemyHp" Panel.ZIndex="2" Minimum="0" Maximum="100" Value="100" Height="11" Margin="432,0,0,151" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="173" Background="{x:Null}" >
+            <ProgressBar.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF17D011" Offset="0"/>
+                    <GradientStop Color="#FF297B0C" Offset="1"/>
+                </LinearGradientBrush>
+            </ProgressBar.Foreground>
+        </ProgressBar>
+        <ProgressBar x:Name="HeroHp" Panel.ZIndex="2" Minimum="0" Maximum="100" Value="100" Height="11" IsEnabled="False" Canvas.Left="46" Canvas.Top="318" VerticalAlignment="Top" Margin="0,383,474,0" HorizontalAlignment="Right" Width="173">
+            <ProgressBar.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF0EC308" Offset="0.005"/>
+                    <GradientStop Color="#FF297B0C" Offset="1"/>
+                </LinearGradientBrush>
+            </ProgressBar.Foreground>
+        </ProgressBar>
+        <Rectangle Fill="#FF2B2635" HorizontalAlignment="Left" Height="34" Margin="134,379,0,0" Stroke="Black" VerticalAlignment="Top" Width="197"/>
+
+        <Image Source="/Recourses/Images/HUD/HUD (1).png" Margin="413,286,371,135" Panel.ZIndex="3"/>
+        <Image Source="/Recourses/Images/HUD/HUD (2).png" Margin="412,268,370,148" Panel.ZIndex="3"/>
+
+        <Rectangle Fill="#FF2B2635" HorizontalAlignment="Left" Height="34" Margin="411,268,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+
+        <Label Content="Mana"
+               FontSize="10"
+               FontWeight="Medium"
+               Foreground="White"
+               HorizontalAlignment="Left" 
+               Margin="215,393,0,0" 
+               VerticalAlignment="Top"
+               Panel.ZIndex="5"/>
+        <Label Content="Health" 
+            FontSize="10"
+               Foreground="White"
+            FontWeight="Medium"
+            HorizontalAlignment="Left" 
+            Margin="213,376,0,0" 
+            VerticalAlignment="Top"
+            Panel.ZIndex="5"/>
+        <Label Content="Mana" 
+            FontSize="10"
+               Foreground="White"
+            FontWeight="Medium"
+            HorizontalAlignment="Left" 
+            Margin="501,281,0,0" 
+            VerticalAlignment="Top"
+            Panel.ZIndex="5"/>
+        <Label Content="Health" 
+            FontSize="10"
+               Foreground="White"
+            FontWeight="Medium"
+            HorizontalAlignment="Left" 
+            Margin="499,264,0,0" 
+            VerticalAlignment="Top"
+            Panel.ZIndex="5"/>
+
+        <Button x:Name="btnQuit1" 
+            Content="QUIT" 
+            HorizontalAlignment="Left" 
+            Height="24" 
+            Margin="732,230,0,0" 
+            VerticalAlignment="Top"
+            Width="62" 
+            Foreground="White"
+            BorderBrush="Black"
+            Click="btnAttack_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF0A060C"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="btnAttack2" 
+            Content="Attack 2" 
+            HorizontalAlignment="Left" 
+            Height="24" 
+            Margin="703,361,0,0" 
+            VerticalAlignment="Top"
+            Width="62" 
+            Foreground="White"
+            BorderBrush="Red"
+            Click="btnAttack_Click"
+                Panel.ZIndex="3" RenderTransformOrigin="0.492,-1.998">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFAB0000"/>
+                    <GradientStop Color="#FF480E0E" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnHeal" 
+            Content="Heal" 
+            HorizontalAlignment="Left" 
+            Height="24" 
+            Margin="526,361,0,0" 
+            VerticalAlignment="Top"
+            Width="62" 
+            Foreground="White"
+            BorderBrush="Green"
+            Click="btnAttack_Click"
+                Panel.ZIndex="3">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF175203" Offset="0.01"/>
+                    <GradientStop Color="#FF66D262" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Rectangle HorizontalAlignment="Left" 
+            Height="30" 
+            Stroke="Black" 
+            VerticalAlignment="Top" 
+            Width="70" 
+            Margin="522,395,0,0"
+            RadiusX="10"
+            RadiusY="20">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF24253A" Offset="0.248"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label FontSize="8" Foreground="White" Content="20 | 20%&#xD;&#xA;" HorizontalAlignment="Left" Margin="536,399,0,0" VerticalAlignment="Top" Width="42" Height="22"/>
+        <Image Source="/Recourses/Images/HUD/HUD (2).png" Margin="572,401,210,15" Panel.ZIndex="3" RenderTransformOrigin="0.903,0.522"/>
+        <Rectangle HorizontalAlignment="Left" 
+            Height="30" 
+            Stroke="Black" 
+            VerticalAlignment="Top" 
+            Width="79" 
+            Margin="603,395,0,0"
+            RadiusX="10"
+            RadiusY="20">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF24253A" Offset="0.248"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label FontSize="8" Foreground="White" Content="20 | 30 ATK" HorizontalAlignment="Left" Margin="619,399,0,0" VerticalAlignment="Top" Width="53" Height="22"/>
+        <Image Source="/Recourses/Images/HUD/HUD (3).png" Margin="664,401,120,18" Panel.ZIndex="3"/>
+        <Rectangle HorizontalAlignment="Left" 
+            Height="30" 
+            Stroke="Black" 
+            VerticalAlignment="Top" 
+            Width="79" 
+            Margin="694,393,0,0"
+            RadiusX="10"
+            RadiusY="20">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF24253A" Offset="0.248"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label FontSize="8" Foreground="White" Content="40 | 70 ATK" HorizontalAlignment="Left" Margin="710,397,0,0" VerticalAlignment="Top" Width="53" Height="22"/>
+        <Image Source="/Recourses/Images/HUD/HUD (3).png" Margin="755,401,29,19" Panel.ZIndex="3"/>
+        <Image Source="/Recourses/Images/HUD/HUD (1).png" Margin="700,401,87,20" Panel.ZIndex="3"/>
+        <Image Source="/Recourses/Images/HUD/HUD (1).png" Margin="609,403,178,19" Panel.ZIndex="3"/>
+        <Image Source="/Recourses/Images/HUD/HUD (1).png" Margin="526,403,261,18" Panel.ZIndex="3"/>
+
+        <Rectangle HorizontalAlignment="Left"
+                   Height="100"
+                   Margin="516,354,0,0" 
+                   Stroke="Black"
+                   VerticalAlignment="Top" 
+                   Width="263"
+                   RadiusX="20"
+                   RadiusY="20"
+                   StrokeThickness="3"/>
+        <Rectangle HorizontalAlignment="Left"
+            Height="89"
+            Margin="714,129,0,0" 
+            Stroke="Black"
+            VerticalAlignment="Top" 
+            Width="205"
+            RadiusX="20"
+            RadiusY="20"
+            StrokeThickness="3"/>
+
+        <Rectangle HorizontalAlignment="Left" 
+            Height="77" 
+            Stroke="Black" 
+            VerticalAlignment="Top" 
+            Width="102" 
+            Margin="720,135,0,0"
+            RadiusX="20"
+            RadiusY="20">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF120C09" Offset="1"/>
+                    <GradientStop Color="Black" Offset="0.248"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image Source="/Recourses/Images/HUD/HUD (3).png" Margin="726,156,58,264" Panel.ZIndex="3"/>
+        <Image Source="/Recourses/Images/HUD/HUD (1).png" Margin="728,175,60,246" Panel.ZIndex="3"/>
+        <Image Source="/Recourses/Images/HUD/HUD (2).png" Margin="725,190,57,226" Panel.ZIndex="3"/>
+        <Label Foreground="White" Content="Attack: +0" HorizontalAlignment="Left" Margin="741,150,0,0" VerticalAlignment="Top" FontSize="10"/>
+        <Label Foreground="White" Content="Mana: +0" HorizontalAlignment="Left" Margin="741,169,0,0" VerticalAlignment="Top" FontSize="10"/>
+        <Label Foreground="White" Content="Health: +0" HorizontalAlignment="Left" Margin="741,187,0,0" VerticalAlignment="Top" FontSize="10"/>
+        <Label Foreground="White" Content="Bonuses from items" HorizontalAlignment="Left" Margin="725,137,0,0" VerticalAlignment="Top" FontSize="7"/>
+    </Grid>
 </Window>

@@ -16,7 +16,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Image Margin="0,-93,10,0" Source="\gameLobbyBackground2.gif" Stretch="Fill"/>
-        
+
         <Ellipse HorizontalAlignment="Left" 
                  Height="55" 
                  Margin="10,366,0,0"
@@ -29,8 +29,8 @@
                     <GradientStop Color="#FF382D5F" Offset="0.846"/>
                 </LinearGradientBrush>
             </Ellipse.Fill>
-        </Ellipse> 
-        
+        </Ellipse>
+
         <Image x:Name="hero" gif:ImageBehavior.AnimatedSource="Recourses\Images\Ninja\Idle.gif" RenderTransformOrigin="0.5,0.5" Height="300" Width="350" Margin="-102,128,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
             <Image.RenderTransform>
                 <TransformGroup>
@@ -56,7 +56,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Label x:Name="lblMoney" Panel.ZIndex="5" Content="Money :" FontFamily="Bahnschrift SemiBold" Foreground="White" HorizontalAlignment="Left" Margin="208,327,0,0" VerticalAlignment="Top" Height="26" Width="66"/>
+        <Label x:Name="lblMoney" Panel.ZIndex="5" Content="Money :" FontFamily="Bahnschrift SemiBold" Foreground="White" HorizontalAlignment="Left" Margin="208,327,0,0" VerticalAlignment="Top" Height="26" Width="108"/>
         <DataGrid x:Name="dtgInventory" 
             d:ItemsSource="{d:SampleData ItemCount=5}" 
             Margin="208,94,0,0" 
@@ -174,6 +174,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
+        <Label x:Name="lblError" Content="" HorizontalAlignment="Left" Margin="465,349,0,0" VerticalAlignment="Top" Foreground="Red" FontSize="6" Width="137" Height="18"/>
 
     </Grid>
 </Window>

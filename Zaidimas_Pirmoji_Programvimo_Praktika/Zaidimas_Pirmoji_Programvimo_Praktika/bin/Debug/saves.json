@@ -1,0 +1,93 @@
+{
+  "Name": "Ninja",
+  "DefaultAttack": 58,
+  "DefaultHealth": 100,
+  "DefaultMana": 100,
+  "Inventory": [
+    {
+      "Damage": 25,
+      "Name": "Damage Potion",
+      "Description": "desc",
+      "Price": 100.0,
+      "Mana": 30,
+      "ImagePath": "Recourses\\Images\\Items\\damage.png"
+    },
+    {
+      "Damage": 25,
+      "Name": "Damage Potion",
+      "Description": "desc",
+      "Price": 100.0,
+      "Mana": 30,
+      "ImagePath": "Recourses\\Images\\Items\\damage.png"
+    },
+    {
+      "Damage": 25,
+      "Name": "Damage Potion",
+      "Description": "desc",
+      "Price": 100.0,
+      "Mana": 30,
+      "ImagePath": "Recourses\\Images\\Items\\damage.png"
+    },
+    {
+      "Damage": 25,
+      "Name": "Damage Potion",
+      "Description": "desc",
+      "Price": 100.0,
+      "Mana": 30,
+      "ImagePath": "Recourses\\Images\\Items\\damage.png"
+    },
+    {
+      "Damage": 25,
+      "Name": "Damage Potion",
+      "Description": "desc",
+      "Price": 100.0,
+      "Mana": 30,
+      "ImagePath": "Recourses\\Images\\Items\\damage.png"
+    },
+    {
+      "Damage": 25,
+      "Name": "Damage Potion",
+      "Description": "desc",
+      "Price": 100.0,
+      "Mana": 30,
+      "ImagePath": "Recourses\\Images\\Items\\damage.png"
+    },
+    {
+      "Damage": 25,
+      "Name": "Damage Potion",
+      "Description": "desc",
+      "Price": 100.0,
+      "Mana": 30,
+      "ImagePath": "Recourses\\Images\\Items\\damage.png"
+    },
+    {
+      "Damage": 25,
+      "Name": "Damage Potion",
+      "Description": "desc",
+      "Price": 100.0,
+      "Mana": 30,
+      "ImagePath": "Recourses\\Images\\Items\\damage.png"
+    },
+    {
+      "Damage": 25,
+      "Name": "Damage Potion",
+      "Description": "desc",
+      "Price": 100.0,
+      "Mana": 30,
+      "ImagePath": "Recourses\\Images\\Items\\damage.png"
+    },
+    {
+      "Damage": 25,
+      "Name": "Damage Potion",
+      "Description": "desc",
+      "Price": 100.0,
+      "Mana": 30,
+      "ImagePath": "Recourses\\Images\\Items\\damage.png"
+    }
+  ],
+  "RoundLvl": 0,
+  "PlayerLvl": 1,
+  "Experience": 50,
+  "Money": 219.0,
+  "ImagePath": "Recourses/Images/Ninja/Idle.gif"
+}

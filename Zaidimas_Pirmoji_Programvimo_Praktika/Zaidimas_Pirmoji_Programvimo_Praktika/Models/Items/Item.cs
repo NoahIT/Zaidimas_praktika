@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 using System.Linq;
@@ -26,8 +27,11 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models.Items
 
         public string Name { get; }
         public string Description { get; }
+        [JsonIgnore]
         public BitmapImage Image { get; }
         public decimal Price { get; }
         public int Mana { get; }
+
+        public string ImagePath { get; set; }
     }
 }

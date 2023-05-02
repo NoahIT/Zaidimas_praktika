@@ -16,49 +16,47 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Controllers
     public class EntitiesController
     {
         public void AttackHero(int attackDamage, ProgressBar enemyHp, Image mainHero,string pathname)
-        { 
-            BitmapImage jumpImage = new BitmapImage(new Uri($"Recourses\\Images\\{pathname}\\jump.gif", UriKind.Relative));
-            ImageBehavior.SetAnimatedSource(mainHero, jumpImage);
+        {
+            if (!PlayingModel.IsAttacking || !EnemiesPlayingModel.IsAttacking)
+            {
+                BitmapImage jumpImage = new BitmapImage(new Uri($"Recourses\\Images\\{pathname}\\jump.gif", UriKind.Relative));
+                ImageBehavior.SetAnimatedSource(mainHero, jumpImage);
 
-            // Создайте анимацию удара
-            BitmapImage kickImage = new BitmapImage(new Uri($"Recourses\\Images\\{pathname}\\attack.gif", UriKind.Relative));
+                BitmapImage kickImage = new BitmapImage(new Uri($"Recourses\\Images\\{pathname}\\attack.gif", UriKind.Relative));
 
-            var margin = mainHero.Margin;
+                var margin = mainHero.Margin;
 
-            // Создайте таймер для задержки перед ударом
-            DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(1);
-            timer.Tick += (s, a) =>
-            { 
+                DispatcherTimer timer = new DispatcherTimer();
+                timer.Interval = TimeSpan.FromSeconds(1);
+                timer.Tick += (s, a) =>
+                { 
 
-                // Код, который нужно выполнить после задержки
-                timer.Stop();
+                    timer.Stop();
 
-                // Установите источник для mainHero в качестве kickImage
-                mainHero.HorizontalAlignment = HorizontalAlignment.Left;
-                mainHero.VerticalAlignment = VerticalAlignment.Top;
-                mainHero.Margin = new Thickness(200, 50, 0 , 0);
+                    mainHero.HorizontalAlignment = HorizontalAlignment.Left;
+                    mainHero.VerticalAlignment = VerticalAlignment.Top;
+                    mainHero.Margin = new Thickness(200, 50, 0 , 0);
 
-                ImageBehavior.SetAnimatedSource(mainHero, kickImage);
-                enemyHp.Value -= attackDamage;
+                    ImageBehavior.SetAnimatedSource(mainHero, kickImage);
+                    enemyHp.Value -= attackDamage;
 
-                // Создайте анимацию возврата в исходное состояние
-                BitmapImage idleImage = new BitmapImage(new Uri($"Recourses\\Images\\{pathname}\\Idle.gif", UriKind.Relative));
-                DispatcherTimer idleTimer = new DispatcherTimer();
-                idleTimer.Interval = TimeSpan.FromSeconds(1);
-                idleTimer.Tick += (s2, a2) =>
-                {
-                    // Код, который нужно выполнить после возврата в исходное состояние
-                    idleTimer.Stop();
+                    // Создайте анимацию возврата в исходное состояние
+                    BitmapImage idleImage = new BitmapImage(new Uri($"Recourses\\Images\\{pathname}\\Idle.gif", UriKind.Relative));
+                    DispatcherTimer idleTimer = new DispatcherTimer();
+                    idleTimer.Interval = TimeSpan.FromSeconds(1);
+                    idleTimer.Tick += (s2, a2) =>
+                    {
+                        idleTimer.Stop();
 
-                    // Установите источник для mainHero в качестве idleImage
-                    ImageBehavior.SetAnimatedSource(mainHero, idleImage);
-                    mainHero.Margin = margin;
+                        ImageBehavior.SetAnimatedSource(mainHero, idleImage);
+                        mainHero.Margin = margin;
+                    };
+                    idleTimer.Start();
                 };
-                idleTimer.Start();
-            };
 
-            timer.Start();
+                timer.Start();
+            }
+
         }
 
         public void Hurt(Image hero,string pathname)
@@ -95,40 +93,43 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Controllers
 
         public void AttackEnemy(int damage, ProgressBar heroHp, Image enemyHero, string pathname)
         {
-            BitmapImage jumpImage = new BitmapImage(new Uri($"Recourses\\Images\\{pathname}\\jump.gif", UriKind.Relative));
-            ImageBehavior.SetAnimatedSource(enemyHero, jumpImage);
-
-            BitmapImage kickImage = new BitmapImage(new Uri($"Recourses\\Images\\{pathname}\\attack.gif", UriKind.Relative));
-
-            var margin = enemyHero.Margin;
-
-            DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(2);
-            timer.Tick += (s, a) =>
+            if (!PlayingModel.IsAttacking || !EnemiesPlayingModel.IsAttacking)
             {
-                timer.Stop();
+                BitmapImage jumpImage = new BitmapImage(new Uri($"Recourses\\Images\\{pathname}\\jump.gif", UriKind.Relative));
+                ImageBehavior.SetAnimatedSource(enemyHero, jumpImage);
 
-                enemyHero.HorizontalAlignment = HorizontalAlignment.Left;
-                enemyHero.VerticalAlignment = VerticalAlignment.Top;
-                enemyHero.Margin = new Thickness(60, 80, 0, 0);
+                BitmapImage kickImage = new BitmapImage(new Uri($"Recourses\\Images\\{pathname}\\attack.gif", UriKind.Relative));
 
-                ImageBehavior.SetAnimatedSource(enemyHero, kickImage);
-                heroHp.Value -= damage;
+                var margin = enemyHero.Margin;
 
-                BitmapImage idleImage = new BitmapImage(new Uri($"Recourses\\Images\\{pathname}\\Idle.gif", UriKind.Relative));
-                DispatcherTimer idleTimer = new DispatcherTimer();
-                idleTimer.Interval = TimeSpan.FromSeconds(1);
-                idleTimer.Tick += (s2, a2) =>
+                DispatcherTimer timer = new DispatcherTimer();
+                timer.Interval = TimeSpan.FromSeconds(2);
+                timer.Tick += (s, a) =>
                 {
-                    idleTimer.Stop();
+                    timer.Stop();
 
-                    ImageBehavior.SetAnimatedSource(enemyHero, idleImage);
-                    enemyHero.Margin = margin;
+                    enemyHero.HorizontalAlignment = HorizontalAlignment.Left;
+                    enemyHero.VerticalAlignment = VerticalAlignment.Top;
+                    enemyHero.Margin = new Thickness(60, 80, 0, 0);
+
+                    ImageBehavior.SetAnimatedSource(enemyHero, kickImage);
+                    heroHp.Value -= damage;
+
+                    BitmapImage idleImage = new BitmapImage(new Uri($"Recourses\\Images\\{pathname}\\Idle.gif", UriKind.Relative));
+                    DispatcherTimer idleTimer = new DispatcherTimer();
+                    idleTimer.Interval = TimeSpan.FromSeconds(1);
+                    idleTimer.Tick += (s2, a2) =>
+                    {
+                        idleTimer.Stop();
+
+                        ImageBehavior.SetAnimatedSource(enemyHero, idleImage);
+                        enemyHero.Margin = margin;
+                    };
+                    idleTimer.Start();
                 };
-                idleTimer.Start();
-            };
 
-            timer.Start();
+                timer.Start();
+            }
         }
     }
 }

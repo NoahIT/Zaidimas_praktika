@@ -78,7 +78,7 @@
                 </LinearGradientBrush>
             </ProgressBar.Foreground>
         </ProgressBar>
-        <ProgressBar x:Name="EnemyHp" Panel.ZIndex="2" Minimum="0" Maximum="100" Value="100" Height="11" Margin="432,0,0,151" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="173" Background="{x:Null}" >
+        <ProgressBar x:Name="EnemyHp" Panel.ZIndex="2" Minimum="0" Maximum="100" Value="100" Height="11" Margin="0,0,195,151" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="173" Background="{x:Null}" >
             <ProgressBar.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF17D011" Offset="0"/>
@@ -166,8 +166,8 @@
             Width="62" 
             Foreground="White"
             BorderBrush="Red"
-            Click="btnAttack_Click"
-                Panel.ZIndex="3" RenderTransformOrigin="0.492,-1.998">
+            
+                Panel.ZIndex="3" RenderTransformOrigin="0.492,-1.998" Click="btnAttack2_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -189,8 +189,8 @@
             Width="62" 
             Foreground="White"
             BorderBrush="Green"
-            Click="btnAttack_Click"
-                Panel.ZIndex="3">
+
+                Panel.ZIndex="3" Click="btnHeal_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -261,10 +261,10 @@
 
         <Rectangle HorizontalAlignment="Left"
                    Height="100"
-                   Margin="516,354,0,0" 
+                   Margin="432,354,0,0" 
                    Stroke="Black"
                    VerticalAlignment="Top" 
-                   Width="263"
+                   Width="347"
                    RadiusX="20"
                    RadiusY="20"
                    StrokeThickness="3"/>

@@ -41,7 +41,7 @@
             </Image.RenderTransform>
         </Image>
 
-        <Button x:Name="btnLevel" 
+        <Button x:Name="btnLevel1" 
                 Content="1" 
                 HorizontalAlignment="Left" 
                 Height="34" 
@@ -51,7 +51,7 @@
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
                 FontWeight="Bold" Margin="167,311,0,0"
-                BorderBrush="Purple">
+                BorderBrush="Purple" Click="btnLevel1_Click">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -653,6 +653,28 @@
 
             <Button.Resources>
                 <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF3E2C3E" Offset="0.691"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnSave" 
+            Content="Save" 
+            HorizontalAlignment="Left" 
+            Margin="705,10,0,0" 
+            VerticalAlignment="Top" 
+            Height="25" Width="59" 
+            FontFamily="Century Gothic"
+            Foreground="White"
+            BorderBrush="Black" Click="btnSave_Click">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </Button.Resources>

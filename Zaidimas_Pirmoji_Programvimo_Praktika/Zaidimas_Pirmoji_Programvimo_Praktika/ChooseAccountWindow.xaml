@@ -40,7 +40,7 @@
 
         <Button x:Name="btnAccountSelect1" 
                 Grid.Column="1" 
-                Content="Hero 1" 
+                Content="Start new game" 
                 HorizontalAlignment="Center" 
                 Height="30" 
                 Grid.Row="2" 
@@ -64,9 +64,9 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="btnAccountSelect2" 
+        <Button x:Name="btnLoadGame" 
                 Grid.Column="1" 
-                Content="Hero 2" 
+                Content="Load last game" 
                 HorizontalAlignment="Center" 
                 Height="30" 
                 Grid.Row="3" 
@@ -74,34 +74,8 @@
                 Width="150"  
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Click="btnAccountSelect2_Click"
-                BorderBrush="Black">
-
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="15"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFCE153F"/>
-                    <GradientStop Color="#FF7F1253" Offset="0.586"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
-        <Button x:Name="btnAccountSelect3" 
-                Grid.Column="1" 
-                Content="Hero 3" 
-                HorizontalAlignment="Center" 
-                Height="30" 
-                Grid.Row="4" 
-                VerticalAlignment="Center" 
-                Width="150" 
-                Foreground="White"
-                FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Click="btnAccountSelect3_Click"
-                BorderBrush="Black">
+                FontWeight="Bold"
+                BorderBrush="Black" Click="btnLoadGame_Click">
 
             <Button.Resources>
                 <Style TargetType="Border">

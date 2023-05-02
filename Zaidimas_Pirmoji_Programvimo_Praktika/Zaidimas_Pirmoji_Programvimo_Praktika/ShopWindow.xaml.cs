@@ -27,7 +27,8 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
         {
             InitializeComponent();
             ImageBehavior.SetAnimatedSource(hero, PlayingModel.Image);
-            dtgInventory.ItemsSource = new Class1().GetAllItems();
+            var x = new Class1();
+            dtgInventory.ItemsSource = x.GetAllItems();
             lblMoney.Content = "Money" + PlayingModel.Money;
         }
 
@@ -75,5 +76,14 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
 
             this.Close();
         }
+
+        private void dtgInventory_Loaded(object sender, RoutedEventArgs e)
+        {
+            dtgInventory.MinWidth = dtgInventory.ActualWidth;
+            dtgInventory.MaxWidth = dtgInventory.ActualWidth;
+            dtgInventory.MinHeight = dtgInventory.ActualHeight;
+            dtgInventory.MaxHeight = dtgInventory.ActualHeight;
+        }
+
     }
 }

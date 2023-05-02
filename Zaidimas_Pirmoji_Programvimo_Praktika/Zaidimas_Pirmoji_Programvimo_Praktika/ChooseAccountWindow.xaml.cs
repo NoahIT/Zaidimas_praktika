@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfAnimatedGif;
 using Zaidimas_Pirmoji_Programvimo_Praktika.Models;
+using System.IO;
 
 namespace Zaidimas_Pirmoji_Programvimo_Praktika
 {
@@ -25,25 +27,28 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
 
         private void btnAccountSelect1_Click(object sender, RoutedEventArgs e)
         {
-            // logika del save/load turi but
             var page = new ChooseHeroWindow();
             page.Show();
             this.Close();
         }
 
-        private void btnAccountSelect2_Click(object sender, RoutedEventArgs e)
+        private void btnLoadGame_Click(object sender, RoutedEventArgs e)
         {
-            // logika del save/load turi but
-            var page = new ChooseHeroWindow();
-            page.Show();
-            this.Close();
-        }
+            string json = File.ReadAllText("saves.json");
+            Entity entity = JsonConvert.DeserializeObject<Entity>(json);
 
-        private void btnAccountSelect3_Click(object sender, RoutedEventArgs e)
-        {
-            // logika del save/load turi but
-            var page = new ChooseHeroWindow();
+            BitmapImage image = new BitmapImage(new Uri(entity.ImagePath, UriKind.RelativeOrAbsolute));
+
+            entity.Inventory.Select(x => x.Image == new BitmapImage(new Uri(x.ImagePath, UriKind.RelativeOrAbsolute)));
+
+            entity.Image = image;
+
+            entity.SetToPlayingModel(entity);
+
+            var page = new GameLobbyWindow();
+
             page.Show();
+
             this.Close();
         }
     }

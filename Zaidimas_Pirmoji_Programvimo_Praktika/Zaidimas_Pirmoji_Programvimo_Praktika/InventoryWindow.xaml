@@ -182,7 +182,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        
+
         <Rectangle HorizontalAlignment="Left" 
             Height="297" 
             Stroke="Black" 
@@ -204,6 +204,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
+        <Label Content="Jusu inventory yra tuscias" HorizontalAlignment="Left" Margin="316,127,0,0" VerticalAlignment="Top" Foreground="#FFF91D1D"/>
     </Grid>
 
 </Window>

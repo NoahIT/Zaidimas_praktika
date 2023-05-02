@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfAnimatedGif;
 using Zaidimas_Pirmoji_Programvimo_Praktika.Models;
 using Zaidimas_Pirmoji_Programvimo_Praktika.Models.Items;
 using Zaidimas_Pirmoji_Programvimo_Praktika.Products;
@@ -25,7 +26,9 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
         public ShopWindow()
         {
             InitializeComponent();
+            ImageBehavior.SetAnimatedSource(hero, PlayingModel.Image);
             dtgInventory.ItemsSource = new Class1().GetAllItems();
+            lblMoney.Content = "Money" + PlayingModel.Money;
         }
 
         private void btnBuy_Click(object sender, RoutedEventArgs e)

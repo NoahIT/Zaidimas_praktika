@@ -560,14 +560,14 @@
             </Rectangle.Fill>
         </Rectangle>
 
-        <Label x:Name="lblAttack" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="Attack :" HorizontalAlignment="Left" Height="24" Margin="645,287,0,0" VerticalAlignment="Top" Width="58"/>
-        <Label x:Name="lblHealth" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="Health :" HorizontalAlignment="Left" Height="24" Margin="645,311,0,0" VerticalAlignment="Top" Width="53"/>
-        <Label x:Name="lblMana" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="Mana :" HorizontalAlignment="Left" Height="23" Margin="645,264,0,0" VerticalAlignment="Top" Width="48"/>
+        <Label x:Name="lblAttack" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="Attack :" HorizontalAlignment="Left" Height="24" Margin="645,287,0,0" VerticalAlignment="Top" Width="119"/>
+        <Label x:Name="lblHealth" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="Health :" HorizontalAlignment="Left" Height="24" Margin="645,311,0,0" VerticalAlignment="Top" Width="119"/>
+        <Label x:Name="lblMana" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="Mana :" HorizontalAlignment="Left" Height="23" Margin="645,264,0,0" VerticalAlignment="Top" Width="119"/>
         <ProgressBar x:Name="prgExp" FontFamily="Bahnschrift SemiBold" HorizontalAlignment="Left" Height="17" Margin="657,379,0,0" VerticalAlignment="Top" Width="93" Foreground="Green" />
-        <Label x:Name="lblLvl" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="1lvl" HorizontalAlignment="Left" Margin="691,339,0,0" VerticalAlignment="Top" Height="24" Width="25"/>
-        <Label x:Name="valueofPrg" FontFamily="Bahnschrift SemiBold" Foreground="Black" Content="1" HorizontalAlignment="Left" Margin="696,376,0,0" VerticalAlignment="Top" Height="23" Width="15"/>
+        <Label x:Name="lblLvl" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="1lvl" HorizontalAlignment="Left" Margin="691,339,0,0" VerticalAlignment="Top" Height="24" Width="39"/>
+        <Label x:Name="valueofPrg" FontFamily="Bahnschrift SemiBold" Foreground="Black" Content="1" HorizontalAlignment="Left" Margin="696,376,0,0" VerticalAlignment="Top" Height="23" Width="23"/>
         <Label Content="Level :" FontFamily="Bahnschrift SemiBold" Foreground="White" HorizontalAlignment="Left" Margin="645,339,0,0" VerticalAlignment="Top" Height="24" Width="48"/>
-        <Label x:Name="lblMoney" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="Money :" HorizontalAlignment="Left" Margin="645,240,0,0" VerticalAlignment="Top" Height="24" Width="53"/>
+        <Label x:Name="lblMoney" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="Money :" HorizontalAlignment="Left" Margin="645,240,0,0" VerticalAlignment="Top" Height="24" Width="119"/>
 
         <Button x:Name="btnShop" 
                 Content="Shop" 

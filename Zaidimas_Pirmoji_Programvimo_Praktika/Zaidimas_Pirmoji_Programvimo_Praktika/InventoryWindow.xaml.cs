@@ -27,7 +27,17 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
             InitializeComponent();
             ImageBehavior.SetAnimatedSource(hero, PlayingModel.Image);
             lblMoney.Content = "Money: " + PlayingModel.Money + " Coins";
-            dtgInventory.ItemsSource = PlayingModel.Inventory;
+
+            if (PlayingModel.Inventory != null)
+            {
+                dtgInventory.ItemsSource = PlayingModel.Inventory;
+            }
+            else
+            {
+                dtgInventory.IsEnabled = false;
+                btnSell.IsEnabled = false;
+            }
+
         }
 
         private void btnSell_Click(object sender, RoutedEventArgs e)
@@ -37,8 +47,8 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
             if (selectedItem != null)
             {
                 PlayingModel.Inventory.Remove(selectedItem);
+                PlayingModel.Money += selectedItem.Price;
             }
-            PlayingModel.Money += selectedItem.Price;
 
             lblMoney.Content = "Money:" + PlayingModel.Money + " Coins";
 

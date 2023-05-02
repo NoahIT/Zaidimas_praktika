@@ -175,6 +175,7 @@
             </Rectangle.Fill>
         </Rectangle>
         <Label x:Name="lblError" Content="" HorizontalAlignment="Left" Margin="465,349,0,0" VerticalAlignment="Top" Foreground="Red" FontSize="6" Width="137" Height="18"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="464,326,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

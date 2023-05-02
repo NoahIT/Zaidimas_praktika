@@ -26,7 +26,7 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Name="tbWelcome_Player"
-                   Text="WELCOME PLAYER"
+                   Text="WELCOME"
                    FontSize="20"
                    Foreground="LightCyan"
                    Grid.Column="1"
@@ -40,53 +40,63 @@
                 Grid.Column="1" 
                 Content="START" 
                 HorizontalAlignment="Center" 
-                Height="50" 
+                Height="30" 
                 Grid.Row="2" 
                 VerticalAlignment="Center" 
                 Width="150" 
-                Click="btnStart_Click" 
-                Background="#FF696786" 
+                Click="btnStart_Click"  
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold">
+                FontWeight="Bold"
+                BorderBrush="Black">
 
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15"/>
                 </Style>
             </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFCE153F"/>
+                    <GradientStop Color="#FF7F1253" Offset="0.586"/>
+                </LinearGradientBrush>
+            </Button.Background>
         </Button>
 
         <Button x:Name="btnQuit" 
                 Grid.Column="1" 
                 Content="QUIT" 
                 HorizontalAlignment="Center" 
-                Height="50" 
+                Height="30" 
                 Grid.Row="3" 
                 VerticalAlignment="Center" 
                 Width="150" 
                 Click="btnStart_Click" 
-                Background="#FF696786"
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold">
+                FontWeight="Bold"
+                BorderBrush="Black">
 
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15"/>
                 </Style>
             </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFCE153F"/>
+                    <GradientStop Color="#FF7F1253" Offset="0.586"/>
+                </LinearGradientBrush>
+            </Button.Background>
         </Button>
 
-        <Image gif:ImageBehavior.AnimatedSource="Recourses/Images/game_background.gif" 
+        <Image gif:ImageBehavior.AnimatedSource="\gameLobbyBackground2.gif" 
                Stretch="Fill" 
                VerticalAlignment="Center" 
                HorizontalAlignment="Center"
                Grid.ColumnSpan="3"
                Grid.RowSpan="5"
                Panel.ZIndex="-1"/>
-        <Button Grid.Column="2" Content="ToLvl" HorizontalAlignment="Left" Height="50" Margin="71,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="112" Click="Button_Click"/>
-        <Button x:Name="toShop" Grid.Column="2" Content="ToShop" HorizontalAlignment="Center" Height="50" Margin="0,21,0,0" Grid.Row="1" VerticalAlignment="Top" Width="112" Click="toShop_Click" />
     </Grid>
 </Window>
 

@@ -16,9 +16,9 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Image Margin="-406,-661,-444,0" Grid.RowSpan="2" Source="/backgroundChoose.jpg" Stretch="Fill"/>
+        <Image Margin="-406,-661,-444,0" Grid.RowSpan="2" Source="/gameLobbyBackground2.gif" Stretch="Fill"/>
 
-        <Image x:Name="hero1" gif:ImageBehavior.AnimatedSource="Recourses\Images\Ninja\Idle.gif" RenderTransformOrigin="0.5,0.5" Height="336" Width="362" Canvas.Left="-18" Canvas.Top="-2" Margin="373,54,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.RowSpan="2">
+        <Image x:Name="hero1" gif:ImageBehavior.AnimatedSource="Recourses\Images\Ninja\Idle.gif" RenderTransformOrigin="0.5,0.5" Height="336" Width="362" Canvas.Left="-18" Canvas.Top="-2" Margin="373,89,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.RowSpan="2">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -29,7 +29,7 @@
             </Image.RenderTransform>
         </Image>
 
-        <Image x:Name="hero2" gif:ImageBehavior.AnimatedSource="Recourses\Images\Hero2\Idle.gif" RenderTransformOrigin="0.575,0.55" Height="337" Width="363" Canvas.Left="-18" Canvas.Top="-2" Margin="45,56,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.RowSpan="2">
+        <Image x:Name="hero2" gif:ImageBehavior.AnimatedSource="Recourses\Images\Hero2\Idle.gif" RenderTransformOrigin="0.575,0.55" Height="337" Width="363" Canvas.Left="-18" Canvas.Top="-2" Margin="48,62,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.RowSpan="2">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -40,7 +40,7 @@
             </Image.RenderTransform>
         </Image>
 
-        <Image x:Name="hero3" gif:ImageBehavior.AnimatedSource="Recourses\Images\Hero3\Idle.gif" RenderTransformOrigin="0.5,0.5" Height="336" Width="362" Canvas.Left="-18" Canvas.Top="-2" Margin="226,24,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.RowSpan="2">
+        <Image x:Name="hero3" gif:ImageBehavior.AnimatedSource="Recourses\Images\Hero3\Idle.gif" RenderTransformOrigin="0.5,0.5" Height="336" Width="362" Canvas.Left="-18" Canvas.Top="-2" Margin="226,73,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.RowSpan="2">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -50,9 +50,87 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Button x:Name="btnNinja" Content="Ninja" HorizontalAlignment="Left" Margin="518,71,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Grid.Row="1" Width="79" Click="btnNinja_Click"/>
-        <Button x:Name="btnVampire" Content="Vampire" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Grid.Row="1" Width="88" Margin="0,71,0,0" Click="btnVampire_Click"/>
-        <Button x:Name="btnGirl" Content="Girl" HorizontalAlignment="Left" Margin="186,71,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Grid.Row="1" Width="66" Click="btnGirl_Click"/>
+
+        <Button x:Name="btnNinja" 
+                Content="Ninja" 
+                HorizontalAlignment="Left" 
+                Margin="519,107,0,0" 
+                VerticalAlignment="Top" 
+                FontSize="15" 
+                Grid.Row="1" 
+                Width="79" 
+                Click="btnNinja_Click"
+                FontFamily="Bahnschrift SemiBold" 
+                Foreground="White"
+                BorderBrush="White"
+                Panel.ZIndex="2">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF4E006D"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="btnVampire" 
+                Content="Vampire" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Top" 
+                FontSize="15"  
+                Grid.Row="1" 
+                Width="88" 
+                Margin="0,96,0,0" 
+                Click="btnVampire_Click"
+                FontFamily="Bahnschrift SemiBold"
+                Foreground="White"
+                BorderBrush="White"
+                Panel.ZIndex="2">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF4E006D"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="btnGirl" 
+                Content="Girl" 
+                HorizontalAlignment="Left" 
+                Margin="186,85,0,0" 
+                VerticalAlignment="Top" 
+                FontSize="15" 
+                Grid.Row="1"
+                Foreground="White"
+                Width="66" 
+                FontFamily="Bahnschrift SemiBold"
+                Click="btnGirl_Click"
+                BorderBrush="White"
+                Panel.ZIndex="2">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF4E006D"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

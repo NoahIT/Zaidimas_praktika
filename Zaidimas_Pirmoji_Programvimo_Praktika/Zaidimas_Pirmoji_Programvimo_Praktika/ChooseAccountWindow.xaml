@@ -10,7 +10,7 @@
         ResizeMode="CanResize"
         Background="Black"
         Icon="Recourses/Images/Window title bar icon.ico">
-    
+
     <Grid>
 
         <Grid.RowDefinitions>
@@ -42,63 +42,81 @@
                 Grid.Column="1" 
                 Content="Hero 1" 
                 HorizontalAlignment="Center" 
-                Height="50" 
+                Height="30" 
                 Grid.Row="2" 
                 VerticalAlignment="Center" 
                 Width="150" 
-                Background="#FF696786" 
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Click="btnAccountSelect1_Click">
+                FontWeight="Bold" Click="btnAccountSelect1_Click"
+                BorderBrush="Black">
 
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15"/>
                 </Style>
             </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFCE153F"/>
+                    <GradientStop Color="#FF7F1253" Offset="0.586"/>
+                </LinearGradientBrush>
+            </Button.Background>
         </Button>
 
         <Button x:Name="btnAccountSelect2" 
                 Grid.Column="1" 
                 Content="Hero 2" 
                 HorizontalAlignment="Center" 
-                Height="50" 
+                Height="30" 
                 Grid.Row="3" 
                 VerticalAlignment="Center" 
                 Width="150"  
-                Background="#FF696786" 
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Click="btnAccountSelect2_Click">
+                FontWeight="Bold" Click="btnAccountSelect2_Click"
+                BorderBrush="Black">
 
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15"/>
                 </Style>
             </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFCE153F"/>
+                    <GradientStop Color="#FF7F1253" Offset="0.586"/>
+                </LinearGradientBrush>
+            </Button.Background>
         </Button>
 
         <Button x:Name="btnAccountSelect3" 
                 Grid.Column="1" 
                 Content="Hero 3" 
                 HorizontalAlignment="Center" 
-                Height="50" 
+                Height="30" 
                 Grid.Row="4" 
                 VerticalAlignment="Center" 
                 Width="150" 
-                Background="#FF696786" 
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Click="btnAccountSelect3_Click">
+                FontWeight="Bold" Click="btnAccountSelect3_Click"
+                BorderBrush="Black">
 
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="15"/>
                 </Style>
             </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFCE153F"/>
+                    <GradientStop Color="#FF7F1253" Offset="0.586"/>
+                </LinearGradientBrush>
+            </Button.Background>
         </Button>
 
-        <Image gif:ImageBehavior.AnimatedSource="Recourses/Images/game_background.gif" 
+        <Image gif:ImageBehavior.AnimatedSource="\gameLobbyBackground2.gif" 
                Stretch="Fill" 
                VerticalAlignment="Center" 
                HorizontalAlignment="Center"

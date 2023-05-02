@@ -10,7 +10,6 @@
         ResizeMode="NoResize"
         Icon="Recourses/Images/Window title bar icon.ico">
 
-
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -51,7 +50,8 @@
                 FontSize="25"
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="167,311,0,0">
+                FontWeight="Bold" Margin="167,311,0,0"
+                BorderBrush="Purple">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -75,7 +75,8 @@
                 FontSize="25"
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="206,274,0,0">
+                FontWeight="Bold" Margin="206,274,0,0"
+                BorderBrush="Purple">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -99,7 +100,8 @@
                 FontSize="25"
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="226,221,0,0">
+                FontWeight="Bold" Margin="226,221,0,0"
+                BorderBrush="Purple">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -123,7 +125,8 @@
                 FontSize="25"
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="206,168,0,0">
+                FontWeight="Bold" Margin="206,168,0,0"
+                BorderBrush="Purple">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -147,7 +150,8 @@
                 FontSize="25"
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="206,119,0,0">
+                FontWeight="Bold" Margin="206,119,0,0"
+                BorderBrush="Purple">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -171,7 +175,10 @@
                 FontSize="25" 
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="246,83,0,0" RenderTransformOrigin="-0.195,-0.221">
+                FontWeight="Bold" 
+                Margin="246,83,0,0" 
+                RenderTransformOrigin="-0.195,-0.221"
+                BorderBrush="Purple">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -195,7 +202,8 @@
                 FontSize="25"
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="303,76,0,0">
+                FontWeight="Bold" Margin="303,76,0,0"
+                BorderBrush="Purple">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -219,7 +227,8 @@
                 FontSize="25"
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="354,91,0,0">
+                FontWeight="Bold" Margin="354,91,0,0"
+                BorderBrush="Purple">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -243,7 +252,8 @@
                 FontSize="25"
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="0,139,0,0">
+                FontWeight="Bold" Margin="0,139,0,0"
+                BorderBrush="Purple">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -267,7 +277,9 @@
                 FontSize="25"
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold">
+                FontWeight="Bold"
+                BorderBrush="Black"
+                BorderThickness="2,9">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -291,7 +303,8 @@
                 FontSize="25" 
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="358,262,0,0">
+                FontWeight="Bold" Margin="358,262,0,0"
+                BorderBrush="Purple">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -315,7 +328,8 @@
                 FontSize="25"
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="367,319,0,0">
+                FontWeight="Bold" Margin="367,319,0,0"
+                BorderBrush="Purple">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -339,7 +353,8 @@
                 FontSize="25" 
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="416,345,0,0">
+                FontWeight="Bold" Margin="416,345,0,0"
+                BorderBrush="Purple">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -363,7 +378,8 @@
                 FontSize="25"
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="484,333,0,0">
+                FontWeight="Bold" Margin="484,333,0,0"
+                BorderBrush="Purple">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -387,7 +403,8 @@
                 FontSize="25"
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="521,278,0,0">
+                FontWeight="Bold" Margin="521,278,0,0"
+                BorderBrush="Purple">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -411,7 +428,8 @@
                 FontSize="25"
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="520,225,0,0">
+                FontWeight="Bold" Margin="520,225,0,0"
+                BorderBrush="Purple">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -435,7 +453,8 @@
                 FontSize="25"
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="557,134,0,0">
+                FontWeight="Bold" Margin="557,134,0,0"
+                BorderBrush="Purple">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -459,7 +478,8 @@
                 FontSize="25"
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="520,168,0,0">
+                FontWeight="Bold" Margin="520,168,0,0"
+                BorderBrush="Purple">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -483,7 +503,8 @@
                 FontSize="25" 
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="613,124,0,0">
+                FontWeight="Bold" Margin="613,124,0,0"
+                BorderBrush="Purple">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -507,7 +528,9 @@
                 FontSize="25"
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="659,143,0,0">
+                FontWeight="Bold" Margin="659,143,0,0"
+                BorderBrush="Black"
+                BorderThickness="2,9">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -563,10 +586,10 @@
         <Label x:Name="lblAttack" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="Attack :" HorizontalAlignment="Left" Height="24" Margin="645,287,0,0" VerticalAlignment="Top" Width="119"/>
         <Label x:Name="lblHealth" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="Health :" HorizontalAlignment="Left" Height="24" Margin="645,311,0,0" VerticalAlignment="Top" Width="119"/>
         <Label x:Name="lblMana" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="Mana :" HorizontalAlignment="Left" Height="23" Margin="645,264,0,0" VerticalAlignment="Top" Width="119"/>
-        <ProgressBar x:Name="prgExp" FontFamily="Bahnschrift SemiBold" HorizontalAlignment="Left" Height="17" Margin="657,379,0,0" VerticalAlignment="Top" Width="93" Foreground="Green" />
+        <ProgressBar x:Name="prgExp" Panel.ZIndex="4" FontFamily="Bahnschrift SemiBold" HorizontalAlignment="Left" Height="18" Margin="658,374,0,0" VerticalAlignment="Top" Width="94" Foreground="Green" />
         <Label x:Name="lblLvl" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="1lvl" HorizontalAlignment="Left" Margin="691,339,0,0" VerticalAlignment="Top" Height="24" Width="39"/>
-        <Label x:Name="valueofPrg" FontFamily="Bahnschrift SemiBold" Foreground="Black" Content="1" HorizontalAlignment="Left" Margin="696,376,0,0" VerticalAlignment="Top" Height="23" Width="23"/>
-        <Label Content="Level :" FontFamily="Bahnschrift SemiBold" Foreground="White" HorizontalAlignment="Left" Margin="645,339,0,0" VerticalAlignment="Top" Height="24" Width="48"/>
+        <Label x:Name="valueofPrg" FontFamily="Bahnschrift SemiBold" Panel.ZIndex="5" Foreground="Black" Content="1" HorizontalAlignment="Left" Margin="694,372,0,0" VerticalAlignment="Top" Height="22" Width="22"/>
+        <Label Content="Level :" FontFamily="Bahnschrift SemiBold" Foreground="White" HorizontalAlignment="Left" Margin="645,337,0,0" VerticalAlignment="Top" Height="24" Width="48"/>
         <Label x:Name="lblMoney" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="Money :" HorizontalAlignment="Left" Margin="645,240,0,0" VerticalAlignment="Top" Height="24" Width="119"/>
 
         <Button x:Name="btnShop" 
@@ -577,7 +600,8 @@
                 Height="30" Width="72" 
                 Click="btnShop_Click" 
                 FontFamily="Century Gothic"
-                Foreground="White">
+                Foreground="White"
+                BorderBrush="Black">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -600,7 +624,8 @@
                 Height="30" Width="73" 
                 Click="btnInventory_Click"
                 Foreground="White"
-                FontFamily="Century Gothic">
+                FontFamily="Century Gothic"
+                BorderBrush="Black">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -623,7 +648,8 @@
                 Height="30" Width="74" 
                 Click="btnMainMenu_Click"
                 Foreground="White"
-                FontFamily="Century Gothic">
+                FontFamily="Century Gothic"
+                BorderBrush="Black">
 
             <Button.Resources>
                 <Style TargetType="Border">

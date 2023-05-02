@@ -15,9 +15,23 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Image Margin="0,-93,10,0" Source="/lobbyBack.jpg" Stretch="Fill"/>
-        <Ellipse HorizontalAlignment="Left" Height="72" Margin="10,317,0,0" Stroke="Black" VerticalAlignment="Top" Width="159" Fill="#FFB35757"/>
-        <Image x:Name="hero" gif:ImageBehavior.AnimatedSource="Recourses\Images\Ninja\Idle.gif" RenderTransformOrigin="0.5,0.5" Height="300" Width="350" Margin="-90,95,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+
+        <Image Margin="0,-93,0,0" Source="\gameLobbyBackground2.gif" Stretch="Fill"/>
+        <Ellipse HorizontalAlignment="Left" 
+                 Height="55" 
+                 Margin="10,366,0,0"
+                 Stroke="Black" 
+                 VerticalAlignment="Top" 
+                 Width="138">
+            <Ellipse.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF180748" Offset="0.277"/>
+                    <GradientStop Color="#FF382D5F" Offset="0.846"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+
+        <Image x:Name="hero" gif:ImageBehavior.AnimatedSource="Recourses\Images\Ninja\Idle.gif" RenderTransformOrigin="0.5,0.5" Height="300" Width="350" Margin="-101,128,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -27,30 +41,169 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Rectangle HorizontalAlignment="Center" Height="74" Stroke="#FFC16565" VerticalAlignment="Top" Width="800">
+
+        <Rectangle HorizontalAlignment="Left" 
+                   Height="54" 
+                   Stroke="Black" 
+                   VerticalAlignment="Top" 
+                   Width="267" 
+                   Margin="270,-2,0,0"
+                   RadiusX="10"
+                   RadiusY="20">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFC78566" Offset="1"/>
-                    <GradientStop Color="#FF883434" Offset="0.248"/>
+                    <GradientStop Color="#FF120C09" Offset="1"/>
+                    <GradientStop Color="#FF24253A" Offset="0.248"/>
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="376" Stroke="#FFC16565" VerticalAlignment="Top" Width="172" Margin="633,74,0,0">
+
+        <Rectangle HorizontalAlignment="Left" 
+                   Height="78" 
+                   Stroke="Black" 
+                   VerticalAlignment="Top" 
+                   Width="102" 
+                   Margin="637,83,0,0"
+                   RadiusX="20"
+                   RadiusY="20">
+
+            <Rectangle.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"></Setter>
+                </Style>
+            </Rectangle.Resources>
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFC78566" Offset="1"/>
-                    <GradientStop Color="#FF883434" Offset="0.248"/>
+                    <GradientStop Color="#FF120C09" Offset="1"/>
+                    <GradientStop Color="#FF24253A" Offset="0.248"/>
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Label x:Name="lblMoney" Content="Money:" HorizontalAlignment="Left" Margin="633,24,0,0" VerticalAlignment="Top" Height="26" Width="157"/>
-        <DataGrid x:Name="dtgInventory" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="192,74,167,0"/>
-        <Button x:Name="btnSell" Content="Sell" HorizontalAlignment="Left" Height="28" Margin="658,106,0,0" VerticalAlignment="Top" Width="61" Click="btnSell_Click"/>
 
-        <Button x:Name="btnShop" Content="Shop" HorizontalAlignment="Left" Margin="457,22,0,0" VerticalAlignment="Top" Height="30" Width="73" Click="btnShop_Click"/>
-        <Button x:Name="btnInventory" Content="Inventory" HorizontalAlignment="Left" Margin="347,22,0,0" VerticalAlignment="Top" Height="30" Width="73" Click="btnInventory_Click"/>
-        <Button x:Name="btnMainMenu" Content="Main menu" HorizontalAlignment="Left" Margin="238,20,0,0" VerticalAlignment="Top" Height="30" Width="73" Click="btnMainMenu_Click" />
+        <Label x:Name="lblMoney" Content="Money :" FontFamily="Bahnschrift SemiBold" Foreground="White" HorizontalAlignment="Left" Margin="640,94,0,0" VerticalAlignment="Top" Height="26" Width="66"/>
 
+        <DataGrid x:Name="dtgInventory" 
+                  d:ItemsSource="{d:SampleData ItemCount=5}" 
+                  Margin="208,94,0,0" 
+                  Background="White" 
+                  VerticalAlignment="Top" 
+                  HorizontalAlignment="Left"
+                  FontFamily="Bahnschrift SemiBold"
+                  Panel.ZIndex="10" Height="259"/>
+
+        <Button x:Name="btnSell" 
+                Content="Sell" 
+                HorizontalAlignment="Left" 
+                Height="28" 
+                Margin="657,125,0,0" 
+                VerticalAlignment="Top"
+                Width="62"
+                Foreground="White"
+                Click="btnSell_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF3E2C3E" Offset="0.691"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="btnShop" 
+                Content="Shop" 
+                HorizontalAlignment="Left" 
+                Margin="454,10,0,0" 
+                VerticalAlignment="Top" 
+                Height="30" Width="72" 
+                Click="btnShop_Click" 
+                FontFamily="Century Gothic"
+                Foreground="White">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF3E2C3E" Offset="0.691"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="btnInventory" 
+                Content="Inventory" 
+                HorizontalAlignment="Left" 
+                Margin="367,10,0,0" 
+                VerticalAlignment="Top" 
+                Height="30" Width="73" 
+                Click="btnInventory_Click"
+                Foreground="White"
+                FontFamily="Century Gothic">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF3E2C3E" Offset="0.691"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="btnMainMenu" 
+                Content="Main menu" 
+                HorizontalAlignment="Left" 
+                Margin="279,10,0,0" 
+                VerticalAlignment="Top" 
+                Height="30" Width="74" 
+                Click="btnMainMenu_Click"
+                Foreground="White"
+                FontFamily="Century Gothic">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF3E2C3E" Offset="0.691"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        
+        <Rectangle HorizontalAlignment="Left" 
+            Height="297" 
+            Stroke="Black" 
+            VerticalAlignment="Top" 
+            Width="414" 
+            Margin="188,79,0,0"
+            RadiusX="20"
+            RadiusY="20">
+
+            <Rectangle.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Rectangle.Resources>
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF120C09" Offset="1"/>
+                    <GradientStop Color="#FF24253A" Offset="0.248"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
     </Grid>
 
 </Window>

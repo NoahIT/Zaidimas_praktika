@@ -298,5 +298,20 @@
   <ItemGroup>
     <Resource Include="lobbyBack.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="gameLobbyBackground2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="defpic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bggif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="33.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="f.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -20,5 +20,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
         public static int PlayerLvl { get; set; }
         public static int Experience { get; set; }
         public static decimal Money { get; set; }
+        public static bool IsAttacking { get; set; } = false;
+        
     }
 }

@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using WpfAnimatedGif;
 using Zaidimas_Pirmoji_Programvimo_Praktika.Models;
 using Zaidimas_Pirmoji_Programvimo_Praktika.Models.Items;
+using Zaidimas_Pirmoji_Programvimo_Praktika.Products;
 
 namespace Zaidimas_Pirmoji_Programvimo_Praktika
 {
@@ -84,6 +85,14 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
             page.Show();
 
             this.Close();
+        }
+
+        private void dtgInventory_Loaded(object sender, RoutedEventArgs e)
+        {
+            dtgInventory.MinWidth = dtgInventory.ActualWidth;
+            dtgInventory.MaxWidth = dtgInventory.ActualWidth;
+            dtgInventory.MinHeight = dtgInventory.ActualHeight;
+            dtgInventory.MaxHeight = dtgInventory.ActualHeight;
         }
     }
 }

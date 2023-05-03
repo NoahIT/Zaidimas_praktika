@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -36,7 +37,8 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
         }
 
         public string Name { get; }
-        public BitmapImage Image { get; }
+        [JsonIgnore]
+        public BitmapImage Image { get; set; }
         public int DefaultAttack { get; }
         public int DefaultHealth { get; }
         public int DefaultMana { get; }
@@ -45,5 +47,20 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
         public int PlayerLvl { get; }
         public int Experience { get; }
         public decimal Money { get; }
+        public string ImagePath { get; set; }
+
+        public void SetToPlayingModel(Entity h)
+        {
+            PlayingModel.Name = h.Name;
+            PlayingModel.Image = h.Image;
+            PlayingModel.DefaultAttack = h.DefaultAttack;
+            PlayingModel.DefaultHealth = h.DefaultHealth;
+            PlayingModel.DefaultMana = h.DefaultMana;
+            PlayingModel.Inventory = h.Inventory;
+            PlayingModel.RoundLvl = h.RoundLvl;
+            PlayingModel.PlayerLvl = h.PlayerLvl;
+            PlayingModel.Experience = h.Experience;
+            PlayingModel.Money = h.Money;
+        }
     }
 }

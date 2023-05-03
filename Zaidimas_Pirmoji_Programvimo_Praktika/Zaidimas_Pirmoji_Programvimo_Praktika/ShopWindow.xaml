@@ -57,14 +57,41 @@
             </Rectangle.Fill>
         </Rectangle>
         <Label x:Name="lblMoney" Panel.ZIndex="5" Content="Money :" FontFamily="Bahnschrift SemiBold" Foreground="White" HorizontalAlignment="Left" Margin="208,327,0,0" VerticalAlignment="Top" Height="26" Width="108"/>
+
         <DataGrid x:Name="dtgInventory" 
-            d:ItemsSource="{d:SampleData ItemCount=5}" 
-            Margin="208,94,0,0" 
-            Background="White" 
-            VerticalAlignment="Top" 
-            HorizontalAlignment="Left"
-            FontFamily="Bahnschrift SemiBold"
-            Panel.ZIndex="10" Height="215"/>
+              AutoGenerateColumns="False"
+              Margin="208,94,0,0" 
+              Background="#FF24253A" 
+              VerticalAlignment="Top" 
+              HorizontalAlignment="Left"
+              FontFamily="Bahnschrift SemiBold"
+              IsReadOnly="True"
+              Panel.ZIndex="10" Height="215" Loaded="dtgInventory_Loaded" Width="380">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Image" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Image}" Width="50" Height="50" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="3*" CanUserResize="False" />
+                <DataGridTextColumn Header="Mana" Binding="{Binding Mana}" Width="1*" CanUserResize="False"/>
+                <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="1*" CanUserResize="False"/>
+            </DataGrid.Columns>
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <Setter Property="Background" Value="#FF24253A"/>
+                </Style>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#FF24253A"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+
+
         <Button x:Name="btnBuy" 
             Content="Buy" 
             HorizontalAlignment="Left" 
@@ -72,8 +99,8 @@
             Margin="502,325,0,0" 
             VerticalAlignment="Top"
             Width="62"
-                Panel.ZIndex="10"
-            Foreground="White">
+            Panel.ZIndex="10"
+            Foreground="White" Click="btnBuy_Click">
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -174,8 +201,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Label x:Name="lblError" Content="" HorizontalAlignment="Left" Margin="465,349,0,0" VerticalAlignment="Top" Foreground="Red" FontSize="6" Width="137" Height="18"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="464,326,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblError" Content="" HorizontalAlignment="Left" Margin="451,355,0,0" VerticalAlignment="Top" Foreground="Red" FontSize="6" Width="137" Height="18"/>
 
     </Grid>
 </Window>

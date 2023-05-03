@@ -360,7 +360,7 @@
             </Rectangle.Fill>
         </Rectangle>
         <Label FontSize="7" Foreground="White" Content="50| 30%&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="430,411,0,0" VerticalAlignment="Top" Width="38" Height="22"/>
-        <Image Source="/Recourses/Images/HUD/HUD (1).png" Margin="421,397,368,25" Panel.ZIndex="3"/>
+        <Image Source="/Recourses/Images/HUD/HUD (1).png" Margin="421,406,368,16" Panel.ZIndex="3"/>
         <Rectangle HorizontalAlignment="Left" 
             Height="30" 
             Stroke="Black" 

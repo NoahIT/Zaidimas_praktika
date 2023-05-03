@@ -27,7 +27,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
         {
             InitializeComponent();
             ImageBehavior.SetAnimatedSource(hero, PlayingModel.Image);
-            var x = new Class1();
+            var x = new CreatedItems();
             dtgInventory.ItemsSource = x.GetAllItems();
             lblMoney.Content = "Money" + PlayingModel.Money;
         }

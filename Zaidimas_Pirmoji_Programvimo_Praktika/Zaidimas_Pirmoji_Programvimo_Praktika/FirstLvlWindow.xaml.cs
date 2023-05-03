@@ -8,7 +8,6 @@ using System.Windows;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
@@ -22,12 +21,18 @@ using System.Threading;
 using Zaidimas_Pirmoji_Programvimo_Praktika.Controllers;
 using WpfMessageBox = System.Windows.MessageBox;
 using System.Diagnostics.Eventing.Reader;
+using FormsMessageBox = System.Windows.Forms.MessageBox;
+using ModernWpf.Controls;
+using System.Windows.Media;
+using Zaidimas_Pirmoji_Programvimo_Praktika.Products;
+using Windows.UI.Xaml.Controls.Primitives;
 
 namespace Zaidimas_Pirmoji_Programvimo_Praktika
 {
     public partial class FirstLvlWindow : Window
     {
         EntitiesController EController = new EntitiesController();
+        List<Achievment> list = new List<Achievment>();
 
         public FirstLvlWindow()
         {
@@ -39,6 +44,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
             HeroMana.Value = PlayingModel.DefaultMana;
             EnemyMana.Value = EnemiesPlayingModel.DefaultMana;
 
+
             DispatcherTimer timer1 = new DispatcherTimer();
             timer1.Interval = TimeSpan.FromSeconds(1);
             timer1.Tick += (s, a) =>
@@ -47,12 +53,55 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
                 {
                     BitmapImage die = new BitmapImage(new Uri($"Recourses\\Images\\{PlayingModel.Name}\\dead.gif", UriKind.Relative));
                     ImageBehavior.SetAnimatedSource(mainHero, die);
-                    if (WpfMessageBox.Show("Jus pralaimejote", "Pranesimas", MessageBoxButton.OK) == MessageBoxResult.OK)
+
+                    if (WpfMessageBox.Show("Jus pralaimejote:(", "Pranesimas", MessageBoxButton.OK) == MessageBoxResult.OK)
                     {
-                        timer1.Stop();
-                        var page = new GameLobbyWindow();
-                        page.Show();
-                        this.Close();
+                        PlayingModel.HowManyTimesDied++;
+
+                        if (PlayingModel.HowManyAttackDid >= 10 && PlayingModel.HowManyAttackDid <= 12)
+                        {
+                            list.Add(new CreatedAchievments().Get1Ach());
+                        }
+                        if (PlayingModel.HowManyAttackDid >= 20 && PlayingModel.HowManyAttackDid <= 22)
+                        {
+                            list.Add(new CreatedAchievments().Get6Ach());
+                        }
+                        if (PlayingModel.HowManyAttackDid >= 30 && PlayingModel.HowManyAttackDid <= 32)
+                        {
+                            list.Add(new CreatedAchievments().Get7Ach());
+                        }
+                        if (PlayingModel.HowManyAttackDid > 50 && PlayingModel.HowManyAttackDid <= 52)
+                        {
+                            list.Add(new CreatedAchievments().Get8Ach());
+                        }
+
+                        if (PlayingModel.HowManyTimesDied == 10)
+                        {
+                            list.Add(new CreatedAchievments().Get2Ach());
+                        }
+                        if(PlayingModel.HowManyTimesDied == 5)
+                        {
+                            list.Add(new CreatedAchievments().Get10Ach());
+                        }
+                        if (PlayingModel.HowManyTimesDied == 20)
+                        {
+                            list.Add(new CreatedAchievments().Get9Ach());
+                        }
+
+                        if (list.Count!=0)
+                        {
+                            timer1.Stop();
+                            var page = new GameLobbyWindow(list);
+                            page.Show();
+                            this.Close();
+                        }
+                        else
+                        {
+                            timer1.Stop();
+                            var page = new GameLobbyWindow();
+                            page.Show();
+                            this.Close();
+                        }
                     }
                 }
 
@@ -65,12 +114,49 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
                     PlayingModel.Experience += 25;
                     PlayingModel.Money += 150;
 
-                    if (WpfMessageBox.Show("Jus laimejote", "Pranesimas", MessageBoxButton.OK) == MessageBoxResult.OK)
+                    if (WpfMessageBox.Show("JUS LAIMEJOTE","Pranesimas", MessageBoxButton.OK) == MessageBoxResult.OK )
                     {
-                                            timer1.Stop();
-                        var page = new GameLobbyWindow();
-                        page.Show();
-                        this.Close();
+                        if (EnemiesPlayingModel.RoundLvl == 11)
+                        {
+                            list.Add(new CreatedAchievments().Get3Ach());
+                        }
+                        if (EnemiesPlayingModel.RoundLvl == 20)
+                        {
+                            list.Add(new CreatedAchievments().Get4Ach());
+                            list.Add(new CreatedAchievments().Get5Ach());
+                        }
+
+                        if (PlayingModel.HowManyAttackDid >= 10 && PlayingModel.HowManyAttackDid <= 12)
+                        {
+                            list.Add(new CreatedAchievments().Get1Ach());
+                        }
+                        if(PlayingModel.HowManyAttackDid >= 20 && PlayingModel.HowManyAttackDid <= 22)
+                        {
+                            list.Add(new CreatedAchievments().Get6Ach());
+                        }
+                        if (PlayingModel.HowManyAttackDid >= 30 && PlayingModel.HowManyAttackDid <= 32)
+                        {
+                            list.Add(new CreatedAchievments().Get7Ach());
+                        }
+                        if (PlayingModel.HowManyAttackDid > 50 && PlayingModel.HowManyAttackDid <= 52)
+                        {
+                            list.Add(new CreatedAchievments().Get8Ach());
+                        }
+
+                        if (list.Count==0)
+                        {
+                            timer1.Stop();
+                            var page = new GameLobbyWindow();
+                            page.Show();
+                            this.Close();
+                        }
+                        else
+                        {
+                            timer1.Stop();
+                            var page = new GameLobbyWindow(list);
+                            page.Show();
+                            this.Close();
+                        }
                     }
                 }
             };
@@ -87,16 +173,17 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
             Attack(40, 70, "Jums neuztenka manos");
         }
 
-        private void btnHeal_Click(object sender, RoutedEventArgs e)
+        private async void btnHeal_Click(object sender, RoutedEventArgs e)
         {
             if (PlayingModel.Inventory.FirstOrDefault(x => x.Name == "Health Potion") != null && HeroMana.Value >= 20)
             {
+                PlayingModel.Inventory.Remove(PlayingModel.Inventory.FirstOrDefault(x => x.Name == "Health Potion"));
                 HeroHp.Value += (HeroHp.Value / 100 * 20);
                 HeroMana.Value -= 20;
             }
             else
             {
-                MessageBox.Show("Jus neturite tokio potion arba jums neuztenka manos");
+               await ShowMessageBoxAsync("Jus neturite tokio potion arba jums neuztenka manos");
             }
         }
 
@@ -107,24 +194,66 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
             this.Close();
         }
 
-        private void btnDamagePotion_Click(object sender, RoutedEventArgs e)
+        private async void btnDamagePotion_Click(object sender, RoutedEventArgs e)
         {
-
+            if (PlayingModel.Inventory.FirstOrDefault(x => x.Name == "Damage Potion") != null && HeroMana.Value >= 50)
+            {
+                PlayingModel.Inventory.Remove(PlayingModel.Inventory.FirstOrDefault(x => x.Name == "Damage Potion"));
+                EnemyHp.Value -= (EnemyHp.Value / 100 * 30);
+                HeroMana.Value -= 50;
+            }
+            else
+            {
+               await ShowMessageBoxAsync("Jus neturite tokio potion arba jums neuztenka manos");
+            }
         }
 
-        private void btnMana_Click(object sender, RoutedEventArgs e)
+        private async void btnMana_Click(object sender, RoutedEventArgs e)
         {
-
+            if (PlayingModel.Inventory.FirstOrDefault(x => x.Name == "Mana Potion") != null && HeroMana.Value >= 20)
+            {
+                PlayingModel.Inventory.Remove(PlayingModel.Inventory.FirstOrDefault(x => x.Name == "Mana Potion"));
+                HeroMana.Value += (HeroMana.Value / 100 * 20);
+                HeroMana.Value -= 20;
+            }
+            else
+            {
+                await ShowMessageBoxAsync("Jus neturite tokio potion arba jums neuztenka manos");
+            }
         }
 
-        private void Attack(int mana, int damage,string messageBox)
+        public async Task ShowMessageBoxAsync(string message)
+        {
+            try
+            { 
+                var dialog = new ContentDialog
+                  {
+                      Title = "Pranesimas",
+                      Content = message,
+                      CloseButtonText = "OK",
+                      Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF24253A"))
+                  };
+
+                await dialog.ShowAsync();
+            }
+            catch (Exception ex)
+            {
+                using (var writer = new StreamWriter("logs.txt"))
+                {
+                    writer.WriteLine(ex.Message);
+                }
+            }
+        }
+
+        private async void Attack(int mana, int damage,string messageBox)
         {
             if (HeroMana.Value >= mana)
             {
+                PlayingModel.HowManyAttackDid++;
                 DispatcherTimer timer1 = new DispatcherTimer();
-                timer1.Interval = TimeSpan.FromSeconds(1);
+                timer1.Interval = TimeSpan.FromSeconds(3);
                 DispatcherTimer timer2 = new DispatcherTimer();
-                timer2.Interval = TimeSpan.FromSeconds(2);
+                timer2.Interval = TimeSpan.FromSeconds(3);
                 DispatcherTimer timer3 = new DispatcherTimer();
                 timer3.Interval = TimeSpan.FromSeconds(3);
 
@@ -171,7 +300,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
             }
             else
             {
-                MessageBox.Show(messageBox);
+                await ShowMessageBoxAsync(messageBox);
             }
         }
     }

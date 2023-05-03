@@ -19,6 +19,9 @@ using Zaidimas_Pirmoji_Programvimo_Praktika.Models;
 using Zaidimas_Pirmoji_Programvimo_Praktika.Models.Items;
 using Zaidimas_Pirmoji_Programvimo_Praktika.Products;
 using Newtonsoft.Json;
+using System.Windows.Media.Animation;
+using System.Threading;
+using System.Windows.Threading;
 
 namespace Zaidimas_Pirmoji_Programvimo_Praktika
 {
@@ -62,6 +65,69 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
                     break;
                 }
             }
+        }
+
+        public GameLobbyWindow(List<Achievment> ach)
+        {
+            InitializeComponent();
+
+            if (PlayingModel.Experience > 100)
+            {
+                PlayingModel.PlayerLvl++;
+                PlayingModel.Experience -= 100;
+                prgExp.Value = PlayingModel.Experience;
+                valueofPrg.Content = PlayingModel.Experience;
+                lblLvl.Content = PlayingModel.PlayerLvl + " lvl";
+            }
+
+            ImageBehavior.SetAnimatedSource(hero, PlayingModel.Image);
+            lblAttack.Content = "Attack Damage: " + PlayingModel.DefaultAttack;
+            lblHealth.Content = "Hero`s Health: " + PlayingModel.DefaultHealth;
+            lblMana.Content = "Hero`s Mana: " + PlayingModel.DefaultMana;
+            lblMoney.Content = "Money: " + PlayingModel.Money + " Coins";
+
+            List<Button> buttoms = new List<Button>
+            {
+                btnLevel1, btnLevel2, btnLevel3, btnLevel4, btnLevel5, btnLevel6, btnLevel7, btnLevel8, btnLevel9, btnLevel10,
+                btnLevel11, btnLevel12, btnLevel13, btnLevel14, btnLevel15, btnLevel16, btnLevel17, btnLevel18, btnLevel19, btnLevel20
+            };
+
+            foreach (var item in buttoms)
+            {
+                item.IsEnabled = true;
+                if (item.Name == "btnLevel" + PlayingModel.RoundLvl.ToString())
+                {
+                    item.IsEnabled = true;
+                    elpCurr.Margin = item.Margin;
+                    break;
+                }
+            }
+            if (ach != null)
+            {
+                ach.ForEach(item => PlayingModel.Achievments.Add(item));
+            }
+
+            ShowElementsForTwoSeconds(rctAch, lblAch);
+        }
+
+        private void ShowElementsForTwoSeconds(UIElement element1, UIElement element2)
+        {
+            element1.Visibility = Visibility.Visible;
+            element2.Visibility = Visibility.Visible;
+
+            var timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(2);
+            timer.Tick += (sender, args) =>
+            {
+                element1.Visibility = Visibility.Hidden;
+                element2.Visibility = Visibility.Hidden;
+
+                MainGrid.Children.Remove(element1);
+                MainGrid.Children.Remove(element2);
+
+                timer.Stop();
+            };
+            timer.Start();
         }
 
         private void btnInventory_Click(object sender, RoutedEventArgs e)
@@ -117,6 +183,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
                 PlayingModel.DefaultHealth,
                 PlayingModel.DefaultMana,
                 PlayingModel.Inventory,
+                PlayingModel.Achievments,
                 PlayingModel.RoundLvl,
                 PlayingModel.PlayerLvl,
                 PlayingModel.Experience,
@@ -159,6 +226,101 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
             x.SetToPlayingModel(x.GetFiveLvl());
 
             OpenFightingWindow();
+        }
+
+        private void btnLevel6_Click(object sender, RoutedEventArgs e)
+        {
+            var x = new Enemies();
+            x.SetToPlayingModel(x.Get6Lvl());
+
+            OpenFightingWindow();
+        }
+
+        private void btnLevel7_Click(object sender, RoutedEventArgs e)
+        {
+            var x = new Enemies();
+            x.SetToPlayingModel(x.Get7Lvl());
+
+            OpenFightingWindow();
+        }
+
+        private void btnLevel8_Click(object sender, RoutedEventArgs e)
+        {
+            var x = new Enemies();
+            x.SetToPlayingModel(x.Get8Lvl());
+
+            OpenFightingWindow();
+        }
+
+        private void btnLevel9_Click(object sender, RoutedEventArgs e)
+        {
+            var x = new Enemies();
+            x.SetToPlayingModel(x.Get9Lvl());
+
+            OpenFightingWindow();
+        }
+
+        private void btnLevel10_Click(object sender, RoutedEventArgs e)
+        {
+            var x = new Enemies();
+            x.SetToPlayingModel(x.Get10Lvl());
+
+            OpenFightingWindow();
+        }
+
+        private void btnLevel11_Click(object sender, RoutedEventArgs e)
+        {
+            var x = new Enemies();
+            x.SetToPlayingModel(x.Get11Lvl());
+
+            OpenFightingWindow();
+        }
+
+        private void btnLevel12_Click(object sender, RoutedEventArgs e)
+        {
+            var x = new Enemies();
+            x.SetToPlayingModel(x.Get12Lvl());
+
+            OpenFightingWindow();
+        }
+
+        private void btnLevel13_Click(object sender, RoutedEventArgs e)
+        {
+            var x = new Enemies();
+            x.SetToPlayingModel(x.Get13Lvl());
+
+            OpenFightingWindow();
+        }
+
+        private void btnLevel14_Click(object sender, RoutedEventArgs e)
+        {
+            var x = new Enemies();
+            x.SetToPlayingModel(x.Get14Lvl());
+
+            OpenFightingWindow();
+        }
+
+        private void btnLevel15_Click(object sender, RoutedEventArgs e)
+        {
+            var x = new Enemies();
+            x.SetToPlayingModel(x.Get15Lvl());
+
+            OpenFightingWindow();
+        }
+
+        private void btnLevel16_Click(object sender, RoutedEventArgs e)
+        {
+            var x = new Enemies();
+            x.SetToPlayingModel(x.Get16Lvl());
+
+            OpenFightingWindow();
+        }
+
+        private void btnAchiev_Click(object sender, RoutedEventArgs e)
+        {
+            var page = new AchievmentWindow();
+            page.Show();
+            this.Close();
         }
     }
 }

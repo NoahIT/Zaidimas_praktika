@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Windows.SDK.Contracts.10.0.18362.2005\build\Microsoft.Windows.SDK.Contracts.props" Condition="Exists('..\packages\Microsoft.Windows.SDK.Contracts.10.0.18362.2005\build\Microsoft.Windows.SDK.Contracts.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -14,6 +15,8 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,12 +38,33 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CommonWin32, Version=2.0.0.0, Culture=neutral, PublicKeyToken=a0a4edcfe233918d, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonWin32.2.1.0.3\lib\net35-Client\CommonWin32.dll</HintPath>
+    </Reference>
+    <Reference Include="ModernWpf.Controls, Version=0.9.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ModernWpfUI.0.9.3\lib\net462\ModernWpf.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="ModernWpf.Toolkit, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ModernWpf.Toolkit.0.1.0\lib\net462\ModernWpf.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ModernWpf.Toolkit.UI, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ModernWpf.Toolkit.UI.0.1.0\lib\net462\ModernWpf.Toolkit.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="ModernWpf.Toolkit.UI.Controls, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ModernWpf.Toolkit.UI.Controls.0.1.0\lib\net462\ModernWpf.Toolkit.UI.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard" />
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <PackageReference Include="ModernWpf" Version="1.4.6" />
+    <PackageReference Include="ModernWpf.Toolkit.UI.Controls" Version="0.1.0" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -63,24 +87,37 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AchievmentWindow.xaml.cs">
+      <DependentUpon>AchievmentWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ChooseHeroWindow.xaml.cs">
       <DependentUpon>ChooseHeroWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\AchievmentController.cs" />
     <Compile Include="GameLobbyWindow.xaml.cs">
       <DependentUpon>GameLobbyWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="InventoryWindow.xaml.cs">
       <DependentUpon>InventoryWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\Enemies.cs" />
-    <Compile Include="Models\EnemiesPlayingModel.cs" />
-    <Compile Include="Models\Hero1.cs" />
-    <Compile Include="Models\Hero2.cs" />
-    <Compile Include="Models\Hero3.cs" />
-    <Compile Include="Models\PlayingModel.cs" />
+    <Compile Include="Models\Achievment.cs" />
+    <Compile Include="Models\Entitiess\Enemies.cs" />
+    <Compile Include="Models\Entitiess\EnemiesPlayingModel.cs" />
+    <Compile Include="Models\Entitiess\Hero1.cs" />
+    <Compile Include="Models\Entitiess\Hero2.cs" />
+    <Compile Include="Models\Entitiess\Hero3.cs" />
+    <Compile Include="Models\Entitiess\PlayingModel.cs" />
+    <Compile Include="NotificationWindow.xaml.cs">
+      <DependentUpon>NotificationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Products\CreatedAchievments.cs" />
     <Compile Include="ShopWindow.xaml.cs">
       <DependentUpon>ShopWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="AchievmentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ChooseAccountWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -113,7 +150,6 @@
       <DependentUpon>ChooseAccountWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controllers\EntitiesController.cs" />
-    <Compile Include="Controllers\MapController.cs" />
     <Compile Include="FirstLvlWindow.xaml.cs">
       <DependentUpon>FirstLvlWindow.xaml</DependentUpon>
     </Compile>
@@ -121,6 +157,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="NotificationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ShopWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -128,11 +168,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Items\DamageItem.cs" />
-    <Compile Include="Models\Entity.cs" />
+    <Compile Include="Models\Entitiess\Entity.cs" />
     <Compile Include="Models\Items\HealthItem.cs" />
     <Compile Include="Models\Items\Item.cs" />
     <Compile Include="Models\Items\ManaItem.cs" />
-    <Compile Include="Products\Class1.cs" />
+    <Compile Include="Products\CreatedItems.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -159,39 +199,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Recourses\Images\5 Boss gif%27s\Boss 1.gif" />
-    <Resource Include="Recourses\Images\5 Boss gif%27s\Boss 2.gif" />
-    <Resource Include="Recourses\Images\5 Boss gif%27s\Boss 3.gif" />
-    <Resource Include="Recourses\Images\5 Boss gif%27s\Boss 4.gif" />
-    <Resource Include="Recourses\Images\5 Boss gif%27s\Boss 5.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Recourses\Images\10 Pre-Boss enemies gif%27s\Enemy 1.gif" />
-    <Resource Include="Recourses\Images\10 Pre-Boss enemies gif%27s\Enemy 10.gif" />
-    <Resource Include="Recourses\Images\10 Pre-Boss enemies gif%27s\Enemy 2.gif" />
-    <Resource Include="Recourses\Images\10 Pre-Boss enemies gif%27s\Enemy 3.gif" />
-    <Resource Include="Recourses\Images\10 Pre-Boss enemies gif%27s\Enemy 4.gif" />
-    <Resource Include="Recourses\Images\10 Pre-Boss enemies gif%27s\Enemy 5.gif" />
-    <Resource Include="Recourses\Images\10 Pre-Boss enemies gif%27s\Enemy 6.gif" />
-    <Resource Include="Recourses\Images\10 Pre-Boss enemies gif%27s\Enemy 7.gif" />
-    <Resource Include="Recourses\Images\10 Pre-Boss enemies gif%27s\Enemy 8.gif" />
-    <Resource Include="Recourses\Images\10 Pre-Boss enemies gif%27s\Enemy 9.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Recourses\Images\Player avatar gif\Player avatar.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Recourses\Images\Random gif%27s %28uneused%29\2QuT.gif" />
-    <Resource Include="Recourses\Images\Random gif%27s %28uneused%29\2VK1.gif" />
-    <Resource Include="Recourses\Images\Random gif%27s %28uneused%29\2VK3.gif" />
-    <Resource Include="Recourses\Images\Random gif%27s %28uneused%29\3vIU.gif" />
-    <Resource Include="Recourses\Images\Random gif%27s %28uneused%29\4bXB.gif" />
-    <Resource Include="Recourses\Images\Random gif%27s %28uneused%29\4NOQ.gif" />
-    <Resource Include="Recourses\Images\Random gif%27s %28uneused%29\5RTG.gif" />
-    <Resource Include="Recourses\Images\Random gif%27s %28uneused%29\Minecraft sheep.gif" />
-    <Resource Include="Recourses\Images\Random gif%27s %28uneused%29\Pooh.gif" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Recourses\Images\game_background.gif" />
@@ -392,5 +399,218 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recourses\Images\11lvl\attack.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\11lvl\dead.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\11lvl\hurt.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\11lvl\Idle.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\11lvl\jump.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\12lvl\attack.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\12lvl\dead.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\12lvl\hurt.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\12lvl\Idle.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\12lvl\jump.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\13lvl\attack.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\13lvl\dead.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\13lvl\hurt.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\13lvl\Idle.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\13lvl\jump.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\14lvl\attack.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\14lvl\dead.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\14lvl\hurt.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\14lvl\Idle.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\14lvl\jump.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\15lvl\attack.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\15lvl\dead.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\15lvl\hurt.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\15lvl\Idle.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\15lvl\jump.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\16lvl\attack.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\16lvl\dead.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\16lvl\hurt.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\16lvl\Idle.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\16lvl\jump.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recourses\Images\10lvl\attack.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\10lvl\dead.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\10lvl\hurt.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\10lvl\Idle.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\10lvl\jump.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\6lvl\attack.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\6lvl\dead.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\6lvl\hurt.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\6lvl\Idle.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\6lvl\jump.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\7lvl\attack.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\7lvl\dead.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\7lvl\hurt.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\7lvl\Idle.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\7lvl\jump.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\8lvl\attack.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\8lvl\dead.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\8lvl\hurt.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\8lvl\Idle.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\8lvl\jump.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\9lvl\attack.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\9lvl\dead.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\9lvl\hurt.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\9lvl\Idle.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\9lvl\jump.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recourses\Images\achievments\1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\achievments\10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\achievments\2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\achievments\3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\achievments\4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\achievments\5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\achievments\6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\achievments\7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\achievments\8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\achievments\9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Runtime.WindowsRuntime.4.6.0\build\net461\System.Runtime.WindowsRuntime.targets" Condition="Exists('..\packages\System.Runtime.WindowsRuntime.4.6.0\build\net461\System.Runtime.WindowsRuntime.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Runtime.WindowsRuntime.4.6.0\build\net461\System.Runtime.WindowsRuntime.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Runtime.WindowsRuntime.4.6.0\build\net461\System.Runtime.WindowsRuntime.targets'))" />
+    <Error Condition="!Exists('..\packages\System.Runtime.WindowsRuntime.UI.Xaml.4.6.0\build\net461\System.Runtime.WindowsRuntime.UI.Xaml.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Runtime.WindowsRuntime.UI.Xaml.4.6.0\build\net461\System.Runtime.WindowsRuntime.UI.Xaml.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Windows.SDK.Contracts.10.0.18362.2005\build\Microsoft.Windows.SDK.Contracts.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.SDK.Contracts.10.0.18362.2005\build\Microsoft.Windows.SDK.Contracts.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Windows.SDK.Contracts.10.0.18362.2005\build\Microsoft.Windows.SDK.Contracts.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.SDK.Contracts.10.0.18362.2005\build\Microsoft.Windows.SDK.Contracts.targets'))" />
+  </Target>
+  <Import Project="..\packages\System.Runtime.WindowsRuntime.UI.Xaml.4.6.0\build\net461\System.Runtime.WindowsRuntime.UI.Xaml.targets" Condition="Exists('..\packages\System.Runtime.WindowsRuntime.UI.Xaml.4.6.0\build\net461\System.Runtime.WindowsRuntime.UI.Xaml.targets')" />
+  <Import Project="..\packages\Microsoft.Windows.SDK.Contracts.10.0.18362.2005\build\Microsoft.Windows.SDK.Contracts.targets" Condition="Exists('..\packages\Microsoft.Windows.SDK.Contracts.10.0.18362.2005\build\Microsoft.Windows.SDK.Contracts.targets')" />
 </Project>

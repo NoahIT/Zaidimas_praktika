@@ -16,7 +16,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models.Items
             string description,
             BitmapImage image,
             decimal price,
-            int mana)
+            int mana = 0)
         {
             Name = name;
             Description = description;

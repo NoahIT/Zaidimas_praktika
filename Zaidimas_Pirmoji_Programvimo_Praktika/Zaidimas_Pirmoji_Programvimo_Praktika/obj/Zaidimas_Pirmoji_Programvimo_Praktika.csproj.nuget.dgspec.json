@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\vania\\OneDrive\\Рабочий стол\\Zaidimas_praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\vania\\OneDrive\\Рабочий стол\\Zaidimas_praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\Zaidimas_praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika.csproj",
+        "projectName": "Zaidimas_Pirmoji_Programvimo_Praktika",
+        "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\Zaidimas_praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika.csproj",
+        "packagesPath": "C:\\Users\\vania\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\Zaidimas_praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vania\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "ModernWpf": {
+              "target": "Package",
+              "version": "[1.4.6, )"
+            },
+            "ModernWpf.Toolkit.UI.Controls": {
+              "target": "Package",
+              "version": "[0.1.0, )"
+            }
+          },
+          "imports": [
+            "uap10.0.18362"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

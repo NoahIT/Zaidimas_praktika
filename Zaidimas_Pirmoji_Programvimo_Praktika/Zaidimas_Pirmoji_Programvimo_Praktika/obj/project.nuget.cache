@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "QEfCjXP/OmRjKRV7xoXa9Jf7NFXMkm1jPB64d9fYYUQUUSG0rQ/kaoS+h4+/pm8NiuG299bKION34GZ5V78IdA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\Zaidimas_praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vania\\.nuget\\packages\\commonwin32\\2.1.0.3\\commonwin32.2.1.0.3.nupkg.sha512",
+    "C:\\Users\\vania\\.nuget\\packages\\microsoft.windows.sdk.contracts\\10.0.18362.2005\\microsoft.windows.sdk.contracts.10.0.18362.2005.nupkg.sha512",
+    "C:\\Users\\vania\\.nuget\\packages\\modernwpf\\1.4.6\\modernwpf.1.4.6.nupkg.sha512",
+    "C:\\Users\\vania\\.nuget\\packages\\modernwpf.toolkit\\0.1.0\\modernwpf.toolkit.0.1.0.nupkg.sha512",
+    "C:\\Users\\vania\\.nuget\\packages\\modernwpf.toolkit.ui\\0.1.0\\modernwpf.toolkit.ui.0.1.0.nupkg.sha512",
+    "C:\\Users\\vania\\.nuget\\packages\\modernwpf.toolkit.ui.controls\\0.1.0\\modernwpf.toolkit.ui.controls.0.1.0.nupkg.sha512",
+    "C:\\Users\\vania\\.nuget\\packages\\modernwpfui\\0.9.3-preview.201204.0\\modernwpfui.0.9.3-preview.201204.0.nupkg.sha512",
+    "C:\\Users\\vania\\.nuget\\packages\\system.runtime.windowsruntime\\4.6.0\\system.runtime.windowsruntime.4.6.0.nupkg.sha512",
+    "C:\\Users\\vania\\.nuget\\packages\\system.runtime.windowsruntime.ui.xaml\\4.6.0\\system.runtime.windowsruntime.ui.xaml.4.6.0.nupkg.sha512",
+    "C:\\Users\\vania\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

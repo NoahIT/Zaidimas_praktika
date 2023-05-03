@@ -29,9 +29,9 @@
       "ImagePath": "Recourses\\Images\\Items\\health.png"
     }
   ],
-  "RoundLvl": 2,
+  "RoundLvl": 16,
   "PlayerLvl": 1,
   "Experience": 0,
-  "Money": 40.0,
+  "Money": 999.0,
   "ImagePath": "Recourses/Images/Hero3/Idle.gif"
 }

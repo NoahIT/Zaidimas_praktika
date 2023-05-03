@@ -10,7 +10,7 @@
         ResizeMode="NoResize"
         Icon="Recourses/Images/Window title bar icon.ico">
 
-    <Grid>
+    <Grid x:Name="MainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
@@ -314,7 +314,7 @@
                 FontWeight="Bold" 
                 Margin="246,83,0,0" 
                 RenderTransformOrigin="-0.195,-0.221"
-                BorderBrush="Purple" IsEnabled="False">
+                BorderBrush="Purple" IsEnabled="False" Click="btnLevel6_Click">
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -338,7 +338,7 @@
                 Foreground="Black"
                 FontFamily="Bahnschrift SemiBold" 
                 FontWeight="Bold" Margin="303,76,0,0"
-                BorderBrush="Purple" IsEnabled="False">
+                BorderBrush="Purple" IsEnabled="False" Click="btnLevel7_Click">
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -362,7 +362,7 @@
                 Foreground="Black"
                 FontFamily="Bahnschrift SemiBold" 
                 FontWeight="Bold" Margin="354,91,0,0"
-                BorderBrush="Purple" IsEnabled="False">
+                BorderBrush="Purple" IsEnabled="False" Click="btnLevel8_Click">
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -386,7 +386,7 @@
                 Foreground="Black"
                 FontFamily="Bahnschrift SemiBold" 
                 FontWeight="Bold" Margin="0,139,0,0"
-                BorderBrush="Purple" IsEnabled="False">
+                BorderBrush="Purple" IsEnabled="False" Click="btnLevel9_Click">
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -411,7 +411,7 @@
                 FontFamily="Bahnschrift SemiBold" 
                 FontWeight="Bold"
                 BorderBrush="Black"
-                BorderThickness="2,9" IsEnabled="False">
+                BorderThickness="2,9" IsEnabled="False" Click="btnLevel10_Click">
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -435,7 +435,7 @@
                 Foreground="Black"
                 FontFamily="Bahnschrift SemiBold" 
                 FontWeight="Bold" Margin="358,262,0,0"
-                BorderBrush="Purple" IsEnabled="False">
+                BorderBrush="Purple" IsEnabled="False" Click="btnLevel11_Click">
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -459,7 +459,7 @@
                 Foreground="Black"
                 FontFamily="Bahnschrift SemiBold" 
                 FontWeight="Bold" Margin="367,319,0,0"
-                BorderBrush="Purple" IsEnabled="False">
+                BorderBrush="Purple" IsEnabled="False" Click="btnLevel12_Click">
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -483,7 +483,7 @@
                 Foreground="Black"
                 FontFamily="Bahnschrift SemiBold" 
                 FontWeight="Bold" Margin="416,345,0,0"
-                BorderBrush="Purple" IsEnabled="False">
+                BorderBrush="Purple" IsEnabled="False" Click="btnLevel13_Click">
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -507,7 +507,7 @@
                 Foreground="Black"
                 FontFamily="Bahnschrift SemiBold" 
                 FontWeight="Bold" Margin="484,333,0,0"
-                BorderBrush="Purple" IsEnabled="False">
+                BorderBrush="Purple" IsEnabled="False" Click="btnLevel14_Click">
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -531,7 +531,7 @@
                 Foreground="Black"
                 FontFamily="Bahnschrift SemiBold" 
                 FontWeight="Bold" Margin="521,278,0,0"
-                BorderBrush="Purple" IsEnabled="False">
+                BorderBrush="Purple" IsEnabled="False" Click="btnLevel15_Click">
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -555,7 +555,7 @@
                 Foreground="Black"
                 FontFamily="Bahnschrift SemiBold" 
                 FontWeight="Bold" Margin="520,225,0,0"
-                BorderBrush="Purple" IsEnabled="False">
+                BorderBrush="Purple" IsEnabled="False" Click="btnLevel16_Click">
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -666,6 +666,45 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <Button x:Name="btnAchiev" 
+            Content="Achievments" 
+            HorizontalAlignment="Left" 
+            Margin="10,10,0,0" 
+            VerticalAlignment="Top" 
+            Height="25" Width="95" 
+            Click="btnAchiev_Click"
+            Foreground="White"
+            FontFamily="Century Gothic"
+            BorderBrush="Black">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF3E2C3E" Offset="0.691"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Rectangle x:Name="rctAch" HorizontalAlignment="Left" 
+            Height="25" 
+            Stroke="Black" 
+            VerticalAlignment="Top" 
+            Width="98" 
+            Margin="578,27,0,0"
+            RadiusX="10"
+            RadiusY="20" Visibility="Hidden">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF120C09" Offset="1"/>
+                    <GradientStop Color="#FF24253A" Offset="0.248"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label x:Name="lblAch" Content="Achievment was added" HorizontalAlignment="Left" Margin="591,29,0,0" VerticalAlignment="Top" FontSize="6" Foreground="#FFBDB0B0" Visibility="Hidden"/>
 
     </Grid>
 </Window>

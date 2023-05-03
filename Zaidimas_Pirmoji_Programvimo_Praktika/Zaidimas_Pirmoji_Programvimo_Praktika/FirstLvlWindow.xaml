@@ -261,10 +261,10 @@
 
         <Rectangle HorizontalAlignment="Left"
                    Height="100"
-                   Margin="432,354,0,0" 
+                   Margin="461,354,0,0" 
                    Stroke="Black"
                    VerticalAlignment="Top" 
-                   Width="347"
+                   Width="318"
                    RadiusX="20"
                    RadiusY="20"
                    StrokeThickness="3"/>
@@ -300,5 +300,29 @@
         <Label Foreground="White" Content="Mana: +0" HorizontalAlignment="Left" Margin="741,169,0,0" VerticalAlignment="Top" FontSize="10"/>
         <Label Foreground="White" Content="Health: +0" HorizontalAlignment="Left" Margin="741,187,0,0" VerticalAlignment="Top" FontSize="10"/>
         <Label Foreground="White" Content="Bonuses from items" HorizontalAlignment="Left" Margin="725,137,0,0" VerticalAlignment="Top" FontSize="7"/>
+
+        <Button x:Name="btnMana" 
+            Content="Mana" 
+            HorizontalAlignment="Left" 
+            Height="29" 
+            Margin="473,381,0,0" 
+            VerticalAlignment="Top"
+            Width="41" 
+            Foreground="White"
+            BorderBrush="Blue"
+
+            Panel.ZIndex="3" Click="btnHeal_Click" RenderTransformOrigin="0.573,0.51">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF090352" Offset="0.01"/>
+                    <GradientStop Color="#FF19B4E8" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

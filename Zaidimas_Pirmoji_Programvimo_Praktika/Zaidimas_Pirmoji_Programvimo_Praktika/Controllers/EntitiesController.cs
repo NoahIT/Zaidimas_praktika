@@ -61,8 +61,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Controllers
 
         public void Hurt(Image hero,string pathname)
         {
-            double photoLeft = Canvas.GetLeft(hero);
-            double photoTop = Canvas.GetTop(hero);
+            var margin = hero.Margin;
 
             BitmapImage kickImage = new BitmapImage(new Uri($"Recourses\\Images\\{pathname}\\hurt.gif", UriKind.Relative));
 
@@ -82,8 +81,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Controllers
                     idleTimer.Stop();
 
                     ImageBehavior.SetAnimatedSource(hero, idleImage);
-                    Canvas.SetLeft(hero, photoLeft);
-                    Canvas.SetTop(hero, photoTop);
+                    hero.Margin = margin;
                 };
                 idleTimer.Start();
             };

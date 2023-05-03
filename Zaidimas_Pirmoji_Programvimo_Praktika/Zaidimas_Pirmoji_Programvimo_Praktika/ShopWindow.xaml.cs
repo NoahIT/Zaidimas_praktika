@@ -38,7 +38,16 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
 
             if (selectedItem != null && selectedItem.Price <= PlayingModel.Money)
             {
-                PlayingModel.Inventory.Add(selectedItem);
+                if (PlayingModel.Inventory != null)
+                {
+                    PlayingModel.Inventory.Add(selectedItem);
+                }
+                else
+                {
+                    PlayingModel.Inventory = new List<Item>();
+                    PlayingModel.Inventory.Add(selectedItem);
+                }
+
                 PlayingModel.Money -= selectedItem.Price;
                 lblError.Content = "";
             }

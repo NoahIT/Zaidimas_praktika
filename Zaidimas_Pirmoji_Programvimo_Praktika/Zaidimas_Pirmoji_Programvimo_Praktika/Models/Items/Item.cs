@@ -28,7 +28,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models.Items
         public string Name { get; }
         public string Description { get; }
         [JsonIgnore]
-        public BitmapImage Image { get; }
+        public BitmapImage Image { get; set; }
         public decimal Price { get; }
         public int Mana { get; }
 

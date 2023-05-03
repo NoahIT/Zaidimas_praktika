@@ -18,7 +18,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
                 100,
                 100,
                 null,
-                1,
+                2,
                 1,
                 1,
                 0
@@ -29,12 +29,12 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
         {
             return new Entity(
                 "2lvl",
-                new BitmapImage(new Uri($"Recourses\\Images\\Ninja\\Idle.gif", UriKind.Relative)),
+                new BitmapImage(new Uri($"Recourses\\Images\\2lvl\\Idle.gif", UriKind.Relative)),
                 20,
                 100,
                 100,
                 null,
-                1,
+                3,
                 1,
                 1,
                 0
@@ -45,12 +45,12 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
         {
             return new Entity(
                 "3lvl",
-                new BitmapImage(new Uri($"Recourses\\Images\\Ninja\\Idle.gif", UriKind.Relative)),
+                new BitmapImage(new Uri($"Recourses\\Images\\3lvl\\Idle.gif", UriKind.Relative)),
                 30,
                 100,
                 100,
                 null,
-                1,
+                4,
                 1,
                 1,
                 0
@@ -61,12 +61,12 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
         {
             return new Entity(
                 "4lvl",
-                new BitmapImage(new Uri($"Recourses\\Images\\Ninja\\Idle.gif", UriKind.Relative)),
+                new BitmapImage(new Uri($"Recourses\\Images\\4lvl\\Idle.gif", UriKind.Relative)),
                 40,
                 100,
                 100,
                 null,
-                1,
+                5,
                 1,
                 1,
                 0
@@ -77,12 +77,12 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
         {
             return new Entity(
                 "5lvl",
-                new BitmapImage(new Uri($"Recourses\\Images\\Ninja\\Idle.gif", UriKind.Relative)),
+                new BitmapImage(new Uri($"Recourses\\Images\\5lvl\\Idle.gif", UriKind.Relative)),
                 50,
                 200,
                 100,
                 null,
-                1,
+                6,
                 1,
                 1,
                 0

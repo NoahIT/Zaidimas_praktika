@@ -41,510 +41,6 @@
             </Image.RenderTransform>
         </Image>
 
-        <Button x:Name="btnLevel1" 
-                Content="1" 
-                HorizontalAlignment="Left" 
-                Height="34" 
-                VerticalAlignment="Top" 
-                Width="41" 
-                FontSize="25"
-                Foreground="White"
-                FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="167,311,0,0"
-                BorderBrush="Purple" Click="btnLevel1_Click">
-
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="100"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF3A075F" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
-        <Button x:Name="btnLevel2" 
-                Content="2" 
-                HorizontalAlignment="Left" 
-                Height="35" 
-                VerticalAlignment="Top" 
-                Width="40" 
-                FontSize="25"
-                Foreground="White"
-                FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="206,274,0,0"
-                BorderBrush="Purple">
-
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="100"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF382D5F" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
-        <Button x:Name="btnLevel3" 
-                Content="3" 
-                HorizontalAlignment="Left" 
-                Height="35" 
-                VerticalAlignment="Top" 
-                Width="40" 
-                FontSize="25"
-                Foreground="White"
-                FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="226,221,0,0"
-                BorderBrush="Purple">
-
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="100"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF382D5F" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
-        <Button x:Name="btnLevel4" 
-                Content="4" 
-                HorizontalAlignment="Left" 
-                Height="35" 
-                VerticalAlignment="Top" 
-                Width="40" 
-                FontSize="25"
-                Foreground="White"
-                FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="206,168,0,0"
-                BorderBrush="Purple">
-
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="100"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF382D5F" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
-        <Button x:Name="btnLevel5" 
-                Content="5" 
-                HorizontalAlignment="Left" 
-                Height="34" 
-                VerticalAlignment="Top" 
-                Width="40" 
-                FontSize="25"
-                Foreground="White"
-                FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="206,119,0,0"
-                BorderBrush="Purple">
-
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="100"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF382D5F" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
-        <Button x:Name="btnLevel6" 
-                Content="6" 
-                HorizontalAlignment="Left" 
-                Height="36" 
-                VerticalAlignment="Top" 
-                Width="40" 
-                FontSize="25" 
-                Foreground="White"
-                FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" 
-                Margin="246,83,0,0" 
-                RenderTransformOrigin="-0.195,-0.221"
-                BorderBrush="Purple">
-
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="100"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF382D5F" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
-        <Button x:Name="btnLevel7" 
-                Content="7" 
-                HorizontalAlignment="Left" 
-                Height="35" 
-                VerticalAlignment="Top" 
-                Width="40" 
-                FontSize="25"
-                Foreground="White"
-                FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="303,76,0,0"
-                BorderBrush="Purple">
-
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="100"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF382D5F" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
-        <Button x:Name="btnLevel8" 
-                Content="8" 
-                HorizontalAlignment="Left" 
-                Height="35" 
-                VerticalAlignment="Top" 
-                Width="41" 
-                FontSize="25"
-                Foreground="White"
-                FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="354,91,0,0"
-                BorderBrush="Purple">
-
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="100"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF382D5F" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
-        <Button x:Name="btnLevel9" 
-                Content="9" 
-                HorizontalAlignment="Center" 
-                Height="35" 
-                VerticalAlignment="Top" 
-                Width="42" 
-                FontSize="25"
-                Foreground="White"
-                FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="0,139,0,0"
-                BorderBrush="Purple">
-
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="100"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF382D5F" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
-        <Button x:Name="btnLevel10" 
-                Content="10" 
-                HorizontalAlignment="Center" 
-                Height="57" 
-                VerticalAlignment="Center" 
-                Width="64" 
-                FontSize="25"
-                Foreground="White"
-                FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold"
-                BorderBrush="Black"
-                BorderThickness="2,9">
-
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="100"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0.331"/>
-                    <GradientStop Color="#FF9822DE" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
-        <Button x:Name="btnLevel11" 
-                Content="11" 
-                HorizontalAlignment="Left" 
-                Height="36" 
-                VerticalAlignment="Top" 
-                Width="41" 
-                FontSize="25" 
-                Foreground="White"
-                FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="358,262,0,0"
-                BorderBrush="Purple">
-
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="100"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF382D5F" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
-        <Button x:Name="btnLevel12" 
-                Content="12" 
-                HorizontalAlignment="Left" 
-                Height="34" 
-                VerticalAlignment="Top" 
-                Width="41" 
-                FontSize="25"
-                Foreground="White"
-                FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="367,319,0,0"
-                BorderBrush="Purple">
-
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="100"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF382D5F" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
-        <Button x:Name="btnLevel13" 
-                Content="13" 
-                HorizontalAlignment="Left" 
-                Height="34" 
-                VerticalAlignment="Top" 
-                Width="42" 
-                FontSize="25" 
-                Foreground="White"
-                FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="416,345,0,0"
-                BorderBrush="Purple">
-
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="100"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF382D5F" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
-        <Button x:Name="btnLevel14" 
-                Content="14" 
-                HorizontalAlignment="Left" 
-                Height="36" 
-                VerticalAlignment="Top" 
-                Width="42" 
-                FontSize="25"
-                Foreground="White"
-                FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="484,333,0,0"
-                BorderBrush="Purple">
-
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="100"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF382D5F" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
-        <Button x:Name="btnLevel15" 
-                Content="15" 
-                HorizontalAlignment="Left" 
-                Height="35" 
-                VerticalAlignment="Top" 
-                Width="41" 
-                FontSize="25"
-                Foreground="White"
-                FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="521,278,0,0"
-                BorderBrush="Purple">
-
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="100"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF382D5F" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
-        <Button x:Name="btnLevel16" 
-                Content="16" 
-                HorizontalAlignment="Left" 
-                Height="35" 
-                VerticalAlignment="Top" 
-                Width="42" 
-                FontSize="25"
-                Foreground="White"
-                FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="520,225,0,0"
-                BorderBrush="Purple">
-
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="100"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF382D5F" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
-        <Button x:Name="btnLevel18" 
-                Content="18" 
-                HorizontalAlignment="Left" 
-                Height="34" 
-                VerticalAlignment="Top" 
-                Width="41" 
-                FontSize="25"
-                Foreground="White"
-                FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="557,134,0,0"
-                BorderBrush="Purple">
-
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="100"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF382D5F" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
-        <Button x:Name="btnLevel17" 
-                Content="17" 
-                HorizontalAlignment="Left" 
-                Height="35" 
-                VerticalAlignment="Top" 
-                Width="41" 
-                FontSize="25"
-                Foreground="White"
-                FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="520,168,0,0"
-                BorderBrush="Purple">
-
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="100"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF382D5F" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
-        <Button x:Name="btnLevel19" 
-                Content="19" 
-                HorizontalAlignment="Left" 
-                Height="35" 
-                VerticalAlignment="Top" 
-                Width="41" 
-                FontSize="25" 
-                Foreground="White"
-                FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="613,124,0,0"
-                BorderBrush="Purple">
-
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="100"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FF382D5F" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
-        <Button x:Name="btnLevel20" 
-                Content="20" 
-                HorizontalAlignment="Left" 
-                Height="56" 
-                VerticalAlignment="Top" 
-                Width="60" 
-                FontSize="25"
-                Foreground="White"
-                FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Margin="659,143,0,0"
-                BorderBrush="Black"
-                BorderThickness="2,9">
-
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="100"/>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0.314"/>
-                    <GradientStop Color="#FF881FC7" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
         <Rectangle HorizontalAlignment="Left" 
                    Height="54" 
                    Stroke="Black" 
@@ -588,7 +84,7 @@
         <Label x:Name="lblMana" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="Mana :" HorizontalAlignment="Left" Height="23" Margin="645,264,0,0" VerticalAlignment="Top" Width="119"/>
         <ProgressBar x:Name="prgExp" Panel.ZIndex="4" FontFamily="Bahnschrift SemiBold" HorizontalAlignment="Left" Height="18" Margin="658,374,0,0" VerticalAlignment="Top" Width="94" Foreground="Green" />
         <Label x:Name="lblLvl" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="1lvl" HorizontalAlignment="Left" Margin="691,339,0,0" VerticalAlignment="Top" Height="24" Width="39"/>
-        <Label x:Name="valueofPrg" FontFamily="Bahnschrift SemiBold" Panel.ZIndex="5" Foreground="Black" Content="1" HorizontalAlignment="Left" Margin="694,372,0,0" VerticalAlignment="Top" Height="22" Width="22"/>
+        <Label x:Name="valueofPrg" FontFamily="Bahnschrift SemiBold" Panel.ZIndex="5" Foreground="Black" Content="1" HorizontalAlignment="Left" Margin="694,372,0,0" VerticalAlignment="Top" Height="22" Width="36"/>
         <Label Content="Level :" FontFamily="Bahnschrift SemiBold" Foreground="White" HorizontalAlignment="Left" Margin="645,337,0,0" VerticalAlignment="Top" Height="24" Width="48"/>
         <Label x:Name="lblMoney" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="Money :" HorizontalAlignment="Left" Margin="645,240,0,0" VerticalAlignment="Top" Height="24" Width="119"/>
 
@@ -663,6 +159,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <Ellipse x:Name="elpCurr" HorizontalAlignment="Left" Height="44" Margin="160,307,0,0" Stroke="#FFAD8E8E" VerticalAlignment="Top" Width="56" Fill="#FFE0E0E0" Opacity="0.765"/>
         <Button x:Name="btnSave" 
             Content="Save" 
             HorizontalAlignment="Left" 
@@ -682,6 +179,490 @@
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
                     <GradientStop Color="#FF3E2C3E" Offset="0.691"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnLevel1" 
+                Content="1" 
+                HorizontalAlignment="Left" 
+                Height="34" 
+                VerticalAlignment="Top" 
+                Width="41" 
+                FontSize="25"
+                Foreground="White"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold" Margin="167,311,0,0"
+                BorderBrush="Purple" Click="btnLevel1_Click">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF3A075F" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnLevel2" 
+                Content="2" 
+                HorizontalAlignment="Left" 
+                Height="35" 
+                VerticalAlignment="Top" 
+                Width="40" 
+                FontSize="25"
+                Foreground="Black"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold" Margin="206,274,0,0"
+                BorderBrush="Purple" Click="btnLevel2_Click" IsEnabled="False">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF382D5F" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnLevel3" 
+                Content="3" 
+                HorizontalAlignment="Left" 
+                Height="35" 
+                VerticalAlignment="Top" 
+                Width="40" 
+                FontSize="25"
+                Foreground="Black"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold" Margin="226,221,0,0"
+                BorderBrush="Purple" Click="btnLevel3_Click" IsEnabled="False">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF382D5F" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnLevel4" 
+                Content="4" 
+                HorizontalAlignment="Left" 
+                Height="35" 
+                VerticalAlignment="Top" 
+                Width="40" 
+                FontSize="25"
+                Foreground="Black"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold" Margin="206,168,0,0"
+                BorderBrush="Purple" Click="btnLevel4_Click" IsEnabled="False">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF382D5F" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnLevel5" 
+                Content="5" 
+                HorizontalAlignment="Left" 
+                Height="34" 
+                VerticalAlignment="Top" 
+                Width="40" 
+                FontSize="25"
+                Foreground="Black"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold" Margin="206,119,0,0"
+                BorderBrush="Purple" Click="btnLevel5_Click" IsEnabled="False">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF382D5F" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnLevel6" 
+                Content="6" 
+                HorizontalAlignment="Left" 
+                Height="36" 
+                VerticalAlignment="Top" 
+                Width="40" 
+                FontSize="25" 
+                Foreground="Black"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold" 
+                Margin="246,83,0,0" 
+                RenderTransformOrigin="-0.195,-0.221"
+                BorderBrush="Purple" IsEnabled="False">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF382D5F" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnLevel7" 
+                Content="7" 
+                HorizontalAlignment="Left" 
+                Height="35" 
+                VerticalAlignment="Top" 
+                Width="40" 
+                FontSize="25"
+                Foreground="Black"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold" Margin="303,76,0,0"
+                BorderBrush="Purple" IsEnabled="False">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF382D5F" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnLevel8" 
+                Content="8" 
+                HorizontalAlignment="Left" 
+                Height="35" 
+                VerticalAlignment="Top" 
+                Width="41" 
+                FontSize="25"
+                Foreground="Black"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold" Margin="354,91,0,0"
+                BorderBrush="Purple" IsEnabled="False">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF382D5F" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnLevel9" 
+                Content="9" 
+                HorizontalAlignment="Center" 
+                Height="35" 
+                VerticalAlignment="Top" 
+                Width="42" 
+                FontSize="25"
+                Foreground="Black"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold" Margin="0,139,0,0"
+                BorderBrush="Purple" IsEnabled="False">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF382D5F" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnLevel10" 
+                Content="10" 
+                HorizontalAlignment="Center" 
+                Height="57" 
+                VerticalAlignment="Center" 
+                Width="64" 
+                FontSize="25"
+                Foreground="Black"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold"
+                BorderBrush="Black"
+                BorderThickness="2,9" IsEnabled="False">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0.331"/>
+                    <GradientStop Color="#FF9822DE" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnLevel11" 
+                Content="11" 
+                HorizontalAlignment="Left" 
+                Height="36" 
+                VerticalAlignment="Top" 
+                Width="41" 
+                FontSize="25" 
+                Foreground="Black"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold" Margin="358,262,0,0"
+                BorderBrush="Purple" IsEnabled="False">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF382D5F" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnLevel12" 
+                Content="12" 
+                HorizontalAlignment="Left" 
+                Height="34" 
+                VerticalAlignment="Top" 
+                Width="41" 
+                FontSize="25"
+                Foreground="Black"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold" Margin="367,319,0,0"
+                BorderBrush="Purple" IsEnabled="False">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF382D5F" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnLevel13" 
+                Content="13" 
+                HorizontalAlignment="Left" 
+                Height="34" 
+                VerticalAlignment="Top" 
+                Width="42" 
+                FontSize="25" 
+                Foreground="Black"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold" Margin="416,345,0,0"
+                BorderBrush="Purple" IsEnabled="False">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF382D5F" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnLevel14" 
+                Content="14" 
+                HorizontalAlignment="Left" 
+                Height="36" 
+                VerticalAlignment="Top" 
+                Width="42" 
+                FontSize="25"
+                Foreground="Black"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold" Margin="484,333,0,0"
+                BorderBrush="Purple" IsEnabled="False">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF382D5F" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnLevel15" 
+                Content="15" 
+                HorizontalAlignment="Left" 
+                Height="35" 
+                VerticalAlignment="Top" 
+                Width="41" 
+                FontSize="25"
+                Foreground="Black"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold" Margin="521,278,0,0"
+                BorderBrush="Purple" IsEnabled="False">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF382D5F" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnLevel16" 
+                Content="16" 
+                HorizontalAlignment="Left" 
+                Height="35" 
+                VerticalAlignment="Top" 
+                Width="42" 
+                FontSize="25"
+                Foreground="Black"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold" Margin="520,225,0,0"
+                BorderBrush="Purple" IsEnabled="False">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF382D5F" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnLevel18" 
+                Content="18" 
+                HorizontalAlignment="Left" 
+                Height="34" 
+                VerticalAlignment="Top" 
+                Width="41" 
+                FontSize="25"
+                Foreground="Black"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold" Margin="557,134,0,0"
+                BorderBrush="Purple" IsEnabled="False">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF382D5F" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnLevel17" 
+                Content="17" 
+                HorizontalAlignment="Left" 
+                Height="35" 
+                VerticalAlignment="Top" 
+                Width="41" 
+                FontSize="25"
+                Foreground="Black"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold" Margin="520,168,0,0"
+                BorderBrush="Purple" IsEnabled="False">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF382D5F" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnLevel19" 
+                Content="19" 
+                HorizontalAlignment="Left" 
+                Height="35" 
+                VerticalAlignment="Top" 
+                Width="41" 
+                FontSize="25" 
+                Foreground="Black"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold" Margin="613,124,0,0"
+                BorderBrush="Purple" IsEnabled="False">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF382D5F" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnLevel20" 
+                Content="20" 
+                HorizontalAlignment="Left" 
+                Height="56" 
+                VerticalAlignment="Top" 
+                Width="60" 
+                FontSize="25"
+                Foreground="Black"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold" Margin="659,143,0,0"
+                BorderBrush="Black"
+                BorderThickness="2,9" IsEnabled="False">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0.314"/>
+                    <GradientStop Color="#FF881FC7" Offset="1"/>
                 </LinearGradientBrush>
             </Button.Background>
         </Button>

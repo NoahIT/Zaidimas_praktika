@@ -31,22 +31,37 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
         {
             InitializeComponent();
 
-            if (prgExp.Value > 100)
+            if (PlayingModel.Experience > 100)
             {
                 PlayingModel.PlayerLvl++;
-                PlayingModel.Experience = 0;
+                PlayingModel.Experience -= 100;
+                prgExp.Value = PlayingModel.Experience;
+                valueofPrg.Content = PlayingModel.Experience;
+                lblLvl.Content = PlayingModel.PlayerLvl + " lvl";
             }
 
             ImageBehavior.SetAnimatedSource(hero, PlayingModel.Image);
             lblAttack.Content = "Attack Damage: " + PlayingModel.DefaultAttack;
-            lblHealth.Content = "Hero`s Health" + PlayingModel.DefaultHealth;
-            lblLvl.Content = PlayingModel.PlayerLvl + " lvl";
+            lblHealth.Content = "Hero`s Health: " + PlayingModel.DefaultHealth;
             lblMana.Content = "Hero`s Mana: " + PlayingModel.DefaultMana;
-            valueofPrg.Content = PlayingModel.Experience;
-            prgExp.Value = PlayingModel.Experience;
             lblMoney.Content = "Money: " + PlayingModel.Money + " Coins";
 
-            
+            List<Button> buttoms = new List<Button>
+            {
+                btnLevel1, btnLevel2, btnLevel3, btnLevel4, btnLevel5, btnLevel6, btnLevel7, btnLevel8, btnLevel9, btnLevel10,
+                btnLevel11, btnLevel12, btnLevel13, btnLevel14, btnLevel15, btnLevel16, btnLevel17, btnLevel18, btnLevel19, btnLevel20
+            };
+
+            foreach (var item in buttoms)
+            {
+                item.IsEnabled = true;
+                if (item.Name == "btnLevel" + PlayingModel.RoundLvl.ToString())
+                {
+                    item.IsEnabled = true;
+                    elpCurr.Margin = item.Margin;
+                    break;
+                }
+            }
         }
 
         private void btnInventory_Click(object sender, RoutedEventArgs e)
@@ -112,6 +127,38 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
             string json = JsonConvert.SerializeObject(x, Newtonsoft.Json.Formatting.Indented);
 
             File.WriteAllText("saves.json", json);
+        }
+
+        private void btnLevel2_Click(object sender, RoutedEventArgs e)
+        {
+            var x = new Enemies();
+            x.SetToPlayingModel(x.GetSecondLvl());
+
+            OpenFightingWindow();
+        }
+
+        private void btnLevel3_Click(object sender, RoutedEventArgs e)
+        {
+            var x = new Enemies();
+            x.SetToPlayingModel(x.GetThirdLvl());
+
+            OpenFightingWindow();
+        }
+
+        private void btnLevel4_Click(object sender, RoutedEventArgs e)
+        {
+            var x = new Enemies();
+            x.SetToPlayingModel(x.GetFourLvl());
+
+            OpenFightingWindow();
+        }
+
+        private void btnLevel5_Click(object sender, RoutedEventArgs e)
+        {
+            var x = new Enemies();
+            x.SetToPlayingModel(x.GetFiveLvl());
+
+            OpenFightingWindow();
         }
     }
 }

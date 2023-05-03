@@ -71,7 +71,7 @@
                 Grid.Row="3" 
                 VerticalAlignment="Center" 
                 Width="150" 
-                Click="btnStart_Click" 
+                Click="btnQuit_Click" 
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
                 FontWeight="Bold"

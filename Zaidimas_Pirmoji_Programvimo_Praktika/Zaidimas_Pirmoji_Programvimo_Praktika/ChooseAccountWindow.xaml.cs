@@ -39,7 +39,10 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
 
             BitmapImage image = new BitmapImage(new Uri(entity.ImagePath, UriKind.RelativeOrAbsolute));
 
-            entity.Inventory.Select(x => x.Image == new BitmapImage(new Uri(x.ImagePath, UriKind.RelativeOrAbsolute)));
+            if (entity.Inventory != null)
+            {
+                entity.Inventory.ForEach(x => x.Image = new BitmapImage(new Uri(x.ImagePath, UriKind.RelativeOrAbsolute)));
+            }
 
             entity.Image = image;
 
@@ -51,5 +54,6 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
 
             this.Close();
         }
+
     }
 }

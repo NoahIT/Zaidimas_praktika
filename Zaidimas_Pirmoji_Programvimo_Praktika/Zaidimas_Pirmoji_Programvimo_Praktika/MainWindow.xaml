@@ -28,13 +28,19 @@
         <TextBlock Name="tbWelcome_Player"
                    Text="WELCOME"
                    FontSize="20"
-                   Foreground="LightCyan"
                    Grid.Column="1"
                    Grid.Row="1"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    FontFamily="Bahnschrift SemiBold" 
-                   FontWeight="Bold"/>
+                   FontWeight="Bold">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFF1C3B"/>
+                    <GradientStop Color="#FFFFB022" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
 
         <Button x:Name="btnStart" 
                 Grid.Column="1" 
@@ -44,8 +50,7 @@
                 Grid.Row="2" 
                 VerticalAlignment="Center" 
                 Width="150" 
-                Click="btnStart_Click"  
-                Foreground="White"
+                Click="btnStart_Click"
                 FontFamily="Bahnschrift SemiBold" 
                 FontWeight="Bold"
                 BorderBrush="Black">
@@ -55,6 +60,12 @@
                     <Setter Property="CornerRadius" Value="15"/>
                 </Style>
             </Button.Resources>
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFCE153F"/>

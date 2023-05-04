@@ -30,13 +30,19 @@
         <TextBlock Name="tbChooseSave"
                    Text="CHOOSE SAVE"
                    FontSize="20"
-                   Foreground="LightCyan"
                    Grid.Column="1"
                    Grid.Row="1"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    FontFamily="Bahnschrift SemiBold" 
-                   FontWeight="Bold"/>
+                   FontWeight="Bold">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFF1C3B"/>
+                    <GradientStop Color="#FFFFB022" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
 
         <Button x:Name="btnAccountSelect1" 
                 Grid.Column="1" 

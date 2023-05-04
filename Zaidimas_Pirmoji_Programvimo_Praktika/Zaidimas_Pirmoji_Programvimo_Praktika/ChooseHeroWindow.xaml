@@ -18,7 +18,7 @@
 
         <Image Margin="-406,-661,-444,0" Grid.RowSpan="2" Source="/gameLobbyBackground2.gif" Stretch="Fill"/>
 
-        <Image x:Name="hero1" gif:ImageBehavior.AnimatedSource="Recourses\Images\Ninja\Idle.gif" RenderTransformOrigin="0.5,0.5" Height="336" Width="362" Canvas.Left="-18" Canvas.Top="-2" Margin="373,89,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.RowSpan="2">
+        <Image x:Name="hero1" gif:ImageBehavior.AnimatedSource="Recourses\Images\Ninja\Idle.gif" RenderTransformOrigin="0.5,0.5" Height="278" Width="329" Canvas.Left="-18" Canvas.Top="-2" Margin="380,130,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.RowSpan="2">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -29,7 +29,7 @@
             </Image.RenderTransform>
         </Image>
 
-        <Image x:Name="hero2" gif:ImageBehavior.AnimatedSource="Recourses\Images\Hero2\Idle.gif" RenderTransformOrigin="0.575,0.55" Height="337" Width="363" Canvas.Left="-18" Canvas.Top="-2" Margin="48,62,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.RowSpan="2">
+        <Image x:Name="hero2" gif:ImageBehavior.AnimatedSource="Recourses\Images\Hero2\Idle.gif" RenderTransformOrigin="0.575,0.55" Height="337" Width="364" Canvas.Left="-18" Canvas.Top="-2" Margin="213,78,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.RowSpan="2">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -40,7 +40,7 @@
             </Image.RenderTransform>
         </Image>
 
-        <Image x:Name="hero3" gif:ImageBehavior.AnimatedSource="Recourses\Images\Hero3\Idle.gif" RenderTransformOrigin="0.5,0.5" Height="336" Width="362" Canvas.Left="-18" Canvas.Top="-2" Margin="226,73,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.RowSpan="2">
+        <Image x:Name="hero3" gif:ImageBehavior.AnimatedSource="Recourses\Images\Hero3\Idle.gif" RenderTransformOrigin="0.5,0.5" Height="336" Width="362" Canvas.Left="-18" Canvas.Top="-2" Margin="74,88,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.RowSpan="2">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -54,7 +54,7 @@
         <Button x:Name="btnNinja" 
                 Content="Ninja" 
                 HorizontalAlignment="Left" 
-                Margin="519,107,0,0" 
+                Margin="496,109,0,0" 
                 VerticalAlignment="Top" 
                 FontSize="15" 
                 Grid.Row="1" 
@@ -80,12 +80,12 @@
 
         <Button x:Name="btnVampire" 
                 Content="Vampire" 
-                HorizontalAlignment="Center" 
+                HorizontalAlignment="Left" 
                 VerticalAlignment="Top" 
                 FontSize="15"  
                 Grid.Row="1" 
                 Width="88" 
-                Margin="0,96,0,0" 
+                Margin="202,109,0,0" 
                 Click="btnVampire_Click"
                 FontFamily="Bahnschrift SemiBold"
                 Foreground="White"
@@ -108,7 +108,7 @@
         <Button x:Name="btnGirl" 
                 Content="Girl" 
                 HorizontalAlignment="Left" 
-                Margin="186,85,0,0" 
+                Margin="356,109,0,0" 
                 VerticalAlignment="Top" 
                 FontSize="15" 
                 Grid.Row="1"
@@ -131,6 +131,97 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+
+        <Rectangle HorizontalAlignment="Left" 
+            Height="79" 
+            Stroke="Black" 
+            VerticalAlignment="Top" 
+            Width="80" 
+            Margin="206,56,0,0"
+            RadiusX="10"
+            RadiusY="20">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB90D5C" Offset="0.993"/>
+                    <GradientStop Color="#FF3A2424" Offset="0.248"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label x:Name="lblAttack" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="Attack : 50" HorizontalAlignment="Left" Height="24" Margin="224,74,0,0" VerticalAlignment="Top" Width="62" FontSize="10"/>
+        <Label x:Name="lblAttack_Copy" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="STATS" HorizontalAlignment="Left" Height="24" Margin="224,56,0,0" VerticalAlignment="Top" Width="44"/>
+        <Label x:Name="lblAttack_Copy1" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="Health: 100" HorizontalAlignment="Left" Height="24" Margin="224,94,0,0" VerticalAlignment="Top" Width="62" FontSize="10"/>
+        <Label x:Name="lblAttack_Copy2" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="Mana: 120&#xD;&#xA;" HorizontalAlignment="Left" Height="24" Margin="224,114,0,0" VerticalAlignment="Top" Width="62" FontSize="10"/>
+        <Image Source="/Recourses/Images/HUD/HUD (3).png" Margin="210,68,574,176" Panel.ZIndex="3"/>
+        <Image Source="/Recourses/Images/HUD/HUD (1).png" Margin="214,107,574,135" Panel.ZIndex="3" RenderTransformOrigin="0.37,0.381"/>
+        <Image Source="/Recourses/Images/HUD/HUD (2).png" Margin="210,88,572,154" Panel.ZIndex="3"/>
+        <Rectangle HorizontalAlignment="Left" 
+            Height="79" 
+            Stroke="Black" 
+            VerticalAlignment="Top" 
+            Width="81" 
+            Margin="341,55,0,0"
+            RadiusX="10"
+            RadiusY="20">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB90D5C" Offset="0.993"/>
+                    <GradientStop Color="#FF3A2424" Offset="0.248"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label x:Name="lblAttack_Copy3" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="Attack : 50" HorizontalAlignment="Left" Height="24" Margin="360,74,0,0" VerticalAlignment="Top" Width="62" FontSize="10"/>
+        <Label x:Name="lblAttack_Copy4" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="STATS" HorizontalAlignment="Left" Height="24" Margin="359,55,0,0" VerticalAlignment="Top" Width="43"/>
+        <Label x:Name="lblAttack_Copy5" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="Health: 120" HorizontalAlignment="Left" Height="24" Margin="360,93,0,0" VerticalAlignment="Top" Width="62" FontSize="10"/>
+        <Label x:Name="lblAttack_Copy6" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="Mana: 100" HorizontalAlignment="Left" Height="24" Margin="360,113,0,0" VerticalAlignment="Top" Width="62" FontSize="10"/>
+        <Image Source="/Recourses/Images/HUD/HUD (3).png" Margin="345,68,439,174" Panel.ZIndex="3"/>
+        <Image Source="/Recourses/Images/HUD/HUD (1).png" Margin="350,106,438,134" Panel.ZIndex="3" RenderTransformOrigin="0.37,0.381"/>
+        <Image Source="/Recourses/Images/HUD/HUD (2).png" Margin="344,87,438,153" Panel.ZIndex="3"/>
+        <Rectangle HorizontalAlignment="Left" 
+            Height="79" 
+            Stroke="Black" 
+            VerticalAlignment="Top" 
+            Width="81" 
+            Margin="487,55,0,0"
+            RadiusX="10"
+            RadiusY="20">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB90D5C" Offset="0.993"/>
+                    <GradientStop Color="#FF3A2424" Offset="0.241"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label x:Name="lblAttack_Copy7" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="Attack : 60" HorizontalAlignment="Left" Height="24" Margin="506,73,0,0" VerticalAlignment="Top" Width="62" FontSize="10"/>
+        <Label x:Name="lblAttack_Copy8" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="STATS" HorizontalAlignment="Left" Height="24" Margin="506,55,0,0" VerticalAlignment="Top" Width="53"/>
+        <Label x:Name="lblAttack_Copy9" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="Health: 100" HorizontalAlignment="Left" Height="24" Margin="506,93,0,0" VerticalAlignment="Top" Width="62" FontSize="10"/>
+        <Label x:Name="lblAttack_Copy10" FontFamily="Bahnschrift SemiBold" Foreground="White" Content="Mana: 100" HorizontalAlignment="Left" Height="24" Margin="506,112,0,0" VerticalAlignment="Top" Width="62" FontSize="10"/>
+        <Image Source="/Recourses/Images/HUD/HUD (3).png" Margin="492,67,292,177" Panel.ZIndex="3"/>
+        <Image Source="/Recourses/Images/HUD/HUD (1).png" Margin="496,105,292,137" Panel.ZIndex="3" RenderTransformOrigin="0.37,0.381"/>
+        <Image Source="/Recourses/Images/HUD/HUD (2).png" Margin="491,87,291,155" Panel.ZIndex="3"/>
+        <Label x:Name="lblAttack_Copy11" FontFamily="Bahnschrift SemiBold" Content="CHOOSE" HorizontalAlignment="Left" Height="47" VerticalAlignment="Top" Width="144" FontSize="30" RenderTransformOrigin="-1.861,-1.042" Margin="641,133,0,0">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFF1C3B"/>
+                    <GradientStop Color="#FFFFB022" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label x:Name="lblAttack_Copy12" FontFamily="Bahnschrift SemiBold" Content="HERO" HorizontalAlignment="Left" Height="51" Margin="660,197,0,0" VerticalAlignment="Top" Width="106" FontSize="30" RenderTransformOrigin="0.349,0.471">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFF1C3B"/>
+                    <GradientStop Color="#FFFFB022" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label x:Name="lblAttack_Copy13" FontFamily="Bahnschrift SemiBold" Content="YOUR" HorizontalAlignment="Left" Height="51" Margin="660,166,0,0" VerticalAlignment="Top" Width="106" FontSize="30" RenderTransformOrigin="0.349,0.236">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFF1C3B"/>
+                    <GradientStop Color="#FFFFB022" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
 
     </Grid>
 </Window>

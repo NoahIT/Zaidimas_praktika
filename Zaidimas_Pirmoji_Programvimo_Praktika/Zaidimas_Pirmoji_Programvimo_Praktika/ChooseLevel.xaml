@@ -1,0 +1,122 @@
+﻿<Window x:Class="Zaidimas_Pirmoji_Programvimo_Praktika.ChooseLevel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Zaidimas_Pirmoji_Programvimo_Praktika"
+        mc:Ignorable="d"
+        Title="ChooseLevel" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Image Source="/gameLobbyBackground2.gif" Stretch="Fill" Grid.ColumnSpan="3" Grid.RowSpan="5"/>
+
+        <Button x:Name="btnEasy" 
+                Grid.Column="1" 
+                Content="Easy" 
+                HorizontalAlignment="Center" 
+                Height="30" 
+                Grid.Row="2" 
+                VerticalAlignment="Center" 
+                Width="150" 
+                Foreground="White"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold" Click="btnAccountSelect1_Click"
+                BorderBrush="Black">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF3DCE15"/>
+                    <GradientStop Color="#FF005A3B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="btnMedium" 
+                Grid.Column="1" 
+                Content="Medium" 
+                HorizontalAlignment="Center" 
+                Height="30" 
+                Grid.Row="3" 
+                VerticalAlignment="Center" 
+                Width="150"  
+                Foreground="White"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold"
+                BorderBrush="Black" Click="btnLoadGame_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF1FF00"/>
+                    <GradientStop Color="#FFB9340C" Offset="0.914"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="btnHard" 
+                Grid.Column="1" 
+                Content="Hard" 
+                HorizontalAlignment="Center" 
+                Height="30" 
+                Grid.Row="4" 
+                VerticalAlignment="Center" 
+                Width="150"  
+                Foreground="White"
+                FontFamily="Bahnschrift SemiBold" 
+                FontWeight="Bold"
+                BorderBrush="Black" Click="btnLoadGame_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF9063D"/>
+                    <GradientStop Color="#FF1F0303" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <TextBlock Name="tbChooseSave"
+                   Text="CHOOSE LEVEL"
+                   FontSize="20"
+                   Grid.Column="1"
+                   Grid.Row="1"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontFamily="Bahnschrift SemiBold" 
+                   FontWeight="Bold">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFF1C3B"/>
+                    <GradientStop Color="#FFFFB022" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+
+    </Grid>
+</Window>

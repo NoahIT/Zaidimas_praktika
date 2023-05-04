@@ -25,5 +25,6 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
         public static int HowManyTimesDied { get; set; } = 0;
         public static int HowManyAttackDid { get; set; } = 0;
         public static List<Item> Equiped { get; set; } = new List<Item>();
+        public static int HardLvl { get; set; }
     }
 }

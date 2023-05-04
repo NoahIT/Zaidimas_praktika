@@ -41,6 +41,11 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
 
             ImageBehavior.SetAnimatedSource(enemyHero, EnemiesPlayingModel.Image);
             ImageBehavior.SetAnimatedSource(mainHero, PlayingModel.Image);
+
+            EnemyHp.Maximum = EnemiesPlayingModel.DefaultHealth;
+            HeroHp.Maximum = PlayingModel.DefaultHealth;
+            HeroMana.Maximum = PlayingModel.DefaultMana;
+
             EnemyHp.Value = EnemiesPlayingModel.DefaultHealth;
             HeroHp.Value = PlayingModel.DefaultHealth;
             HeroMana.Value = PlayingModel.DefaultMana;
@@ -129,9 +134,13 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
                     BitmapImage die = new BitmapImage(new Uri($"Recourses\\Images\\{EnemiesPlayingModel.Name}\\dead.gif", UriKind.Relative));
                     ImageBehavior.SetAnimatedSource(enemyHero, die);
 
-                    PlayingModel.RoundLvl = EnemiesPlayingModel.RoundLvl;
-                    PlayingModel.Experience += 25;
-                    PlayingModel.Money += 150;
+                    if (PlayingModel.RoundLvl <= EnemiesPlayingModel.RoundLvl)
+                    {
+                         PlayingModel.RoundLvl = EnemiesPlayingModel.RoundLvl;
+                    }
+                    Random rand = new Random();
+                    PlayingModel.Experience += rand.Next(25,56);
+                    PlayingModel.Money += rand.Next(150,350);
 
                     if (WpfMessageBox.Show("JUS LAIMEJOTE","Pranesimas", MessageBoxButton.OK) == MessageBoxResult.OK )
                     {
@@ -184,12 +193,12 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
 
         private void btnAttack_Click(object sender, RoutedEventArgs e)
         {
-            Attack(PlayingModel.DefaultAttack*1, 35, "Jums neuztenka manos");
+            Attack(35, PlayingModel.DefaultAttack*1, "Jums neuztenka manos");
         }
 
         private void btnAttack2_Click(object sender, RoutedEventArgs e)
         {
-            Attack(PlayingModel.DefaultAttack*2, 70, "Jums neuztenka manos");
+            Attack(70, PlayingModel.DefaultAttack * 2, "Jums neuztenka manos");
         }
 
         private async void btnHeal_Click(object sender, RoutedEventArgs e)
@@ -273,60 +282,65 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
 
         private async void Attack(int mana, int damage,string messageBox)
         {
-            if (HeroMana.Value >= mana)
+            if (!PlayingModel.IsAttacking)
             {
-                PlayingModel.HowManyAttackDid++;
-                DispatcherTimer timer1 = new DispatcherTimer();
-                timer1.Interval = TimeSpan.FromSeconds(3);
-                DispatcherTimer timer2 = new DispatcherTimer();
-                timer2.Interval = TimeSpan.FromSeconds(3);
-                DispatcherTimer timer3 = new DispatcherTimer();
-                timer3.Interval = TimeSpan.FromSeconds(3);
-
-                timer1.Tick += (s, a) =>
+                if (HeroMana.Value >= mana)
                 {
-                    timer1.Stop();
+                    PlayingModel.IsAttacking = true;
+                    PlayingModel.HowManyAttackDid++;
+                    DispatcherTimer timer1 = new DispatcherTimer();
+                    timer1.Interval = TimeSpan.FromSeconds(1);
+                    DispatcherTimer timer2 = new DispatcherTimer();
+                    timer2.Interval = TimeSpan.FromSeconds(3);
+                    DispatcherTimer timer3 = new DispatcherTimer();
+                    timer3.Interval = TimeSpan.FromSeconds(3);
 
-                    EController.AttackHero(damage, EnemyHp, mainHero, PlayingModel.Name);
-                    HeroMana.Value -= mana;
-                    EController.Hurt(enemyHero, EnemiesPlayingModel.Name);
-
-
-                    if (EnemyHp.Value > 0)
-                    {
-                        timer2.Start();
-                    }
-                    else
+                    timer1.Tick += (s, a) =>
                     {
                         timer1.Stop();
-                    }
-                };
 
-                timer2.Tick += (s2, a2) =>
-                {
-                    timer2.Stop();
-                    if (EnemyHp.Value > 0)
+                        EController.AttackHero(damage, EnemyHp, mainHero, PlayingModel.Name);
+                        HeroMana.Value -= mana;
+                        EController.Hurt(enemyHero, EnemiesPlayingModel.Name);
+
+
+                        if (EnemyHp.Value > 0)
+                        {
+                            timer2.Start();
+                        }
+                        else
+                        {
+                            timer1.Stop();
+                        }
+                    };
+
+                    timer2.Tick += (s2, a2) =>
                     {
-                         EController.AttackEnemy(EnemiesPlayingModel.DefaultAttack, HeroHp, enemyHero, EnemiesPlayingModel.Name);
-                    }
-                    else
+                        timer2.Stop();
+                        if (EnemyHp.Value > 0)
+                        {
+                            EController.AttackEnemy(EnemiesPlayingModel.DefaultAttack, HeroHp, enemyHero, EnemiesPlayingModel.Name);
+                        }
+                        else
+                        {
+                            timer1.Stop();
+                            timer3.Start();
+                        }
+                        PlayingModel.IsAttacking = false;
+                    };
+
+                    timer3.Tick += (s, a) =>
                     {
-                        timer1.Stop();
-                        timer3.Start();
-                    }
-                };
+                        BitmapImage die = new BitmapImage(new Uri($"Recourses\\Images\\{EnemiesPlayingModel.Name}\\dead.gif", UriKind.Relative));
+                        ImageBehavior.SetAnimatedSource(enemyHero, die);
+                    };
 
-                timer3.Tick += (s, a) =>
+                    timer1.Start();
+                }
+                else
                 {
-                    BitmapImage die = new BitmapImage(new Uri($"Recourses\\Images\\{EnemiesPlayingModel.Name}\\dead.gif", UriKind.Relative));
-                    ImageBehavior.SetAnimatedSource(enemyHero, die);
-                };
-
-                timer1.Start();
-            }
-            else
-            {
-                await ShowMessageBoxAsync(messageBox);
+                    await ShowMessageBoxAsync(messageBox);
+                }
             }
         }
     }

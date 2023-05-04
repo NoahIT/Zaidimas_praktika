@@ -14,9 +14,9 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
             return new Entity(
                 "1lvl",
                 new BitmapImage(new Uri($"Recourses\\Images\\1lvl\\Idle.gif", UriKind.Relative)),
-                30,
-                100,
-                100,
+                30 * PlayingModel.HardLvl,
+                100 * PlayingModel.HardLvl,
+                100 * PlayingModel.HardLvl,
                 null,
                 null,
                 2,
@@ -32,9 +32,9 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
             return new Entity(
                 "2lvl",
                 new BitmapImage(new Uri($"Recourses\\Images\\2lvl\\Idle.gif", UriKind.Relative)),
-                40,
-                100,
-                100,
+                40 * PlayingModel.HardLvl,
+                100* PlayingModel.HardLvl,
+                100 * PlayingModel.HardLvl,
                 null,
                 null,
                 3,
@@ -50,9 +50,9 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
             return new Entity(
                 "3lvl",
                 new BitmapImage(new Uri($"Recourses\\Images\\3lvl\\Idle.gif", UriKind.Relative)),
-                40,
-                120,
-                100,
+                40 * PlayingModel.HardLvl,
+                120 * PlayingModel.HardLvl,
+                100 * PlayingModel.HardLvl,
                 null,
                 null,
                 4,
@@ -68,9 +68,9 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
             return new Entity(
                 "4lvl",
                 new BitmapImage(new Uri($"Recourses\\Images\\4lvl\\Idle.gif", UriKind.Relative)),
-                50,
-                150,
-                100,
+                50 * PlayingModel.HardLvl,
+                150 * PlayingModel.HardLvl,
+                100 * PlayingModel.HardLvl,
                 null,
                 null,
                 5,
@@ -86,9 +86,9 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
             return new Entity(
                 "5lvl",
                 new BitmapImage(new Uri($"Recourses\\Images\\5lvl\\Idle.gif", UriKind.Relative)),
-                60,
-                150,
-                100,
+                60 * PlayingModel.HardLvl,
+                150 * PlayingModel.HardLvl,
+                100 * PlayingModel.HardLvl,
                 null,
                 null,
                 6,
@@ -104,9 +104,9 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
             return new Entity(
                 "6lvl",
                 new BitmapImage(new Uri($"Recourses\\Images\\6lvl\\Idle.gif", UriKind.Relative)),
-                60,
-                180,
-                100,
+                60 * PlayingModel.HardLvl,
+                180 * PlayingModel.HardLvl,
+                100 * PlayingModel.HardLvl,
                 null,
                 null,
                 7,
@@ -122,9 +122,9 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
             return new Entity(
                 "7lvl",
                 new BitmapImage(new Uri($"Recourses\\Images\\7lvl\\Idle.gif", UriKind.Relative)),
-                70,
-                150,
-                100,
+                70 * PlayingModel.HardLvl,
+                150 * PlayingModel.HardLvl,
+                100 * PlayingModel.HardLvl,
                 null,
                 null,
                 8,
@@ -140,9 +140,9 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
             return new Entity(
                 "8lvl",
                 new BitmapImage(new Uri($"Recourses\\Images\\8lvl\\Idle.gif", UriKind.Relative)),
-                70,
-                200,
-                100,
+                70 * PlayingModel.HardLvl,
+                200 * PlayingModel.HardLvl,
+                100 * PlayingModel.HardLvl,
                 null,
                 null,
                 9,
@@ -158,9 +158,9 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
             return new Entity(
                 "9lvl",
                 new BitmapImage(new Uri($"Recourses\\Images\\9lvl\\Idle.gif", UriKind.Relative)),
-                80,
-                200,
-                100,
+                80 * PlayingModel.HardLvl,
+                200 * PlayingModel.HardLvl,
+                100 * PlayingModel.HardLvl,
                 null,
                 null,
                 10,
@@ -175,9 +175,9 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
             return new Entity(
                 "10lvl",
                 new BitmapImage(new Uri($"Recourses\\Images\\10lvl\\Idle.gif", UriKind.Relative)),
-                20,
-                1000,
-                100,
+                20 * PlayingModel.HardLvl,
+                1000 * PlayingModel.HardLvl,
+                100 * PlayingModel.HardLvl,
                 null,
                 null,
                 11,
@@ -193,9 +193,9 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
             return new Entity(
                 "11lvl",
                 new BitmapImage(new Uri($"Recourses\\Images\\11lvl\\Idle.gif", UriKind.Relative)),
-                90,
-                300,
-                100,
+                90 * PlayingModel.HardLvl,
+                300 * PlayingModel.HardLvl,
+                100 * PlayingModel.HardLvl,
                 null,
                 null,
                 12,
@@ -211,9 +211,9 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
             return new Entity(
                 "12lvl",
                 new BitmapImage(new Uri($"Recourses\\Images\\12lvl\\Idle.gif", UriKind.Relative)),
-                90,
-                320,
-                100,
+                90 * PlayingModel.HardLvl,
+                320 * PlayingModel.HardLvl,
+                100 * PlayingModel.HardLvl,
                 null,
                 null,
                 13,
@@ -229,9 +229,9 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
             return new Entity(
                 "13lvl",
                 new BitmapImage(new Uri($"Recourses\\Images\\13lvl\\Idle.gif", UriKind.Relative)),
-                100,
-                480,
-                100,
+                100 * PlayingModel.HardLvl,
+                480 * PlayingModel.HardLvl,
+                100 * PlayingModel.HardLvl,
                 null,
                 null,
                 14,
@@ -247,9 +247,9 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
             return new Entity(
                 "14lvl",
                 new BitmapImage(new Uri($"Recourses\\Images\\14lvl\\Idle.gif", UriKind.Relative)),
-                110,
-                500,
-                100,
+                110 * PlayingModel.HardLvl,
+                500 * PlayingModel.HardLvl,
+                100 * PlayingModel.HardLvl,
                 null,
                 null,
                 15,
@@ -265,9 +265,9 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
             return new Entity(
                 "15lvl",
                 new BitmapImage(new Uri($"Recourses\\Images\\15lvl\\Idle.gif", UriKind.Relative)),
-                110,
-                700,
-                100,
+                110 * PlayingModel.HardLvl,
+                700 * PlayingModel.HardLvl,
+                100 * PlayingModel.HardLvl,
                 null,
                 null,
                 16,
@@ -283,18 +283,90 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
             return new Entity(
                 "16lvl",
                 new BitmapImage(new Uri($"Recourses\\Images\\16lvl\\Idle.gif", UriKind.Relative)),
-                100,
-                1000,
-                100,
+                100 * PlayingModel.HardLvl,
+                1000 * PlayingModel.HardLvl,
+                100 * PlayingModel.HardLvl,
                 null,
                 null,
-                16,
+                17,
                 1,
                 1,
                 0,
                 null
                 );
         }
+
+        public Entity Get17Lvl()
+        {
+            return new Entity(
+                "17lvl",
+                new BitmapImage(new Uri($"Recourses\\Images\\17lvl\\Idle.gif", UriKind.Relative)),
+                110 * PlayingModel.HardLvl,
+                1000 * PlayingModel.HardLvl,
+                110 * PlayingModel.HardLvl,
+                null,
+                null,
+                18,
+                1,
+                1,
+                0,
+                null
+                );
+        }
+
+        public Entity Get18Lvl()
+        {
+            return new Entity(
+                "18lvl",
+                new BitmapImage(new Uri($"Recourses\\Images\\18lvl\\Idle.gif", UriKind.Relative)),
+                100 * PlayingModel.HardLvl,
+                1000 * PlayingModel.HardLvl,
+                100 * PlayingModel.HardLvl,
+                null,
+                null,
+                19,
+                1,
+                1,
+                0,
+                null
+                );
+        }
+
+        public Entity Get19Lvl()
+        {
+            return new Entity(
+                "19lvl",
+                new BitmapImage(new Uri($"Recourses\\Images\\19lvl\\Idle.gif", UriKind.Relative)),
+                100 * PlayingModel.HardLvl,
+                1000 * PlayingModel.HardLvl,
+                100 * PlayingModel.HardLvl,
+                null,
+                null,
+                20,
+                1,
+                1,
+                0,
+                null
+                );
+        }
+        public Entity Get20Lvl()
+        {
+            return new Entity(
+                "20lvl",
+                new BitmapImage(new Uri($"Recourses\\Images\\20lvl\\Idle.gif", UriKind.Relative)),
+                100 * PlayingModel.HardLvl,
+                1000 * PlayingModel.HardLvl,
+                100 * PlayingModel.HardLvl,
+                null,
+                null,
+                20,
+                1,
+                1,
+                0,
+                null
+                );
+        }
+
         public void SetToPlayingModel(Entity h)
         {
             EnemiesPlayingModel.Name = h.Name;

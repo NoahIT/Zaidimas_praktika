@@ -579,7 +579,7 @@
                 Foreground="Black"
                 FontFamily="Bahnschrift SemiBold" 
                 FontWeight="Bold" Margin="557,134,0,0"
-                BorderBrush="Purple" IsEnabled="False">
+                BorderBrush="Purple" IsEnabled="False" Click="btnLevel18_Click">
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -603,7 +603,7 @@
                 Foreground="Black"
                 FontFamily="Bahnschrift SemiBold" 
                 FontWeight="Bold" Margin="520,168,0,0"
-                BorderBrush="Purple" IsEnabled="False">
+                BorderBrush="Purple" IsEnabled="False" Click="btnLevel17_Click">
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -627,7 +627,7 @@
                 Foreground="Black"
                 FontFamily="Bahnschrift SemiBold" 
                 FontWeight="Bold" Margin="613,124,0,0"
-                BorderBrush="Purple" IsEnabled="False">
+                BorderBrush="Purple" IsEnabled="False" Click="btnLevel19_Click">
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -652,7 +652,7 @@
                 FontFamily="Bahnschrift SemiBold" 
                 FontWeight="Bold" Margin="659,143,0,0"
                 BorderBrush="Black"
-                BorderThickness="2,9" IsEnabled="False">
+                BorderThickness="2,9" IsEnabled="False" Click="btnLevel20_Click">
 
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">

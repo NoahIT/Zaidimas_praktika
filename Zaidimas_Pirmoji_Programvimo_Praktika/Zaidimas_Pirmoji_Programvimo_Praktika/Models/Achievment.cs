@@ -11,11 +11,11 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
 {
     public class Achievment
     {
-        public Achievment(BitmapImage image, string name)
+        public Achievment(BitmapImage image, string name, string imagePath)
         {
             Image = image;
             Name = name;
-            ImagePath = Image.UriSource.ToString();
+            ImagePath = imagePath;
         }
         [JsonIgnore]
         public BitmapImage Image { get; set; }

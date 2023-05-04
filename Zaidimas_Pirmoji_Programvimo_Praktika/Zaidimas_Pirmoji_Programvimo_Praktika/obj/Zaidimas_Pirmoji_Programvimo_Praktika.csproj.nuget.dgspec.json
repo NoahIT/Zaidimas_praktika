@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Zaidimas_praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika.csproj": {}
+    "C:\\Users\\vania\\OneDrive\\Рабочий стол\\Zaidimas_praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika.csproj": {}
   },
   "projects": {
-    "D:\\Zaidimas_praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika.csproj": {
+    "C:\\Users\\vania\\OneDrive\\Рабочий стол\\Zaidimas_praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Zaidimas_praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika.csproj",
+        "projectUniqueName": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\Zaidimas_praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika.csproj",
         "projectName": "Zaidimas_Pirmoji_Programvimo_Praktika",
-        "projectPath": "D:\\Zaidimas_praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika.csproj",
-        "packagesPath": "C:\\Users\\rasci\\.nuget\\packages\\",
-        "outputPath": "D:\\Zaidimas_praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\obj\\",
+        "projectPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\Zaidimas_praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika.csproj",
+        "packagesPath": "C:\\Users\\vania\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vania\\OneDrive\\Рабочий стол\\Zaidimas_praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\Zaidimas_Pirmoji_Programvimo_Praktika\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\rasci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vania\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

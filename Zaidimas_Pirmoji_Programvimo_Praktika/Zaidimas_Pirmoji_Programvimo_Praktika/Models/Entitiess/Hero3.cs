@@ -13,9 +13,9 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
         public Hero3() : base(
                             "Hero3",
                             new BitmapImage(new Uri($"Recourses\\Images\\Hero3\\Idle.gif", UriKind.Relative)),
-                            50,
+                            45,
                             100,
-                            120,
+                            270,
                             null,
                             new List<Achievment>(),
                             1,
@@ -43,6 +43,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
             PlayingModel.HowManyAttackDid = h.HowManyAttackDid;
             PlayingModel.HowManyTimesDied = h.HowManyTimesDied;
             PlayingModel.Equiped = h.Equiped;
+            PlayingModel.HardLvl = h.HardLvl;
         }
     }
 }

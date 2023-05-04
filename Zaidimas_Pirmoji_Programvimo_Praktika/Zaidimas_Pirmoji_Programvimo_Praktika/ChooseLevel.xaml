@@ -34,7 +34,7 @@
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
                 FontWeight="Bold"
-                BorderBrush="Black">
+                BorderBrush="Black" Click="btnEasy_Click">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -60,7 +60,7 @@
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
                 FontWeight="Bold"
-                BorderBrush="Black">
+                BorderBrush="Black" Click="btnMedium_Click">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -86,7 +86,7 @@
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
                 FontWeight="Bold"
-                BorderBrush="Black">
+                BorderBrush="Black" Click="btnHard_Click">
 
             <Button.Resources>
                 <Style TargetType="Border">

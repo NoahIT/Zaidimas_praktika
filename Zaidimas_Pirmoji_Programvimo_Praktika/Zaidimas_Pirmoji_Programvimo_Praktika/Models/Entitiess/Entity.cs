@@ -38,6 +38,39 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
             Experience = experience;
             Money = money;
             Equiped = equiped;
+            HardLvl = 1;
+        }
+
+
+        [JsonConstructor]
+        public Entity(
+                string name,
+                BitmapImage image,
+                int defaultAttack,
+                int defaultHealth,
+                int defaultMana,
+                List<Item> inventory,
+                List<Achievment> achievments,
+                int roundLvl,
+                int playerLvl,
+                int experience,
+                decimal money,
+                List<Item> equiped,
+                int hardLvl)
+        {
+            Name = name;
+            Image = image;
+            DefaultAttack = defaultAttack;
+            DefaultHealth = defaultHealth;
+            DefaultMana = defaultMana;
+            Inventory = inventory;
+            Achievments = achievments;
+            RoundLvl = roundLvl;
+            PlayerLvl = playerLvl;
+            Experience = experience;
+            Money = money;
+            Equiped = equiped;
+            HardLvl = hardLvl;
         }
 
         public string Name { get; }
@@ -56,6 +89,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
         public int HowManyTimesDied { get; set; } = 0;
         public int HowManyAttackDid { get; set; } = 0;
         public List<Item> Equiped { get; set; }
+        public int HardLvl { get; set; }
 
         public void SetToPlayingModel(Entity h)
         {
@@ -72,6 +106,8 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
             PlayingModel.Money = h.Money;
             PlayingModel.HowManyAttackDid = h.HowManyAttackDid;
             PlayingModel.HowManyTimesDied = h.HowManyTimesDied;
+            PlayingModel.Equiped = h.Equiped;
+            PlayingModel.HardLvl = h.HardLvl;
         }
     }
 }

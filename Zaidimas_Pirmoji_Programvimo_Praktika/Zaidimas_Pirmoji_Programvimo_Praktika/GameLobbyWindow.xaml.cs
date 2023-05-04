@@ -116,7 +116,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
             element2.Visibility = Visibility.Visible;
 
             var timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(2);
+            timer.Interval = TimeSpan.FromSeconds(4);
             timer.Tick += (sender, args) =>
             {
                 element1.Visibility = Visibility.Hidden;
@@ -188,7 +188,8 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
                 PlayingModel.PlayerLvl,
                 PlayingModel.Experience,
                 PlayingModel.Money,
-                PlayingModel.Equiped);
+                PlayingModel.Equiped,
+                PlayingModel.HardLvl);
 
             x.ImagePath = $"Recourses/Images/{PlayingModel.Name}/Idle.gif";
 
@@ -313,6 +314,34 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
         {
             var x = new Enemies();
             x.SetToPlayingModel(x.Get16Lvl());
+
+            OpenFightingWindow();
+        }
+        private void btnLevel17_Click(object sender, RoutedEventArgs e)
+        {
+            var x = new Enemies();
+            x.SetToPlayingModel(x.Get17Lvl());
+
+            OpenFightingWindow();
+        }
+        private void btnLevel18_Click(object sender, RoutedEventArgs e)
+        {
+            var x = new Enemies();
+            x.SetToPlayingModel(x.Get18Lvl());
+
+            OpenFightingWindow();
+        }
+        private void btnLevel19_Click(object sender, RoutedEventArgs e)
+        {
+            var x = new Enemies();
+            x.SetToPlayingModel(x.Get19Lvl());
+
+            OpenFightingWindow();
+        }
+        private void btnLevel20_Click(object sender, RoutedEventArgs e)
+        {
+            var x = new Enemies();
+            x.SetToPlayingModel(x.Get20Lvl());
 
             OpenFightingWindow();
         }

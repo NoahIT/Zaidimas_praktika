@@ -51,7 +51,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
 
         public void openWindow()
         {
-            var page = new GameLobbyWindow();
+            var page = new ChooseLevel();
 
             page.Show();
 

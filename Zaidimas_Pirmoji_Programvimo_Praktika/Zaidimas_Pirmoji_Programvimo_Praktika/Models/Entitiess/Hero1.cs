@@ -14,9 +14,9 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
         public Hero1() : base(
                             "Ninja",
                             new BitmapImage(new Uri($"Recourses\\Images\\Ninja\\Idle.gif", UriKind.Relative)),
-                            60,
+                            35,
                             100,
-                            100,
+                            250,
                             null,
                             new List<Achievment>(),
                             1,
@@ -44,6 +44,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
             PlayingModel.HowManyAttackDid = h.HowManyAttackDid;
             PlayingModel.HowManyTimesDied = h.HowManyTimesDied;
             PlayingModel.Equiped = h.Equiped;
+            PlayingModel.HardLvl = h.HardLvl;
         }
     }
 }

@@ -1,54 +1,32 @@
 {
   "Name": "Ninja",
-  "DefaultAttack": 88,
+  "DefaultAttack": 185,
   "DefaultHealth": 300,
-  "DefaultMana": 300,
-  "Inventory": [
+  "DefaultMana": 310,
+  "Inventory": [],
+  "Achievments": [
     {
-      "PlusMana": 25,
-      "Name": "boots",
-      "Description": "desc",
-      "Price": 300.0,
-      "ImagePath": "Recourses\\Images\\Items\\boots1.png",
-      "IsEquiping": true,
-      "IsEquiped": false
+      "ImagePath": "Recourses\\Images\\achievments\\3.png",
+      "Name": "First Boss"
     }
   ],
-  "Achievments": [],
-  "RoundLvl": 16,
-  "PlayerLvl": 1,
-  "Experience": 50,
-  "Money": 999.0,
+  "RoundLvl": 20,
+  "PlayerLvl": 2,
+  "Experience": 1,
+  "Money": 120.0,
   "ImagePath": "Recourses/Images/Ninja/Idle.gif",
   "HowManyTimesDied": 0,
   "HowManyAttackDid": 0,
   "Equiped": [
     {
-      "PlusMana": 15,
+      "PlusMana": 60,
       "Name": "boots",
       "Description": "desc",
       "Price": 200.0,
       "ImagePath": "Recourses\\Images\\Items\\boots.png",
       "IsEquiping": true,
       "IsEquiped": true
-    },
-    {
-      "PlusHealth": 20,
-      "Name": "armor",
-      "Description": "desc",
-      "Price": 350.0,
-      "ImagePath": "Recourses\\Images\\Items\\armor.png",
-      "IsEquiping": true,
-      "IsEquiped": true
-    },
-    {
-      "PlusAttack": 30,
-      "Name": "sword",
-      "Description": "desc",
-      "Price": 250.0,
-      "ImagePath": "Recourses\\Images\\Items\\sword.png",
-      "IsEquiping": true,
-      "IsEquiped": true
     }
-  ]
+  ],
+  "HardLvl": 1
 }

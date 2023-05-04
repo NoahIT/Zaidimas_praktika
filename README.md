@@ -51,5 +51,12 @@ Paspaudę `LOAD LAST GAME` arba `START NEW GAME` mygtukus pamatysime naują lang
 Žaidimas prasideda kai pradedam pirmąjį lygį, pačio žaidimo ekrane yra keli mygtukai bei funkcijos. Kairiajame šone matome lentelę `ITEMS` kurioje bus atvaizduojami mūsų daiktai įgyti žaidžiant žaidimą. Apatiniame dešiniajame ampe matome galimas atakas bei gyvybių ir man'os mygtukus `(mana- reikalinga norint atakuoti arba atgaut gyvybes)`. Pašiam dešiniajame šone matome kitą lentelę kurioje konkrečiai yra rodoma kiek ir kokiu kvalifikacijų žaidimo metu įgyti daiktai mums davė.
 ![5](https://user-images.githubusercontent.com/78691849/236309229-6d106356-693b-46fe-9fec-167805d02dce.png)
 
+Štai kaip atrodo žaidėjų inventorius. Kaip ir `GAME LOBBY` matome viršuje mygtukus kur galime patekti, tačiau papildomai dabar galima užsidėti arba nusiimti norimus daiktus žaidime. ![6](https://user-images.githubusercontent.com/78691849/236309918-7dcc20e4-f58d-4eee-951b-73fc4312b10c.png)
+
+Štai kaip atrodo žaidėjų parduotuvė. Čia galima pirkti norimus daiktus.
+![7](https://user-images.githubusercontent.com/78691849/236310375-acb752e2-f223-408b-82e0-bff1346642f6.png)
+
+Pasiekimų langas, atvaizduos pasiekimus užsidibtus žaidime.![8](https://user-images.githubusercontent.com/78691849/236310666-fa506494-43dc-4cac-a996-0ecc774154d5.png)
+
 
 

@@ -33,7 +33,7 @@
                 Width="150" 
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
-                FontWeight="Bold" Click="btnAccountSelect1_Click"
+                FontWeight="Bold"
                 BorderBrush="Black">
 
             <Button.Resources>
@@ -60,7 +60,7 @@
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
                 FontWeight="Bold"
-                BorderBrush="Black" Click="btnLoadGame_Click">
+                BorderBrush="Black">
 
             <Button.Resources>
                 <Style TargetType="Border">
@@ -86,7 +86,7 @@
                 Foreground="White"
                 FontFamily="Bahnschrift SemiBold" 
                 FontWeight="Bold"
-                BorderBrush="Black" Click="btnLoadGame_Click">
+                BorderBrush="Black">
 
             <Button.Resources>
                 <Style TargetType="Border">

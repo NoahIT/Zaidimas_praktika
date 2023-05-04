@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\vania\OneDrive\Рабочий стол\Zaidimas_praktika\Zaidimas_Pirmoji_Programvimo_Praktika\Zaidimas_Pirmoji_Programvimo_Praktika\obj\Debug\
+D:\Zaidimas_praktika\Zaidimas_Pirmoji_Programvimo_Praktika\Zaidimas_Pirmoji_Programvimo_Praktika\obj\Debug\
 Zaidimas_Pirmoji_Programvimo_Praktika
 none
 false
 DEBUG;TRACE
-C:\Users\vania\OneDrive\Рабочий стол\Zaidimas_praktika\Zaidimas_Pirmoji_Programvimo_Praktika\Zaidimas_Pirmoji_Programvimo_Praktika\App.xaml
-9-306570651
+D:\Zaidimas_praktika\Zaidimas_Pirmoji_Programvimo_Praktika\Zaidimas_Pirmoji_Programvimo_Praktika\App.xaml
+10-1159386254
 
-331156652512
-216-755769070
-AchievmentWindow.xaml;ChooseAccountWindow.xaml;ChooseHeroWindow.xaml;FirstLvlWindow.xaml;GameLobbyWindow.xaml;InventoryWindow.xaml;MainWindow.xaml;NotificationWindow.xaml;ShopWindow.xaml;
+341596287527
+216-428375080
+AchievmentWindow.xaml;ChooseAccountWindow.xaml;ChooseHeroWindow.xaml;ChooseLevel.xaml;FirstLvlWindow.xaml;GameLobbyWindow.xaml;InventoryWindow.xaml;MainWindow.xaml;NotificationWindow.xaml;ShopWindow.xaml;
 
-False
+True
 

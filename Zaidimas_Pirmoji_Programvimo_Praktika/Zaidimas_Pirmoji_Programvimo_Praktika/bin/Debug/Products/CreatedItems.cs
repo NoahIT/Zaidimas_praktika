@@ -14,17 +14,17 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Products
     {
         public List<Item> GetAllItems()
         {
-            var item1 = new DamageItem("Damage Potion", "desc", new BitmapImage(new Uri("Recourses\\Images\\Items\\damage.png", UriKind.Relative)), 100, 30, 25);
-            var item2 = new HealthItem("Health Potion", "desc", new BitmapImage(new Uri("Recourses\\Images\\Items\\health.png", UriKind.Relative)), 20, 20, 50);
-            var item3 = new ManaItem("Mana Potion", "desc", new BitmapImage(new Uri("Recourses\\Images\\Items\\mana.png", UriKind.Relative)), 100, 10, 45);
+            var item1 = new DamageItem("Damage Potion", "desc", new BitmapImage(new Uri("Recourses\\Images\\Items\\damage.png", UriKind.Relative)), 100, 20, 50);
+            var item2 = new HealthItem("Health Potion", "desc", new BitmapImage(new Uri("Recourses\\Images\\Items\\health.png", UriKind.Relative)), 50, 20, 50);
+            var item3 = new ManaItem("Mana Potion", "desc", new BitmapImage(new Uri("Recourses\\Images\\Items\\mana.png", UriKind.Relative)), 50, 0, 40);
 
-            var boots1 = new Boots("boots", "desc", new BitmapImage(new Uri("Recourses\\Images\\Items\\boots.png", UriKind.Relative)), 200, 15);
-            var sword1 = new Sword("sword", "desc", new BitmapImage(new Uri("Recourses\\Images\\Items\\sword.png", UriKind.Relative)), 250, 30);
-            var armor1 = new Armor("armor", "desc", new BitmapImage(new Uri("Recourses\\Images\\Items\\armor.png", UriKind.Relative)), 350, 20);
+            var boots1 = new Boots("boots", "desc", new BitmapImage(new Uri("Recourses\\Images\\Items\\boots.png", UriKind.Relative)), 200, 60);
+            var sword1 = new Sword("sword", "desc", new BitmapImage(new Uri("Recourses\\Images\\Items\\sword.png", UriKind.Relative)), 250, 50);
+            var armor1 = new Armor("armor", "desc", new BitmapImage(new Uri("Recourses\\Images\\Items\\armor.png", UriKind.Relative)), 350, 150);
 
-            var boots2 = new Boots("boots", "desc", new BitmapImage(new Uri("Recourses\\Images\\Items\\boots1.png", UriKind.Relative)), 300, 25);
-            var sword2 = new Sword("sword", "desc", new BitmapImage(new Uri("Recourses\\Images\\Items\\sword1.png", UriKind.Relative)), 350, 50);
-            var armor2= new Armor("armor", "desc", new BitmapImage(new Uri("Recourses\\Images\\Items\\armor1.png", UriKind.Relative)), 450, 45);
+            var boots2 = new Boots("boots", "desc", new BitmapImage(new Uri("Recourses\\Images\\Items\\boots1.png", UriKind.Relative)), 300, 200);
+            var sword2 = new Sword("sword", "desc", new BitmapImage(new Uri("Recourses\\Images\\Items\\sword1.png", UriKind.Relative)), 350, 150);
+            var armor2= new Armor("armor", "desc", new BitmapImage(new Uri("Recourses\\Images\\Items\\armor1.png", UriKind.Relative)), 450, 200);
 
             item1.ImagePath = "Recourses\\Images\\Items\\damage.png";
             item2.ImagePath = "Recourses\\Images\\Items\\health.png";

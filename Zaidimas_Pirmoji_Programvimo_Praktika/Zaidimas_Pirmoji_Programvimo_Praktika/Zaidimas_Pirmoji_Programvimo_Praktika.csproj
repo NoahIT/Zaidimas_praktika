@@ -93,6 +93,9 @@
     <Compile Include="ChooseHeroWindow.xaml.cs">
       <DependentUpon>ChooseHeroWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ChooseLevel.xaml.cs">
+      <DependentUpon>ChooseLevel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AchievmentController.cs" />
     <Compile Include="GameLobbyWindow.xaml.cs">
       <DependentUpon>GameLobbyWindow.xaml</DependentUpon>
@@ -126,6 +129,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ChooseHeroWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChooseLevel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

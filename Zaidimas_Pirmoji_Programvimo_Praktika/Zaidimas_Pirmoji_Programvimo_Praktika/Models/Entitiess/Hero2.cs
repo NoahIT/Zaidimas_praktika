@@ -13,8 +13,8 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
         public Hero2() : base(
                             "Hero2",
                             new BitmapImage(new Uri($"Recourses\\Images\\Hero2\\Idle.gif", UriKind.Relative)),
-                            58,
-                            100,
+                            50,
+                            120,
                             100,
                             null,
                             new List<Achievment>(),

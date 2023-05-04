@@ -23,7 +23,8 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
             int roundLvl,
             int playerLvl,
             int experience,
-            decimal money)
+            decimal money,
+            List<Item> equiped)
         {
             Name = name;
             Image = image;
@@ -36,6 +37,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
             PlayerLvl = playerLvl;
             Experience = experience;
             Money = money;
+            Equiped = equiped;
         }
 
         public string Name { get; }
@@ -53,6 +55,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
         public string ImagePath { get; set; }
         public int HowManyTimesDied { get; set; } = 0;
         public int HowManyAttackDid { get; set; } = 0;
+        public List<Item> Equiped { get; set; }
 
         public void SetToPlayingModel(Entity h)
         {

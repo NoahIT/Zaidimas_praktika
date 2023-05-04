@@ -187,7 +187,8 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
                 PlayingModel.RoundLvl,
                 PlayingModel.PlayerLvl,
                 PlayingModel.Experience,
-                PlayingModel.Money);
+                PlayingModel.Money,
+                PlayingModel.Equiped);
 
             x.ImagePath = $"Recourses/Images/{PlayingModel.Name}/Idle.gif";
 

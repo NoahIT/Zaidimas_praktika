@@ -16,13 +16,13 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models.Items
             string description,
             BitmapImage image,
             decimal price,
-            int mana = 0)
+            bool isEquiping)
         {
             Name = name;
             Description = description;
             Image = image;
             Price = price;
-            Mana = mana;
+            IsEquiping = isEquiping;
         }
 
         public string Name { get; }
@@ -30,8 +30,9 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models.Items
         [JsonIgnore]
         public BitmapImage Image { get; set; }
         public decimal Price { get; }
-        public int Mana { get; }
 
         public string ImagePath { get; set; }
+        public bool IsEquiping { get; set; }
+        public bool IsEquiped { get; set; }=false;
     }
 }

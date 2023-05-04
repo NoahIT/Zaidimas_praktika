@@ -1,37 +1,56 @@
 {
-  "Name": "Hero3",
+  "Name": "Ninja",
   "DefaultAttack": 58,
   "DefaultHealth": 100,
   "DefaultMana": 100,
-  "Inventory": [
-    {
-      "Health": 50,
-      "Name": "Health Potion",
-      "Description": "desc",
-      "Price": 20.0,
-      "Mana": 20,
-      "ImagePath": "Recourses\\Images\\Items\\health.png"
-    },
-    {
-      "Health": 50,
-      "Name": "Health Potion",
-      "Description": "desc",
-      "Price": 20.0,
-      "Mana": 20,
-      "ImagePath": "Recourses\\Images\\Items\\health.png"
-    },
-    {
-      "Health": 50,
-      "Name": "Health Potion",
-      "Description": "desc",
-      "Price": 20.0,
-      "Mana": 20,
-      "ImagePath": "Recourses\\Images\\Items\\health.png"
-    }
-  ],
+  "Inventory": [],
+  "Achievments": [],
   "RoundLvl": 16,
   "PlayerLvl": 1,
-  "Experience": 0,
-  "Money": 999.0,
-  "ImagePath": "Recourses/Images/Hero3/Idle.gif"
+  "Experience": 50,
+  "Money": 1479.0,
+  "ImagePath": "Recourses/Images/Ninja/Idle.gif",
+  "HowManyTimesDied": 0,
+  "HowManyAttackDid": 0,
+  "Equiped": [
+    {
+      "Mana": 30,
+      "Damage": 25,
+      "Name": "Damage Potion",
+      "Description": "desc",
+      "Price": 100.0,
+      "ImagePath": "Recourses\\Images\\Items\\damage.png",
+      "IsEquiping": false,
+      "IsEquiped": true
+    },
+    {
+      "Mana": 10,
+      "Regen": 45,
+      "Name": "Mana Potion",
+      "Description": "desc",
+      "Price": 100.0,
+      "ImagePath": "Recourses\\Images\\Items\\mana.png",
+      "IsEquiping": false,
+      "IsEquiped": true
+    },
+    {
+      "Mana": 20,
+      "Health": 50,
+      "Name": "Health Potion",
+      "Description": "desc",
+      "Price": 20.0,
+      "ImagePath": "Recourses\\Images\\Items\\health.png",
+      "IsEquiping": false,
+      "IsEquiped": true
+    },
+    {
+      "PlusMana": 15,
+      "Name": "boots",
+      "Description": "desc",
+      "Price": 200.0,
+      "ImagePath": "Recourses\\Images\\Items\\boots.png",
+      "IsEquiping": true,
+      "IsEquiped": true
+    }
+  ]
 }

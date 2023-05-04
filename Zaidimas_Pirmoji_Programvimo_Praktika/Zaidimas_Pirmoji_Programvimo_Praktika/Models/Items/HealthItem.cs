@@ -10,22 +10,11 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models.Items
 {
     public class HealthItem : Item
     {
-        public HealthItem(
-            string name,
-            string desc,
-            BitmapImage image,
-            decimal price,
-            int mana,
-            int health)
-                    :base(
-                         name,
-                         desc,
-                         image,
-                         price,
-                         mana)
+        public HealthItem(string name, string desc, BitmapImage image, decimal price, int mana, int health) : base(name, desc, image, price, false) 
         {
-            Health = health;
+            Mana = mana; Health = health; 
         }
+        public int Mana { get; }
 
         public int Health { get; set; } 
     }

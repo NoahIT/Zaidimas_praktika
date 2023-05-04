@@ -26,6 +26,7 @@ using ModernWpf.Controls;
 using System.Windows.Media;
 using Zaidimas_Pirmoji_Programvimo_Praktika.Products;
 using Windows.UI.Xaml.Controls.Primitives;
+using Zaidimas_Pirmoji_Programvimo_Praktika.Models.Items;
 
 namespace Zaidimas_Pirmoji_Programvimo_Praktika
 {
@@ -37,13 +38,31 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
         public FirstLvlWindow()
         {
             InitializeComponent();
+
             ImageBehavior.SetAnimatedSource(enemyHero, EnemiesPlayingModel.Image);
             ImageBehavior.SetAnimatedSource(mainHero, PlayingModel.Image);
             EnemyHp.Value = EnemiesPlayingModel.DefaultHealth;
             HeroHp.Value = PlayingModel.DefaultHealth;
             HeroMana.Value = PlayingModel.DefaultMana;
             EnemyMana.Value = EnemiesPlayingModel.DefaultMana;
+            
+            dtgEquipped.ItemsSource = PlayingModel.Equiped;
 
+            foreach (var item in PlayingModel.Equiped)
+            {
+                if (item is Sword sword)
+                {
+                    lblAttackPlus.Content = "Attack: +" + sword.PlusAttack;
+                }
+                if (item is Armor armor)
+                {
+                    lblHealthPlus.Content = "Health: +" + armor.PlusHealth;
+                }
+                if (item is Boots boots)
+                {
+                    lblManaPlus.Content = "Mana: +" + boots.PlusMana;
+                }
+            }
 
             DispatcherTimer timer1 = new DispatcherTimer();
             timer1.Interval = TimeSpan.FromSeconds(1);
@@ -165,21 +184,23 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
 
         private void btnAttack_Click(object sender, RoutedEventArgs e)
         {
-            Attack(20, 35, "Jums neuztenka manos");
+            Attack(PlayingModel.DefaultAttack*1, 35, "Jums neuztenka manos");
         }
 
         private void btnAttack2_Click(object sender, RoutedEventArgs e)
         {
-            Attack(40, 70, "Jums neuztenka manos");
+            Attack(PlayingModel.DefaultAttack*2, 70, "Jums neuztenka manos");
         }
 
         private async void btnHeal_Click(object sender, RoutedEventArgs e)
         {
-            if (PlayingModel.Inventory.FirstOrDefault(x => x.Name == "Health Potion") != null && HeroMana.Value >= 20)
+            if (PlayingModel.Equiped.FirstOrDefault(x => x.Name == "Health Potion") != null && HeroMana.Value >= 20)
             {
-                PlayingModel.Inventory.Remove(PlayingModel.Inventory.FirstOrDefault(x => x.Name == "Health Potion"));
+                PlayingModel.Equiped.Remove(PlayingModel.Equiped.FirstOrDefault(x => x.Name == "Health Potion"));
                 HeroHp.Value += (HeroHp.Value / 100 * 20);
                 HeroMana.Value -= 20;
+
+                dtgEquipped.Items.Refresh();
             }
             else
             {
@@ -196,11 +217,13 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
 
         private async void btnDamagePotion_Click(object sender, RoutedEventArgs e)
         {
-            if (PlayingModel.Inventory.FirstOrDefault(x => x.Name == "Damage Potion") != null && HeroMana.Value >= 50)
+            if (PlayingModel.Equiped.FirstOrDefault(x => x.Name == "Damage Potion") != null && HeroMana.Value >= 50)
             {
-                PlayingModel.Inventory.Remove(PlayingModel.Inventory.FirstOrDefault(x => x.Name == "Damage Potion"));
+                PlayingModel.Equiped.Remove(PlayingModel.Equiped.FirstOrDefault(x => x.Name == "Damage Potion"));
                 EnemyHp.Value -= (EnemyHp.Value / 100 * 30);
                 HeroMana.Value -= 50;
+
+                dtgEquipped.Items.Refresh();
             }
             else
             {
@@ -210,11 +233,14 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
 
         private async void btnMana_Click(object sender, RoutedEventArgs e)
         {
-            if (PlayingModel.Inventory.FirstOrDefault(x => x.Name == "Mana Potion") != null && HeroMana.Value >= 20)
+            if (PlayingModel.Equiped.FirstOrDefault(x => x.Name == "Mana Potion") != null && HeroMana.Value >= 20)
             {
-                PlayingModel.Inventory.Remove(PlayingModel.Inventory.FirstOrDefault(x => x.Name == "Mana Potion"));
+                var item = PlayingModel.Equiped.FirstOrDefault(x => x.Name == "Mana Potion");
+                PlayingModel.Equiped.Remove(item);
                 HeroMana.Value += (HeroMana.Value / 100 * 20);
                 HeroMana.Value -= 20;
+
+                dtgEquipped.Items.Refresh();
             }
             else
             {

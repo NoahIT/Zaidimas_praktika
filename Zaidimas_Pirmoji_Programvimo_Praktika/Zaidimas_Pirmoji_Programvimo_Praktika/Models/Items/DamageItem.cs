@@ -23,10 +23,12 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models.Items
                           desc,
                           image,
                           price,
-                          mana)
+                          false)
         {
+            Mana = mana;
             Damage = damage;
         }
+        public int Mana { get; }
 
         public int Damage { get; } 
     }

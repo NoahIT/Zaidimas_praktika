@@ -43,6 +43,14 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
             {
                 entity.Inventory.ForEach(x => x.Image = new BitmapImage(new Uri(x.ImagePath, UriKind.RelativeOrAbsolute)));
             }
+            if (entity.Achievments != null)
+            {
+                entity.Achievments.ForEach(x => x.Image = new BitmapImage(new Uri(x.ImagePath, UriKind.RelativeOrAbsolute)));
+            }
+            if (entity.Equiped != null)
+            {
+                entity.Equiped.ForEach(x => x.Image = new BitmapImage(new Uri(x.ImagePath, UriKind.RelativeOrAbsolute)));
+            }
 
             entity.Image = image;
 

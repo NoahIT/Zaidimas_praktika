@@ -9,22 +9,12 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models.Items
 {
     public class ManaItem : Item
     {
-        public ManaItem(
-            string name,
-            string desc,
-            BitmapImage image,
-            decimal price,
-            int mana,
-            int regen)
-                    : base(
-                         name,
-                         desc,
-                         image,
-                         price,
-                         mana)
+        public ManaItem(string name, string desc, BitmapImage image, decimal price, int mana, int regen) : base(name, desc, image, price, false)
         {
-            Regen = regen;
+            Mana = mana; Regen = regen; 
         }
+        public int Mana { get; }
+
         public int Regen { get; }
     }
 }

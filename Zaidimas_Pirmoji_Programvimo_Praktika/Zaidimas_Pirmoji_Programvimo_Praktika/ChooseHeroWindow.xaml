@@ -72,7 +72,7 @@
             </Button.Resources>
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF4E006D"/>
+                    <GradientStop Color="#FF8E0075"/>
                     <GradientStop Color="Black" Offset="1"/>
                 </LinearGradientBrush>
             </Button.Background>
@@ -99,7 +99,7 @@
             </Button.Resources>
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF4E006D"/>
+                    <GradientStop Color="#FFA70592"/>
                     <GradientStop Color="Black" Offset="1"/>
                 </LinearGradientBrush>
             </Button.Background>
@@ -126,7 +126,7 @@
             </Button.Resources>
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF4E006D"/>
+                    <GradientStop Color="#FF9C097B" Offset="0.014"/>
                     <GradientStop Color="Black" Offset="1"/>
                 </LinearGradientBrush>
             </Button.Background>

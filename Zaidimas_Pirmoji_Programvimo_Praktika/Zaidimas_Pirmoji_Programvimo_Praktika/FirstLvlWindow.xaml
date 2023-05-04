@@ -10,6 +10,10 @@
         ResizeMode="NoResize"
         Icon="Recourses/Images/Window title bar icon.ico">
 
+    <Window.Resources>
+        <RotateTransform x:Key="RotateTransform" Angle="-90" />
+    </Window.Resources>
+
     <Grid x:Name="mainContainer" ClipToBounds="False">
         <Image Source="\background.jpg" Stretch="Fill" Margin="-267,-296,-139,0"/>
         <Image x:Name="mainHero" gif:ImageBehavior.AnimatedSource="Recourses\Images\Ninja\Idle.gif" RenderTransformOrigin="0.5,0.5" Height="337" Width="362" Canvas.Left="-18" Canvas.Top="-2" Margin="0,86,381,0" VerticalAlignment="Top" HorizontalAlignment="Right">
@@ -22,6 +26,46 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
+
+        <DataGrid x:Name="dtgEquipped" 
+          AutoGenerateColumns="False"
+          Margin="-48,2,0,0" 
+          Background="#FF24253A" 
+          VerticalAlignment="Top" 
+          HorizontalAlignment="Left"
+          FontFamily="Bahnschrift SemiBold"
+          IsReadOnly="True"
+          Panel.ZIndex="10" Height="254" Width="72" 
+          LayoutTransform="{StaticResource RotateTransform}" RenderTransformOrigin="0.5,0.5">
+            <DataGrid.Resources>
+                <SolidColorBrush x:Key="SelectedBackgroundBrush" Color="Green" />
+                <Style TargetType="{x:Type DataGridRow}">
+                    <Setter Property="Background" Value="#FF24253A" />
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="{StaticResource SelectedBackgroundBrush}" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-270.24"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Image" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Image}" Width="50" Height="50" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
 
         <Button x:Name="btnAttack" 
                 Content="Attack 1" 
@@ -228,7 +272,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Label FontSize="8" Foreground="White" Content="20 | 30 ATK" HorizontalAlignment="Left" Margin="621,410,0,0" VerticalAlignment="Top" Width="53" Height="22"/>
+        <Label FontSize="8" Foreground="White" Content="20 | 1x ATK" HorizontalAlignment="Left" Margin="621,410,0,0" VerticalAlignment="Top" Width="53" Height="22"/>
         <Rectangle HorizontalAlignment="Left" 
             Height="30" 
             Stroke="Black" 
@@ -244,10 +288,10 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Label FontSize="8" Foreground="White" Content="40 | 70 ATK" HorizontalAlignment="Left" Margin="712,410,0,0" VerticalAlignment="Top" Width="53" Height="22"/>
+        <Label FontSize="8" Foreground="White" Content="40 | 2x ATK" HorizontalAlignment="Left" Margin="712,410,0,0" VerticalAlignment="Top" Width="53" Height="22"/>
 
         <Rectangle HorizontalAlignment="Left"
-                   Height="126"
+                   Height="120"
                    Margin="411,361,0,0" 
                    Stroke="Black"
                    VerticalAlignment="Top" 
@@ -257,10 +301,10 @@
                    StrokeThickness="3"/>
         <Rectangle HorizontalAlignment="Left"
             Height="89"
-            Margin="714,129,0,0" 
+            Margin="699,129,0,0" 
             Stroke="Black"
             VerticalAlignment="Top" 
-            Width="205"
+            Width="220"
             RadiusX="20"
             RadiusY="20"
             StrokeThickness="3"/>
@@ -269,8 +313,8 @@
             Height="77" 
             Stroke="Black" 
             VerticalAlignment="Top" 
-            Width="102" 
-            Margin="720,135,0,0"
+            Width="114" 
+            Margin="708,135,0,0"
             RadiusX="20"
             RadiusY="20">
             <Rectangle.Fill>
@@ -280,9 +324,9 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Label Foreground="White" Content="Attack: +0" HorizontalAlignment="Left" Margin="741,150,0,0" VerticalAlignment="Top" FontSize="10"/>
-        <Label Foreground="White" Content="Mana: +0" HorizontalAlignment="Left" Margin="741,169,0,0" VerticalAlignment="Top" FontSize="10"/>
-        <Label Foreground="White" Content="Health: +0" HorizontalAlignment="Left" Margin="741,187,0,0" VerticalAlignment="Top" FontSize="10"/>
+        <Label x:Name="lblAttackPlus" Foreground="White" Content="Attack: +0" HorizontalAlignment="Left" Margin="734,150,0,0" VerticalAlignment="Top" FontSize="10" Width="62"/>
+        <Label x:Name="lblManaPlus" Foreground="White" Content="Mana: +0" HorizontalAlignment="Left" Margin="734,169,0,0" VerticalAlignment="Top" FontSize="10" Width="60"/>
+        <Label x:Name="lblHealthPlus" Foreground="White" Content="Health: +0" HorizontalAlignment="Left" Margin="734,187,0,0" VerticalAlignment="Top" FontSize="10" Width="62"/>
         <Label Foreground="White" Content="Bonuses from items" HorizontalAlignment="Left" Margin="725,137,0,0" VerticalAlignment="Top" FontSize="7"/>
 
         <Button x:Name="btnMana" 
@@ -308,9 +352,9 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Image Source="/Recourses/Images/HUD/HUD (3).png" Margin="725,147,59,273" Panel.ZIndex="3"/>
-        <Image Source="/Recourses/Images/HUD/HUD (1).png" Margin="728,166,60,255" Panel.ZIndex="3"/>
-        <Image Source="/Recourses/Images/HUD/HUD (2).png" Margin="725,182,57,234" Panel.ZIndex="3"/>
+        <Image Source="/Recourses/Images/HUD/HUD (3).png" Margin="718,147,66,273" Panel.ZIndex="3"/>
+        <Image Source="/Recourses/Images/HUD/HUD (1).png" Margin="722,166,66,255" Panel.ZIndex="3"/>
+        <Image Source="/Recourses/Images/HUD/HUD (2).png" Margin="718,182,64,234" Panel.ZIndex="3"/>
         <Image Source="Recourses\Images\HUD\HUD (1).png" Margin="134,388,650,32" Panel.ZIndex="3"/>
         <Image Source="Recourses\Images\HUD\HUD (2).png" Margin="134,371,648,47" Panel.ZIndex="3"/>
         <Image Source="/Recourses/Images/HUD/HUD (1).png" Margin="413,275,371,146" Panel.ZIndex="3"/>

@@ -107,6 +107,9 @@
     <Compile Include="Models\Entitiess\Hero2.cs" />
     <Compile Include="Models\Entitiess\Hero3.cs" />
     <Compile Include="Models\Entitiess\PlayingModel.cs" />
+    <Compile Include="Models\Items\Armor.cs" />
+    <Compile Include="Models\Items\Boots.cs" />
+    <Compile Include="Models\Items\Sword.cs" />
     <Compile Include="NotificationWindow.xaml.cs">
       <DependentUpon>NotificationWindow.xaml</DependentUpon>
     </Compile>
@@ -172,7 +175,9 @@
     <Compile Include="Models\Items\HealthItem.cs" />
     <Compile Include="Models\Items\Item.cs" />
     <Compile Include="Models\Items\ManaItem.cs" />
-    <Compile Include="Products\CreatedItems.cs" />
+    <Compile Include="Products\CreatedItems.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -597,6 +602,26 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Recourses\Images\achievments\9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recourses\Images\Items\armor.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\Items\armor1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\Items\boots.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\Items\boots1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\Items\sword.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recourses\Images\Items\sword1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

@@ -23,6 +23,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
     /// </summary>
     public partial class InventoryWindow : Window
     {
+
         public InventoryWindow()
         {
             InitializeComponent();
@@ -38,6 +39,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
                 dtgInventory.IsEnabled = false;
                 btnSell.IsEnabled = false;
             }
+            dtgEquipped.ItemsSource = PlayingModel.Equiped;
 
         }
 
@@ -93,6 +95,67 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
             dtgInventory.MaxWidth = dtgInventory.ActualWidth;
             dtgInventory.MinHeight = dtgInventory.ActualHeight;
             dtgInventory.MaxHeight = dtgInventory.ActualHeight;
+        }
+
+        private void btnUnEquip_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedItem = dtgEquipped.SelectedItem as Item;
+            if (selectedItem != null)
+            {
+                selectedItem.IsEquiped = false;
+                PlayingModel.Equiped.Remove(selectedItem);
+                PlayingModel.Inventory.Add(selectedItem);
+
+                if (selectedItem is Sword sword)
+                {
+                    PlayingModel.DefaultAttack -= sword.PlusAttack;
+                }
+                if (selectedItem is Armor armor)
+                {
+                    PlayingModel.DefaultHealth -= armor.PlusHealth;
+                }
+                if (selectedItem is Boots boots)
+                {
+                    PlayingModel.DefaultMana -= boots.PlusMana;
+                }
+
+                dtgEquipped.Items.Refresh();
+                dtgInventory.Items.Refresh();
+            }
+        }
+
+        private void btnEquip_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedItem = dtgInventory.SelectedItem as Item;
+            if (selectedItem != null)
+            {
+                if (PlayingModel.Equiped.FirstOrDefault(x=>x.Name == selectedItem.Name) == null)
+                {
+                    selectedItem.IsEquiped = true;
+                    PlayingModel.Inventory.Remove(selectedItem);
+                    PlayingModel.Equiped.Add(selectedItem);
+
+                    if (selectedItem is Sword sword)
+                    {
+                        PlayingModel.DefaultAttack += sword.PlusAttack;
+                    }
+                    if (selectedItem is Armor armor)
+                    {
+                        PlayingModel.DefaultHealth += armor.PlusHealth;
+                    }
+                    if (selectedItem is Boots boots)
+                    {
+                        PlayingModel.DefaultMana += boots.PlusMana;
+                    }
+
+                    dtgEquipped.Items.Refresh();
+                    dtgInventory.Items.Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("Jus jau uzsidejote tokio tipo item");
+                }
+            }
         }
     }
 }

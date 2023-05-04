@@ -21,7 +21,8 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
                             1,
                             1,
                             0,
-                            100)
+                            100,
+                            new List<Item>())
         {
 
         }
@@ -40,6 +41,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika.Models
             PlayingModel.Money = h.Money;
             PlayingModel.HowManyAttackDid = h.HowManyAttackDid;
             PlayingModel.HowManyTimesDied = h.HowManyTimesDied;
+            PlayingModel.Equiped = h.Equiped;
         }
     }
 }

@@ -5,10 +5,8 @@
 - [Komanda](https://github.com/NoahIT/Zaidimas_praktika#-komanda)
 - [Komandos narių indėlis](https://github.com/NoahIT/Zaidimas_praktika#komandos-nari%C5%B3-ind%C4%97lis)
 - [Kokias technologijas naudojome ?](https://github.com/NoahIT/Zaidimas_praktika#%EF%B8%8F-kokias-technologijas-naudojome)
-- [Apie žaidima](https://github.com/NoahIT/Zaidimas_praktika#-apie-%C5%BEaidima)
-- [Funkcijos](https://github.com/NoahIT/Zaidimas_praktika#-funkcijos)
-- [Atsisiuntimas](https://github.com/NoahIT/Zaidimas_praktika#-atsisiuntimas)
-- [Likulios detalės](https://github.com/NoahIT/Zaidimas_praktika#-likulios-detal%C4%97s)
+- [Idėjos šaknys](https://github.com/NoahIT/Zaidimas_praktika#-id%C4%97jos-%C5%A1ankys)
+- [Funkcijos ir kaip viskas veikia](https://github.com/NoahIT/Zaidimas_praktika#-funkcijos-ir-kaip-viskas-veikia)
 
 ## 👩‍💻 Komanda
 
@@ -39,7 +37,7 @@
 
 ## 🧩 Funkcijos ir kaip viskas veikia
 
-Paleidus programą, pirmą ekraną kurį matysite tai yra `MENU`, kur yra galimos dvi funkcijos: `START` t.y. pradėti žaidimą arba `QUIT` funkcija kuri leidžia iškarto pasitraukti iš žaidimo tam prireikus. ![1](https://user-images.githubusercontent.com/78691849/236304452-ecbc19bc-ec0f-4859-9824-29d1fcc50b8a.png)
+ Paleidus programą, pirmą ekraną kurį matysite tai yra `MENU`, kur yra galimos dvi funkcijos: `START` t.y. pradėti žaidimą arba `QUIT` funkcija kuri leidžia iškarto pasitraukti iš žaidimo tam prireikus. ![1](https://user-images.githubusercontent.com/78691849/236304452-ecbc19bc-ec0f-4859-9824-29d1fcc50b8a.png) 
 
 Toliau paspausdami `START` mygtuka galime judėti toliau. Išlis naujas langas kuriame turime pasirinkti ar jau žaidėme šį žaidimą ir ar esame jau kažkokį progresą padarę, tai mygtukas `LOAD LAST GAME` mums tuo ir pagelbės, tačiau jei nežaidėme ir esame naujas žaidėjas tuo tarpu spaudžiame `STRART NEW GAME`. ![2](https://user-images.githubusercontent.com/78691849/236305709-c90c3ecb-5e57-4ffa-98fc-3f0e4501c129.png)
 

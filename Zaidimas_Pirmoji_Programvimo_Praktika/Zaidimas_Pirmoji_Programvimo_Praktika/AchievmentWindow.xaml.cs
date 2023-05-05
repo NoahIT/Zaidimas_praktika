@@ -33,5 +33,12 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
             dtgInventory.MinHeight = dtgInventory.ActualHeight;
             dtgInventory.MaxHeight = dtgInventory.ActualHeight;
         }
+
+        private void btnAchiev_Click(object sender, RoutedEventArgs e)
+        {
+            var page = new GameLobbyWindow();
+            page.Show();
+            this.Close();
+        }
     }
 }

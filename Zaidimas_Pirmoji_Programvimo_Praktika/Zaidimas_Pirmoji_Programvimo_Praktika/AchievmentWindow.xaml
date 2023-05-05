@@ -38,6 +38,51 @@
 
             </DataGrid.Columns>
         </DataGrid>
+        <Image Margin="0,-93,0,-1" Source="/gameLobbyBackground2.gif" Stretch="Fill"/>
+        <Button x:Name="btnAchiev" 
+            Content="Back" 
+            HorizontalAlignment="Left" 
+            Margin="29,15,0,0" 
+            VerticalAlignment="Top" 
+            Height="25" Width="64" 
+            Click="btnAchiev_Click"
+            Foreground="White"
+            FontFamily="Century Gothic"
+            BorderBrush="Black">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF3E2C3E" Offset="0.691"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Rectangle HorizontalAlignment="Left" 
+            Height="251" 
+            Stroke="Black" 
+            VerticalAlignment="Top" 
+            Width="236" 
+            Margin="236,75,0,0"
+            RadiusX="20"
+            RadiusY="20">
+
+            <Rectangle.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Rectangle.Resources>
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF120C09" Offset="1"/>
+                    <GradientStop Color="#FF24253A" Offset="0.248"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
 
     </Grid>
 </Window>

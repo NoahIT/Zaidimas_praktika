@@ -55,11 +55,7 @@ namespace Zaidimas_Pirmoji_Programvimo_Praktika
 
             lblMoney.Content = "Money:" + PlayingModel.Money + " Coins";
 
-            var page = new InventoryWindow();
-
-            page.Show();
-
-            this.Close();
+            dtgInventory.Items.Refresh();
         }
 
         private void btnInventory_Click(object sender, RoutedEventArgs e)
